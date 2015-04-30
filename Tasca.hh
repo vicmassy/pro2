@@ -1,2 +1,13 @@
-#include "Instant.hh"
+#include <iostream>
+
+using namespace std;
+
+
+class Tasca{
+  
+  private:
+  
+  public:  
+    
+}
 

@@ -36,15 +36,22 @@ class Agenda {
       //Post: s'ha esborrat la tasca especificada o retorna error si aquesta no existeix
       void esborrar_tasca();
       
+      
+      // TODO: Potser retornar un bool si la funcio sha executat OK?
+      
       void interpretar_modificar_rellotge(const Comanda &c);
       
       void interpretar_inserir_tasca(const Comanda &c);
       
       void interpretar_escriure_tasques(const Comanda &c);
       
-      void Agenda::interpretar_modificar_tasca(c);
+      void interpretar_modificar_tasca(const Comanda &c);
 
-    void Agenda::interpretar_esborrar_tasca(c);
+      void interpretar_esborrar_tasca(const Comanda &c);
+      
+      void interpretar_esborrar_etiqueta(const Comanda &c);
+      
+      void interpretar_esborrar_etiquetes(const Comanda &c);
       
       //Consultores
       //Pre: 

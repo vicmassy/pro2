@@ -27,14 +27,18 @@ int main() {
                 if (c.es_passat())
                     a.escriure_tasques_passades();
                 else
-                    interpretar_escriure_tasques(a, c);
+                    a.interpretar_escriure_tasques(c);
             }
             else if (c.es_modificacio())
                 interpretar_modificar_tasca(c);
             else if (c.es_esborrat()) {
                 if (c.tipus_esborrat() == "tasca")
-                    interpretar_esborrar_tasca(c);
-            }
+		    a.interpretar_esborrar_tasca(c);
+		else if(c.tipus_esborrat() == "etiqueta")
+		    a.interpretar_esborrar_etiqueta(c);
+		else if(c.tipus_esborrat() == "etiquetes")
+		    a.interpretar_esborrar_etiquetes(c);
+	    }	
         }
     }
 }
