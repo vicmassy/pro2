@@ -1,13 +1,28 @@
 #include <iostream>
+#include <map>
 
 using namespace std;
 
 
-class Tasca{
+class Tasca {
   
   private:
-  
-  public:  
-    
-}
 
+  	string nom;
+  	map<string,bool> etiquetes;
+
+
+  public:
+
+  	//Constructors
+
+  	Tasca(string n);
+
+  	Tasca(string n, map<string, bool> &e);
+
+
+  	//Consultores
+
+  	void escriure_tasca();
+
+}
