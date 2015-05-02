@@ -1,0 +1,95 @@
+\hypertarget{main_8cc}{\section{Referencia del Archivo main.\-cc}
+\label{main_8cc}\index{main.\-cc@{main.\-cc}}
+}
+Dependencia gráfica adjunta para main.\-cc\-:
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const string \hyperlink{main_8cc_a9c5433cf54bcbe4d1d35f34624e28a36}{D\-A\-T\-A0} = \char`\"{}20.\-04.\-15\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a2420a7a32f18c032d9dfbc954e0194e8}{H\-O\-R\-A0} = \char`\"{}00\-:00\char`\"{}
+\item 
+const string \hyperlink{main_8cc_ac0c5b89ada2846866beff79078de7388}{E\-R\-R\-O\-R} = \char`\"{}No s'ha realitzat.\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{main.\-cc@{main.\-cc}!main@{main}}
+\index{main@{main}!main.cc@{main.\-cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Definición en la línea 12 del archivo main.\-cc.
+
+
+\begin{DoxyCode}
+12            \{
+13   \hyperlink{class_agenda}{Agenda} a(\hyperlink{main_8cc_a9c5433cf54bcbe4d1d35f34624e28a36}{DATA0}, \hyperlink{main_8cc_a2420a7a32f18c032d9dfbc954e0194e8}{HORA0});
+14   \hyperlink{class_comanda}{Comanda} c;
+15   \textcolor{keywordtype}{bool} b;
+16   \textcolor{keywordflow}{while} (c.\hyperlink{class_comanda_af2dbc8ccdbb94bed6ea26155edc71b57}{llegir}(b)) \{
+17     \textcolor{keywordflow}{if} (b) \{
+18       \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_aa8767f298317c3bb07f90676cabb8c43}{es\_rellotge}()) \{
+19         \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_a847ee227fd7fea3a105dbd78735de453}{es\_consulta}())
+20           a.escriure\_rellotge();
+21         \textcolor{keywordflow}{else}
+22           a.interpretar\_modificar\_rellotge(c);
+23       \}
+24       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_a614467bedacc9cf29cc5a9dcbba6b23d}{es\_insercio}())
+25         interpretar\_inserir\_tasca(a, c);
+26       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_a847ee227fd7fea3a105dbd78735de453}{es\_consulta}()) \{
+27         \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_a1f435f8b605f0d1f5cbb06c8c6fe4005}{es\_passat}())
+28           a.escriure\_tasques\_passades();
+29         \textcolor{keywordflow}{else}
+30           a.interpretar\_escriure\_tasques(c);
+31       \}
+32       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_a2a33a5497c7d156f22065656cb48d9a1}{es\_modificacio}())
+33         interpretar\_modificar\_tasca(c);
+34       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_a9e71320e8617ce224c8d994d0969555a}{es\_esborrat}()) \{
+35         \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_a998dc172668a108837512f818ca5430f}{tipus\_esborrat}() == \textcolor{stringliteral}{"tasca"})
+36           a.interpretar\_esborrar\_tasca(c);
+37         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(c.\hyperlink{class_comanda_a998dc172668a108837512f818ca5430f}{tipus\_esborrat}() == \textcolor{stringliteral}{"etiqueta"})
+38           a.interpretar\_esborrar\_etiqueta(c);
+39         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(c.\hyperlink{class_comanda_a998dc172668a108837512f818ca5430f}{tipus\_esborrat}() == \textcolor{stringliteral}{"etiquetes"})
+40           a.interpretar\_esborrar\_etiquetes(c);
+41       \} 
+42     \}
+43   \}
+44 
+45   \textcolor{keywordflow}{return} 0;
+46 
+47 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las variables}
+\hypertarget{main_8cc_a9c5433cf54bcbe4d1d35f34624e28a36}{\index{main.\-cc@{main.\-cc}!D\-A\-T\-A0@{D\-A\-T\-A0}}
+\index{D\-A\-T\-A0@{D\-A\-T\-A0}!main.cc@{main.\-cc}}
+\subsubsection[{D\-A\-T\-A0}]{\setlength{\rightskip}{0pt plus 5cm}const string D\-A\-T\-A0 = \char`\"{}20.\-04.\-15\char`\"{}}}\label{main_8cc_a9c5433cf54bcbe4d1d35f34624e28a36}
+
+
+Definición en la línea 7 del archivo main.\-cc.
+
+\hypertarget{main_8cc_a2420a7a32f18c032d9dfbc954e0194e8}{\index{main.\-cc@{main.\-cc}!H\-O\-R\-A0@{H\-O\-R\-A0}}
+\index{H\-O\-R\-A0@{H\-O\-R\-A0}!main.cc@{main.\-cc}}
+\subsubsection[{H\-O\-R\-A0}]{\setlength{\rightskip}{0pt plus 5cm}const string H\-O\-R\-A0 = \char`\"{}00\-:00\char`\"{}}}\label{main_8cc_a2420a7a32f18c032d9dfbc954e0194e8}
+
+
+Definición en la línea 8 del archivo main.\-cc.
+
+\hypertarget{main_8cc_ac0c5b89ada2846866beff79078de7388}{\index{main.\-cc@{main.\-cc}!E\-R\-R\-O\-R@{E\-R\-R\-O\-R}}
+\index{E\-R\-R\-O\-R@{E\-R\-R\-O\-R}!main.cc@{main.\-cc}}
+\subsubsection[{E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}const string E\-R\-R\-O\-R = \char`\"{}No s'ha realitzat.\char`\"{}}}\label{main_8cc_ac0c5b89ada2846866beff79078de7388}
+
+
+Definición en la línea 9 del archivo main.\-cc.
+

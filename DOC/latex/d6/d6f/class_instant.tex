@@ -1,0 +1,245 @@
+\hypertarget{class_instant}{\section{Referencia de la Clase Instant}
+\label{class_instant}\index{Instant@{Instant}}
+}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_instant_ad49e0d8095a5f9be466421641ca71a8b}{Instant} (string d, string h)
+\item 
+\hyperlink{class_instant_aa5f0f24904311730ad9a61c3f3c76604}{Instant} (\hyperlink{class_instant}{Instant} i)
+\item 
+bool \hyperlink{class_instant_ad3dbbdcb8f7cce6bf28bd109a4b6cbc2}{operator$<$} (const \hyperlink{class_instant}{Instant} \&i) const 
+\item 
+void \hyperlink{class_instant_a9f5b85dfca181715c6814b492b357c70}{modificar\-\_\-hora} (string h)
+\item 
+void \hyperlink{class_instant_a7db61132a491c96b02c60f6b68ead889}{modificar\-\_\-data} (string d)
+\item 
+void \hyperlink{class_instant_a5dc8fbbbaeb033472b6f17262b60f4a7}{escriure\-\_\-data} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_instant_a83ad75456b21fd0121910d766b86ffec}{compge} (const \hyperlink{class_instant}{Instant} \&a, const \hyperlink{class_instant}{Instant} \&b)
+\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{num} (char c)
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_instant_a56ada80c1afff9825a0003f7253795d1}{hh}
+\item 
+int \hyperlink{class_instant_a4de33b0ded8540ec7a903ab5763eccca}{min}
+\item 
+int \hyperlink{class_instant_acc6e1db1f2f2f12a87a865d6849f1b2b}{dd}
+\item 
+int \hyperlink{class_instant_a2912b4df6ae47c81da8f5e041ddc2266}{mm}
+\item 
+int \hyperlink{class_instant_a67fe547756040a8d5d9088c9827bedba}{yy}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 6 del archivo Instant.\-hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_instant_ad49e0d8095a5f9be466421641ca71a8b}{\index{Instant@{Instant}!Instant@{Instant}}
+\index{Instant@{Instant}!Instant@{Instant}}
+\subsubsection[{Instant}]{\setlength{\rightskip}{0pt plus 5cm}Instant\-::\-Instant (
+\begin{DoxyParamCaption}
+\item[{string}]{d, }
+\item[{string}]{h}
+\end{DoxyParamCaption}
+)}}\label{class_instant_ad49e0d8095a5f9be466421641ca71a8b}
+
+
+Definición en la línea 7 del archivo Instant.\-cc.
+
+
+\begin{DoxyCode}
+7                                     \{
+8   \hyperlink{class_instant_a7db61132a491c96b02c60f6b68ead889}{modificar\_data} (d);
+9   \hyperlink{class_instant_a9f5b85dfca181715c6814b492b357c70}{modificar\_hora} (h);
+10 \}
+\end{DoxyCode}
+\hypertarget{class_instant_aa5f0f24904311730ad9a61c3f3c76604}{\index{Instant@{Instant}!Instant@{Instant}}
+\index{Instant@{Instant}!Instant@{Instant}}
+\subsubsection[{Instant}]{\setlength{\rightskip}{0pt plus 5cm}Instant\-::\-Instant (
+\begin{DoxyParamCaption}
+\item[{{\bf Instant}}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_instant_aa5f0f24904311730ad9a61c3f3c76604}
+
+
+Definición en la línea 12 del archivo Instant.\-cc.
+
+
+\begin{DoxyCode}
+12                            \{
+13   
+14 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{\index{Instant@{Instant}!num@{num}}
+\index{num@{num}!Instant@{Instant}}
+\subsubsection[{num}]{\setlength{\rightskip}{0pt plus 5cm}int Instant\-::num (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}
+
+
+Definición en la línea 3 del archivo Instant.\-cc.
+
+
+\begin{DoxyCode}
+3                        \{
+4   \textcolor{keywordflow}{return} int(\textcolor{charliteral}{'c'}) - int(\textcolor{charliteral}{'0'});
+5 \}
+\end{DoxyCode}
+\hypertarget{class_instant_a83ad75456b21fd0121910d766b86ffec}{\index{Instant@{Instant}!compge@{compge}}
+\index{compge@{compge}!Instant@{Instant}}
+\subsubsection[{compge}]{\setlength{\rightskip}{0pt plus 5cm}static bool Instant\-::compge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Instant} \&}]{a, }
+\item[{const {\bf Instant} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_instant_a83ad75456b21fd0121910d766b86ffec}
+
+
+Definición en la línea 16 del archivo Instant.\-cc.
+
+
+\begin{DoxyCode}
+16                                                               \{
+17   \textcolor{keywordflow}{if} (a.\hyperlink{class_instant_a67fe547756040a8d5d9088c9827bedba}{yy} > b.\hyperlink{class_instant_a67fe547756040a8d5d9088c9827bedba}{yy})
+18     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+19   \textcolor{keywordflow}{if} (a.\hyperlink{class_instant_a67fe547756040a8d5d9088c9827bedba}{yy} == b.\hyperlink{class_instant_a67fe547756040a8d5d9088c9827bedba}{yy}) \{
+20     \textcolor{keywordflow}{if} (a.\hyperlink{class_instant_a2912b4df6ae47c81da8f5e041ddc2266}{mm} > b.\hyperlink{class_instant_a2912b4df6ae47c81da8f5e041ddc2266}{mm})
+21       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+22     \textcolor{keywordflow}{if} (a.\hyperlink{class_instant_a2912b4df6ae47c81da8f5e041ddc2266}{mm} == b.\hyperlink{class_instant_a2912b4df6ae47c81da8f5e041ddc2266}{mm}) \{
+23       \textcolor{keywordflow}{if} (a.\hyperlink{class_instant_acc6e1db1f2f2f12a87a865d6849f1b2b}{dd} > b.\hyperlink{class_instant_acc6e1db1f2f2f12a87a865d6849f1b2b}{dd}) 
+24   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+25       \textcolor{keywordflow}{if} (a.\hyperlink{class_instant_acc6e1db1f2f2f12a87a865d6849f1b2b}{dd} == b.\hyperlink{class_instant_acc6e1db1f2f2f12a87a865d6849f1b2b}{dd}) \{
+26   \textcolor{keywordflow}{if} (a.\hyperlink{class_instant_a56ada80c1afff9825a0003f7253795d1}{hh} > b.\hyperlink{class_instant_a56ada80c1afff9825a0003f7253795d1}{hh})
+27     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+28   \textcolor{keywordflow}{if} (a.\hyperlink{class_instant_a56ada80c1afff9825a0003f7253795d1}{hh} == b.\hyperlink{class_instant_a56ada80c1afff9825a0003f7253795d1}{hh})
+29     \textcolor{keywordflow}{return} (a.\hyperlink{class_instant_a4de33b0ded8540ec7a903ab5763eccca}{min} > b.\hyperlink{class_instant_a4de33b0ded8540ec7a903ab5763eccca}{min});
+30       \}
+31     \}
+32   \}
+33   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+34 \}
+\end{DoxyCode}
+\hypertarget{class_instant_ad3dbbdcb8f7cce6bf28bd109a4b6cbc2}{\index{Instant@{Instant}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Instant@{Instant}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Instant\-::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Instant} \&}]{i}
+\end{DoxyParamCaption}
+) const}}\label{class_instant_ad3dbbdcb8f7cce6bf28bd109a4b6cbc2}
+\hypertarget{class_instant_a9f5b85dfca181715c6814b492b357c70}{\index{Instant@{Instant}!modificar\-\_\-hora@{modificar\-\_\-hora}}
+\index{modificar\-\_\-hora@{modificar\-\_\-hora}!Instant@{Instant}}
+\subsubsection[{modificar\-\_\-hora}]{\setlength{\rightskip}{0pt plus 5cm}void Instant\-::modificar\-\_\-hora (
+\begin{DoxyParamCaption}
+\item[{string}]{h}
+\end{DoxyParamCaption}
+)}}\label{class_instant_a9f5b85dfca181715c6814b492b357c70}
+
+
+Definición en la línea 44 del archivo Instant.\-cc.
+
+
+\begin{DoxyCode}
+44                                      \{
+45   \hyperlink{class_instant_a56ada80c1afff9825a0003f7253795d1}{hh} = \hyperlink{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{num}(h[0])*10 + \hyperlink{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{num}(h[1]);
+46   \hyperlink{class_instant_a4de33b0ded8540ec7a903ab5763eccca}{min} = \hyperlink{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{num}(h[3])*10 + \hyperlink{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{num}(h[4]);
+47 \}
+\end{DoxyCode}
+\hypertarget{class_instant_a7db61132a491c96b02c60f6b68ead889}{\index{Instant@{Instant}!modificar\-\_\-data@{modificar\-\_\-data}}
+\index{modificar\-\_\-data@{modificar\-\_\-data}!Instant@{Instant}}
+\subsubsection[{modificar\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void Instant\-::modificar\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{string}]{d}
+\end{DoxyParamCaption}
+)}}\label{class_instant_a7db61132a491c96b02c60f6b68ead889}
+
+
+Definición en la línea 49 del archivo Instant.\-cc.
+
+
+\begin{DoxyCode}
+49                                      \{
+50   \hyperlink{class_instant_acc6e1db1f2f2f12a87a865d6849f1b2b}{dd} = \hyperlink{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{num}(d[0])*10 + \hyperlink{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{num}(d[1]);
+51   \hyperlink{class_instant_a2912b4df6ae47c81da8f5e041ddc2266}{mm} = \hyperlink{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{num}(d[3])*10 + \hyperlink{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{num}(d[4]);
+52   \hyperlink{class_instant_a67fe547756040a8d5d9088c9827bedba}{yy} = \hyperlink{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{num}(d[6])*10 + \hyperlink{class_instant_a746f521daeb12b3b1d67d1c4ac19a4bc}{num}(d[7]);
+53 \}
+\end{DoxyCode}
+\hypertarget{class_instant_a5dc8fbbbaeb033472b6f17262b60f4a7}{\index{Instant@{Instant}!escriure\-\_\-data@{escriure\-\_\-data}}
+\index{escriure\-\_\-data@{escriure\-\_\-data}!Instant@{Instant}}
+\subsubsection[{escriure\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void Instant\-::escriure\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_instant_a5dc8fbbbaeb033472b6f17262b60f4a7}
+
+
+Definición en la línea 55 del archivo Instant.\-cc.
+
+
+\begin{DoxyCode}
+55                             \{
+56   cout << \hyperlink{class_instant_acc6e1db1f2f2f12a87a865d6849f1b2b}{dd} << \textcolor{charliteral}{'.'} << \hyperlink{class_instant_a2912b4df6ae47c81da8f5e041ddc2266}{mm} << \textcolor{charliteral}{'.'} << \hyperlink{class_instant_a67fe547756040a8d5d9088c9827bedba}{yy} << \textcolor{charliteral}{' '} << \hyperlink{class_instant_a56ada80c1afff9825a0003f7253795d1}{hh} << \textcolor{charliteral}{':'} << \hyperlink{class_instant_a4de33b0ded8540ec7a903ab5763eccca}{min};
+57 \}\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_instant_a56ada80c1afff9825a0003f7253795d1}{\index{Instant@{Instant}!hh@{hh}}
+\index{hh@{hh}!Instant@{Instant}}
+\subsubsection[{hh}]{\setlength{\rightskip}{0pt plus 5cm}int Instant\-::hh\hspace{0.3cm}{\ttfamily [private]}}}\label{class_instant_a56ada80c1afff9825a0003f7253795d1}
+
+
+Definición en la línea 11 del archivo Instant.\-hh.
+
+\hypertarget{class_instant_a4de33b0ded8540ec7a903ab5763eccca}{\index{Instant@{Instant}!min@{min}}
+\index{min@{min}!Instant@{Instant}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}int Instant\-::min\hspace{0.3cm}{\ttfamily [private]}}}\label{class_instant_a4de33b0ded8540ec7a903ab5763eccca}
+
+
+Definición en la línea 11 del archivo Instant.\-hh.
+
+\hypertarget{class_instant_acc6e1db1f2f2f12a87a865d6849f1b2b}{\index{Instant@{Instant}!dd@{dd}}
+\index{dd@{dd}!Instant@{Instant}}
+\subsubsection[{dd}]{\setlength{\rightskip}{0pt plus 5cm}int Instant\-::dd\hspace{0.3cm}{\ttfamily [private]}}}\label{class_instant_acc6e1db1f2f2f12a87a865d6849f1b2b}
+
+
+Definición en la línea 11 del archivo Instant.\-hh.
+
+\hypertarget{class_instant_a2912b4df6ae47c81da8f5e041ddc2266}{\index{Instant@{Instant}!mm@{mm}}
+\index{mm@{mm}!Instant@{Instant}}
+\subsubsection[{mm}]{\setlength{\rightskip}{0pt plus 5cm}int Instant\-::mm\hspace{0.3cm}{\ttfamily [private]}}}\label{class_instant_a2912b4df6ae47c81da8f5e041ddc2266}
+
+
+Definición en la línea 11 del archivo Instant.\-hh.
+
+\hypertarget{class_instant_a67fe547756040a8d5d9088c9827bedba}{\index{Instant@{Instant}!yy@{yy}}
+\index{yy@{yy}!Instant@{Instant}}
+\subsubsection[{yy}]{\setlength{\rightskip}{0pt plus 5cm}int Instant\-::yy\hspace{0.3cm}{\ttfamily [private]}}}\label{class_instant_a67fe547756040a8d5d9088c9827bedba}
+
+
+Definición en la línea 11 del archivo Instant.\-hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_instant_8hh}{Instant.\-hh}\item 
+\hyperlink{_instant_8cc}{Instant.\-cc}\end{DoxyCompactItemize}
