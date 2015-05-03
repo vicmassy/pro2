@@ -60,6 +60,7 @@ class Agenda {
 		void interpretar_esborrar_etiquetes(const Comanda &c);
 		
 		//Consultores
+
 		//Pre: 
 		//Post:
 		Instant consultar_rellotge();
