@@ -1,3 +1,6 @@
+#ifndef __AGENDA__
+#define __AGENDA__
+
 #include <iostream>
 #include <map>
 #include "Instant.hh"
@@ -76,3 +79,5 @@ class Agenda {
       void tasques_passades();
     
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef __INSTANT__
+#define __INSTANT__
+
 #include <string>
 #include <iostream>
 
@@ -47,3 +50,5 @@ public:
     void escriure_data();
     
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef __TASCA__
+#define __TASCA__
+
 #include <iostream>
 #include <map>
 
@@ -26,3 +29,5 @@ class Tasca {
   	void escriure_tasca();
 
 }
+
+#endif
