@@ -21,7 +21,10 @@ class Tasca {
 
 		Tasca(string n);
 
-		Tasca(string n, map<string, bool> &e);
+		Tasca(string n, map<string,bool> &e);
+
+
+		//Modificadores
 
 
 		//Consultores
