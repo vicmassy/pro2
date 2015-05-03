@@ -17,14 +17,14 @@ void Agenda::inserir_tasca(const Comanda &c) {
 }
 
 void Agenda::interpretar_modificar_rellotge(const Comanda &c) {
-    Instant nou(a.consultar_rellotge());
+    Instant nou(consultar_rellotge());
     if (c.nombre_dates() == 1)
         nou.modificar_data(c.data(1));
     if (c.te_hora())
         nou.modificar_hora(c.hora());
-    if (not(nou < a.consultar_rellotge()))
+    if (not(nou < consultar_rellotge()))
       // TODO: Gestionar quan és igual, que no canviï
-        a.modificar_rellotge(nou);
+        modificar_rellotge(nou);
     else
         cout << ERROR << endl;
 }
@@ -36,7 +36,7 @@ void Agenda::interpretar_inserir_tasca(const Comanda &c) {
     if(c.nombre_dates() == 0){
       // TODO: Posar data actual
     }
-    a.inserir_tasca(c.titol(), Instant(c.data(1), c.hora), etiquetes);
+    inserir_tasca(c.titol(), Instant(c.data(1), c.hora), etiquetes);
 }    
 
 void Agenda::interpretar_escriure_tasques(const Comanda &c) {
