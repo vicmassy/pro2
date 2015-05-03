@@ -1,8 +1,4 @@
-#include <string>
-#include <vector>
-#include <iostream>
-
-using namespace std;
+#include "Agenda.hh"
 
 const string DATA0 = "20.04.15";
 const string HORA0 = "00:00";
