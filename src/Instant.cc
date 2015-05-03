@@ -9,7 +9,7 @@ Instant::Instant (string d, string h) {
   	modificar_hora (h);
 }
 
-Instant::Instant (Instant i) {
+Instant::Instant (const Instant &i) {
   
 }
 
