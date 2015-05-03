@@ -18,7 +18,7 @@ int main() {
 					a.interpretar_modificar_rellotge(c);
 			}
 			else if (c.es_insercio())
-				interpretar_inserir_tasca(a, c);
+				a.interpretar_inserir_tasca(c);
 			else if (c.es_consulta()) {
 				if (c.es_passat())
 					a.escriure_tasques_passades();
@@ -26,7 +26,7 @@ int main() {
 					a.interpretar_escriure_tasques(c);
 			}
 			else if (c.es_modificacio())
-				interpretar_modificar_tasca(c);
+				a.interpretar_modificar_tasca(c);
 			else if (c.es_esborrat()) {
 				if (c.tipus_esborrat() == "tasca")
 					a.interpretar_esborrar_tasca(c);

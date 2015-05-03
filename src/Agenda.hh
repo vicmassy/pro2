@@ -74,11 +74,11 @@ class Agenda {
       
       //Pre: cert
       //Post: s'han escrit les tasques especificades al canal de sortida
-      void tasques_futures(const Comanda &c);
+      void escriure_tasques_futures(const Comanda &c);
       
       //Pre: cert
       //Post: s'han escrit totes les tasques passades al canal de sortida
-      void tasques_passades();
+      void escriure_tasques_passades();
     
 };
 
