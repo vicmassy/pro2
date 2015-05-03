@@ -9,7 +9,7 @@ var searchData=
   ['i_5ftitol',['i_titol',['../dc/d9d/class_comanda.html#aca04e90eab5ac14ddc3b25f154aabe48',1,'Comanda']]],
   ['iniciar',['iniciar',['../dc/d9d/class_comanda.html#a57a4df9cbf2f41ebbd36270f867e8694',1,'Comanda::iniciar()'],['../db/dc1/class_token.html#a8115f6d5917bd05f7cd568622318af24',1,'Token::iniciar()']]],
   ['inserir_5ftasca',['inserir_tasca',['../d7/d79/class_agenda.html#a059521520bbff1406580f43870b7e6b0',1,'Agenda']]],
-  ['instant',['Instant',['../d6/d6f/class_instant.html',1,'Instant'],['../d6/d6f/class_instant.html#ad49e0d8095a5f9be466421641ca71a8b',1,'Instant::Instant(string d, string h)'],['../d6/d6f/class_instant.html#aa5f0f24904311730ad9a61c3f3c76604',1,'Instant::Instant(Instant i)']]],
+  ['instant',['Instant',['../d6/d6f/class_instant.html',1,'Instant'],['../d6/d6f/class_instant.html#ad49e0d8095a5f9be466421641ca71a8b',1,'Instant::Instant(string d, string h)'],['../d6/d6f/class_instant.html#a2ce98e9c5d48920816a530d9aacb0f27',1,'Instant::Instant(const Instant &amp;i)']]],
   ['instant_2ecc',['Instant.cc',['../d6/d80/_instant_8cc.html',1,'']]],
   ['instant_2ehh',['Instant.hh',['../d1/d19/_instant_8hh.html',1,'']]],
   ['interpretar_5fesborrar_5fetiqueta',['interpretar_esborrar_etiqueta',['../d7/d79/class_agenda.html#a77526b8f1b285b6e6d948454c80ed4d4',1,'Agenda']]],

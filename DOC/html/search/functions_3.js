@@ -15,10 +15,12 @@ var searchData=
   ['es_5fpassat',['es_passat',['../dc/d9d/class_comanda.html#a1f435f8b605f0d1f5cbb06c8c6fe4005',1,'Comanda']]],
   ['es_5frellotge',['es_rellotge',['../dc/d9d/class_comanda.html#aa8767f298317c3bb07f90676cabb8c43',1,'Comanda']]],
   ['es_5ftext',['es_text',['../db/dc1/class_token.html#ab40c482fd70278c5f8ce53aa364d957e',1,'Token']]],
-  ['esborrar_5ftasca',['esborrar_tasca',['../d7/d79/class_agenda.html#a5859536c0a5cf6aad7fa0a89049b6220',1,'Agenda']]],
+  ['esborrar_5ftasca',['esborrar_tasca',['../d7/d79/class_agenda.html#a8dff51b098687e4c0c1eb8f30de2fa67',1,'Agenda']]],
   ['escriure_5fdata',['escriure_data',['../d6/d6f/class_instant.html#a5dc8fbbbaeb033472b6f17262b60f4a7',1,'Instant']]],
   ['escriure_5frellotge',['escriure_rellotge',['../d7/d79/class_agenda.html#ac7896e2cca1324f1cb182666e934c49e',1,'Agenda']]],
   ['escriure_5ftasca',['escriure_tasca',['../d2/dae/class_tasca.html#a51a117cee6a0bed1d96e8a890cd42722',1,'Tasca']]],
+  ['escriure_5ftasques_5ffutures',['escriure_tasques_futures',['../d7/d79/class_agenda.html#ae93a865556df581cd59c3f67f60a5609',1,'Agenda']]],
+  ['escriure_5ftasques_5fpassades',['escriure_tasques_passades',['../d7/d79/class_agenda.html#a4dbb0df94e50d82c3924b387b26a6bf2',1,'Agenda::escriure_tasques_passades()'],['../d5/dfa/_agenda_8cc.html#aa78da360c687c852aa1db438379c01de',1,'escriure_tasques_passades():&#160;Agenda.cc']]],
   ['etiqueta',['etiqueta',['../dc/d9d/class_comanda.html#ac80e9a80d16c6bac9a134e431bca1ed0',1,'Comanda']]],
   ['expressio',['expressio',['../dc/d9d/class_comanda.html#aa3191131592fbf58d20bed1052c31cd1',1,'Comanda']]]
 ];

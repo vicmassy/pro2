@@ -1,4 +1,4 @@
-digraph "Colores y flechas del Gráfico"
+digraph "Llegenda del Gràfic"
 {
   edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
   node [fontname="FreeSans",fontsize="10",shape=record];

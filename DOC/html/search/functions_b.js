@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['tasca',['Tasca',['../d2/dae/class_tasca.html#a67cd792d19dc4073a940e4d8aa1eea36',1,'Tasca::Tasca(string n)'],['../d2/dae/class_tasca.html#a0ecdf23fc047a638e66206941343da06',1,'Tasca::Tasca(string n, map&lt; string, bool &gt; &amp;e)'],['../dc/d9d/class_comanda.html#a67591051e9c5977c324ad8f8c3ac16e3',1,'Comanda::tasca()']]],
-  ['tasques_5ffutures',['tasques_futures',['../d7/d79/class_agenda.html#ac23ecbfde9f0dea166f017fee10c2d14',1,'Agenda']]],
-  ['tasques_5fpassades',['tasques_passades',['../d7/d79/class_agenda.html#a0c94bb1692ff940695931039500443b3',1,'Agenda']]],
+  ['tasca',['tasca',['../dc/d9d/class_comanda.html#a67591051e9c5977c324ad8f8c3ac16e3',1,'Comanda::tasca()'],['../d2/dae/class_tasca.html#a67cd792d19dc4073a940e4d8aa1eea36',1,'Tasca::Tasca(string n)'],['../d2/dae/class_tasca.html#a0ecdf23fc047a638e66206941343da06',1,'Tasca::Tasca(string n, map&lt; string, bool &gt; &amp;e)']]],
   ['te_5fexpressio',['te_expressio',['../dc/d9d/class_comanda.html#a81d17f4233e33f3baac7633546c066f0',1,'Comanda']]],
   ['te_5fhora',['te_hora',['../dc/d9d/class_comanda.html#abf8b926146f3664aacfd24d7800014e5',1,'Comanda']]],
   ['te_5ftitol',['te_titol',['../dc/d9d/class_comanda.html#a5452f5a877d58627cd2bd871cf31b074',1,'Comanda']]],

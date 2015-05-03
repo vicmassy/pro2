@@ -1,7 +1,7 @@
-\hypertarget{class_agenda}{\section{Referencia de la Clase Agenda}
+\hypertarget{class_agenda}{\section{Referència de la Classe Agenda}
 \label{class_agenda}\index{Agenda@{Agenda}}
 }
-\subsection*{Métodos públicos}
+\subsection*{Mètodes públics}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_agenda_a5c7b532b714bfbbe10e6be529160b45b}{Agenda} (string d, string h)
@@ -12,7 +12,7 @@ void \hyperlink{class_agenda_a059521520bbff1406580f43870b7e6b0}{inserir\-\_\-tas
 \item 
 void \hyperlink{class_agenda_a71ed63bb50f305d366ec34fe040de8e6}{modificar\-\_\-tasca} (const \hyperlink{class_comanda}{Comanda} \&c)
 \item 
-void \hyperlink{class_agenda_a5859536c0a5cf6aad7fa0a89049b6220}{esborrar\-\_\-tasca} ()
+void \hyperlink{class_agenda_a8dff51b098687e4c0c1eb8f30de2fa67}{esborrar\-\_\-tasca} (const \hyperlink{class_comanda}{Comanda} \&c)
 \item 
 void \hyperlink{class_agenda_aabd932aa3bf3d31c8b285c1df820cb03}{interpretar\-\_\-modificar\-\_\-rellotge} (const \hyperlink{class_comanda}{Comanda} \&c)
 \item 
@@ -32,25 +32,25 @@ void \hyperlink{class_agenda_a3d8966a287c2eeb1764d5ebe7029724a}{interpretar\-\_\
 \item 
 void \hyperlink{class_agenda_ac7896e2cca1324f1cb182666e934c49e}{escriure\-\_\-rellotge} ()
 \item 
-void \hyperlink{class_agenda_ac23ecbfde9f0dea166f017fee10c2d14}{tasques\-\_\-futures} (const \hyperlink{class_comanda}{Comanda} \&c)
+void \hyperlink{class_agenda_ae93a865556df581cd59c3f67f60a5609}{escriure\-\_\-tasques\-\_\-futures} (const \hyperlink{class_comanda}{Comanda} \&c)
 \item 
-void \hyperlink{class_agenda_a0c94bb1692ff940695931039500443b3}{tasques\-\_\-passades} ()
+void \hyperlink{class_agenda_a4dbb0df94e50d82c3924b387b26a6bf2}{escriure\-\_\-tasques\-\_\-passades} ()
 \end{DoxyCompactItemize}
-\subsection*{Atributos privados}
+\subsection*{Atributs Privats}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_instant}{Instant} \hyperlink{class_agenda_a97ffd092e208975c754a1ed7624e3cb5}{r}
 \end{DoxyCompactItemize}
 
 
-\subsection{Descripción detallada}
+\subsection{Descripció Detallada}
 
 
-Definición en la línea 8 del archivo Agenda.\-hh.
+Definició a la línia 13 del fitxer Agenda.\-hh.
 
 
 
-\subsection{Documentación del constructor y destructor}
+\subsection{Documentació del Constructor i el Destructor}
 \hypertarget{class_agenda_a5c7b532b714bfbbe10e6be529160b45b}{\index{Agenda@{Agenda}!Agenda@{Agenda}}
 \index{Agenda@{Agenda}!Agenda@{Agenda}}
 \subsubsection[{Agenda}]{\setlength{\rightskip}{0pt plus 5cm}Agenda\-::\-Agenda (
@@ -61,18 +61,18 @@ Definición en la línea 8 del archivo Agenda.\-hh.
 )}}\label{class_agenda_a5c7b532b714bfbbe10e6be529160b45b}
 
 
-Definición en la línea 3 del archivo Agenda.\-cc.
+Definició a la línia 3 del fitxer Agenda.\-cc.
 
 
 \begin{DoxyCode}
 3                                  \{
 4   \textcolor{comment}{// TODO: Hem de convertir els strings en un objecte instant i guardar-lo a r}
-5   \textcolor{comment}{//this->r = r;}
+5     \textcolor{comment}{//r = Instant(d,h);}
 6 \}
 \end{DoxyCode}
 
 
-\subsection{Documentación de las funciones miembro}
+\subsection{Documentació de les Funcions Membre}
 \hypertarget{class_agenda_a9682676ce90d55251713aaf5d155f170}{\index{Agenda@{Agenda}!modificar\-\_\-rellotge@{modificar\-\_\-rellotge}}
 \index{modificar\-\_\-rellotge@{modificar\-\_\-rellotge}!Agenda@{Agenda}}
 \subsubsection[{modificar\-\_\-rellotge}]{\setlength{\rightskip}{0pt plus 5cm}void Agenda\-::modificar\-\_\-rellotge (
@@ -82,16 +82,18 @@ Definición en la línea 3 del archivo Agenda.\-cc.
 )}}\label{class_agenda_a9682676ce90d55251713aaf5d155f170}
 
 
-Definición en la línea 8 del archivo Agenda.\-cc.
+Definició a la línia 8 del fitxer Agenda.\-cc.
 
 
 \begin{DoxyCode}
 8                                                 \{
-9   \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_aadabfc85ec7cdeb45039e8952a1ab124}{nombre\_dates}() == 1)
-10     \hyperlink{class_agenda_a97ffd092e208975c754a1ed7624e3cb5}{r}.\hyperlink{class_instant_a7db61132a491c96b02c60f6b68ead889}{modificar\_data}(c.\hyperlink{class_comanda_ab4ce0a50bde32145d11cbaee753526c7}{data}(1));
-11   \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_abf8b926146f3664aacfd24d7800014e5}{te\_hora}())
-12     \hyperlink{class_agenda_a97ffd092e208975c754a1ed7624e3cb5}{r}.\hyperlink{class_instant_a9f5b85dfca181715c6814b492b357c70}{modificar\_hora}(c.\hyperlink{class_comanda_ae8bca2ad702d3316dc1c53dcab7cac02}{hora});
-13 \}
+9   \textcolor{comment}{/*}
+10 \textcolor{comment}{    if (c.nombre\_dates() == 1)}
+11 \textcolor{comment}{    r.modificar\_data(c.data(1));}
+12 \textcolor{comment}{    if (c.te\_hora())}
+13 \textcolor{comment}{    r.modificar\_hora(c.hora);}
+14 \textcolor{comment}{  */}
+15 \}
 \end{DoxyCode}
 \hypertarget{class_agenda_a059521520bbff1406580f43870b7e6b0}{\index{Agenda@{Agenda}!inserir\-\_\-tasca@{inserir\-\_\-tasca}}
 \index{inserir\-\_\-tasca@{inserir\-\_\-tasca}!Agenda@{Agenda}}
@@ -102,13 +104,13 @@ Definición en la línea 8 del archivo Agenda.\-cc.
 )}}\label{class_agenda_a059521520bbff1406580f43870b7e6b0}
 
 
-Definición en la línea 15 del archivo Agenda.\-cc.
+Definició a la línia 17 del fitxer Agenda.\-cc.
 
 
 \begin{DoxyCode}
-15                                            \{
-16   
-17 \}
+17                                            \{
+18   
+19 \}
 \end{DoxyCode}
 \hypertarget{class_agenda_a71ed63bb50f305d366ec34fe040de8e6}{\index{Agenda@{Agenda}!modificar\-\_\-tasca@{modificar\-\_\-tasca}}
 \index{modificar\-\_\-tasca@{modificar\-\_\-tasca}!Agenda@{Agenda}}
@@ -117,13 +119,33 @@ Definición en la línea 15 del archivo Agenda.\-cc.
 \item[{const {\bf Comanda} \&}]{c}
 \end{DoxyParamCaption}
 )}}\label{class_agenda_a71ed63bb50f305d366ec34fe040de8e6}
-\hypertarget{class_agenda_a5859536c0a5cf6aad7fa0a89049b6220}{\index{Agenda@{Agenda}!esborrar\-\_\-tasca@{esborrar\-\_\-tasca}}
+
+
+Definició a la línia 21 del fitxer Agenda.\-cc.
+
+
+\begin{DoxyCode}
+21                                             \{
+22 
+23 \}
+\end{DoxyCode}
+\hypertarget{class_agenda_a8dff51b098687e4c0c1eb8f30de2fa67}{\index{Agenda@{Agenda}!esborrar\-\_\-tasca@{esborrar\-\_\-tasca}}
 \index{esborrar\-\_\-tasca@{esborrar\-\_\-tasca}!Agenda@{Agenda}}
 \subsubsection[{esborrar\-\_\-tasca}]{\setlength{\rightskip}{0pt plus 5cm}void Agenda\-::esborrar\-\_\-tasca (
 \begin{DoxyParamCaption}
-{}
+\item[{const {\bf Comanda} \&}]{c}
 \end{DoxyParamCaption}
-)}}\label{class_agenda_a5859536c0a5cf6aad7fa0a89049b6220}
+)}}\label{class_agenda_a8dff51b098687e4c0c1eb8f30de2fa67}
+
+
+Definició a la línia 25 del fitxer Agenda.\-cc.
+
+
+\begin{DoxyCode}
+25                                            \{
+26 
+27 \}
+\end{DoxyCode}
 \hypertarget{class_agenda_aabd932aa3bf3d31c8b285c1df820cb03}{\index{Agenda@{Agenda}!interpretar\-\_\-modificar\-\_\-rellotge@{interpretar\-\_\-modificar\-\_\-rellotge}}
 \index{interpretar\-\_\-modificar\-\_\-rellotge@{interpretar\-\_\-modificar\-\_\-rellotge}!Agenda@{Agenda}}
 \subsubsection[{interpretar\-\_\-modificar\-\_\-rellotge}]{\setlength{\rightskip}{0pt plus 5cm}void Agenda\-::interpretar\-\_\-modificar\-\_\-rellotge (
@@ -133,22 +155,24 @@ Definición en la línea 15 del archivo Agenda.\-cc.
 )}}\label{class_agenda_aabd932aa3bf3d31c8b285c1df820cb03}
 
 
-Definición en la línea 19 del archivo Agenda.\-cc.
+Definició a la línia 29 del fitxer Agenda.\-cc.
 
 
 \begin{DoxyCode}
-19                                                             \{
-20     \hyperlink{class_instant}{Instant} nou(a.consultar\_rellotge());
-21     \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_aadabfc85ec7cdeb45039e8952a1ab124}{nombre\_dates}() == 1)
-22         nou.\hyperlink{class_instant_a7db61132a491c96b02c60f6b68ead889}{modificar\_data}(c.\hyperlink{class_comanda_ab4ce0a50bde32145d11cbaee753526c7}{data}(1));
-23     \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_abf8b926146f3664aacfd24d7800014e5}{te\_hora}())
-24         nou.modificar\_hora(c.\hyperlink{class_comanda_ae8bca2ad702d3316dc1c53dcab7cac02}{hora}());
-25     \textcolor{keywordflow}{if} (not(nou < a.consultar\_rellotge()))
-26       \textcolor{comment}{// TODO: Gestionar quan és igual, que no canviï}
-27         a.modificar\_rellotge(nou);
-28     \textcolor{keywordflow}{else}
-29         cout << \hyperlink{main_8cc_ac0c5b89ada2846866beff79078de7388}{ERROR} << endl;
-30 \}
+29                                                             \{
+30   \textcolor{comment}{/*}
+31 \textcolor{comment}{  Instant nou(consultar\_rellotge());}
+32 \textcolor{comment}{  if (c.nombre\_dates() == 1)}
+33 \textcolor{comment}{    nou.modificar\_data(c.data(1));}
+34 \textcolor{comment}{  if (c.te\_hora())}
+35 \textcolor{comment}{    nou.modificar\_hora(c.hora());}
+36 \textcolor{comment}{  if (not(nou < consultar\_rellotge()))}
+37 \textcolor{comment}{      // TODO: Gestionar quan és igual, que no canviï}
+38 \textcolor{comment}{    modificar\_rellotge(nou);}
+39 \textcolor{comment}{  else}
+40 \textcolor{comment}{    cout << ERROR << endl;}
+41 \textcolor{comment}{  */}
+42 \}
 \end{DoxyCode}
 \hypertarget{class_agenda_ae0fbad6af5d4132169b2daadacb8ea42}{\index{Agenda@{Agenda}!interpretar\-\_\-inserir\-\_\-tasca@{interpretar\-\_\-inserir\-\_\-tasca}}
 \index{interpretar\-\_\-inserir\-\_\-tasca@{interpretar\-\_\-inserir\-\_\-tasca}!Agenda@{Agenda}}
@@ -159,19 +183,21 @@ Definición en la línea 19 del archivo Agenda.\-cc.
 )}}\label{class_agenda_ae0fbad6af5d4132169b2daadacb8ea42}
 
 
-Definición en la línea 32 del archivo Agenda.\-cc.
+Definició a la línia 44 del fitxer Agenda.\-cc.
 
 
 \begin{DoxyCode}
-32                                                        \{
-33     vector<string> etiquetes(c.\hyperlink{class_comanda_a4280b6ae2d435d9c21bbed364cb1db3d}{nombre\_etiquetes}());
-34     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= c.\hyperlink{class_comanda_a4280b6ae2d435d9c21bbed364cb1db3d}{nombre\_etiquetes}(); ++i)
-35         etiquetes[i-1] = c.\hyperlink{class_comanda_ac80e9a80d16c6bac9a134e431bca1ed0}{etiqueta}(i);
-36     \textcolor{keywordflow}{if}(c.\hyperlink{class_comanda_aadabfc85ec7cdeb45039e8952a1ab124}{nombre\_dates}() == 0)\{
-37       \textcolor{comment}{// TODO: Posar data actual}
-38     \}
-39     a.inserir\_tasca(c.\hyperlink{class_comanda_ad1cefdda3db389d9ab536a59e2ee907d}{titol}(), \hyperlink{class_instant}{Instant}(c.\hyperlink{class_comanda_ab4ce0a50bde32145d11cbaee753526c7}{data}(1), c.\hyperlink{class_comanda_ae8bca2ad702d3316dc1c53dcab7cac02}{hora}), etiquetes);
-40 \}    
+44                                                        \{
+45   \textcolor{comment}{/*}
+46 \textcolor{comment}{  vector<string> etiquetes(c.nombre\_etiquetes());}
+47 \textcolor{comment}{  for (int i = 1; i <= c.nombre\_etiquetes(); ++i)}
+48 \textcolor{comment}{    etiquetes[i-1] = c.etiqueta(i);}
+49 \textcolor{comment}{  if(c.nombre\_dates() == 0)\{}
+50 \textcolor{comment}{      // TODO: Posar data actual}
+51 \textcolor{comment}{  \}}
+52 \textcolor{comment}{  inserir\_tasca(c.titol(), Instant(c.data(1), c.hora), etiquetes);}
+53 \textcolor{comment}{  */}
+54 \}    
 \end{DoxyCode}
 \hypertarget{class_agenda_ac09bb2bf7cf5d1d6d4c30d4c021ada34}{\index{Agenda@{Agenda}!interpretar\-\_\-escriure\-\_\-tasques@{interpretar\-\_\-escriure\-\_\-tasques}}
 \index{interpretar\-\_\-escriure\-\_\-tasques@{interpretar\-\_\-escriure\-\_\-tasques}!Agenda@{Agenda}}
@@ -182,19 +208,21 @@ Definición en la línea 32 del archivo Agenda.\-cc.
 )}}\label{class_agenda_ac09bb2bf7cf5d1d6d4c30d4c021ada34}
 
 
-Definición en la línea 42 del archivo Agenda.\-cc.
+Definició a la línia 56 del fitxer Agenda.\-cc.
 
 
 \begin{DoxyCode}
-42                                                           \{
-43     \textcolor{keywordtype}{string} etiquetes;
-44     \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_a4280b6ae2d435d9c21bbed364cb1db3d}{nombre\_etiquetes}() == 1)
-45         etiquetes = c.\hyperlink{class_comanda_ac80e9a80d16c6bac9a134e431bca1ed0}{etiqueta}(1);
-46     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c.\hyperlink{class_comanda_a81d17f4233e33f3baac7633546c066f0}{te\_expressio}())
-47         etiquetes = c.\hyperlink{class_comanda_aa3191131592fbf58d20bed1052c31cd1}{expressio}();
-48     \textcolor{keywordflow}{else}
-49         etiquetes = \textcolor{stringliteral}{""};
-50 \}    
+56                                                           \{
+57   \textcolor{comment}{/*}
+58 \textcolor{comment}{  string etiquetes;}
+59 \textcolor{comment}{  if (c.nombre\_etiquetes() == 1)}
+60 \textcolor{comment}{    etiquetes = c.etiqueta(1);}
+61 \textcolor{comment}{  else if (c.te\_expressio())}
+62 \textcolor{comment}{    etiquetes = c.expressio();}
+63 \textcolor{comment}{  else}
+64 \textcolor{comment}{    etiquetes = "";}
+65 \textcolor{comment}{  */}
+66 \}    
 \end{DoxyCode}
 \hypertarget{class_agenda_a02f6c89125af8bc3f4851ce169dd5f73}{\index{Agenda@{Agenda}!interpretar\-\_\-modificar\-\_\-tasca@{interpretar\-\_\-modificar\-\_\-tasca}}
 \index{interpretar\-\_\-modificar\-\_\-tasca@{interpretar\-\_\-modificar\-\_\-tasca}!Agenda@{Agenda}}
@@ -203,6 +231,16 @@ Definición en la línea 42 del archivo Agenda.\-cc.
 \item[{const {\bf Comanda} \&}]{c}
 \end{DoxyParamCaption}
 )}}\label{class_agenda_a02f6c89125af8bc3f4851ce169dd5f73}
+
+
+Definició a la línia 68 del fitxer Agenda.\-cc.
+
+
+\begin{DoxyCode}
+68                                                         \{
+69 
+70 \};
+\end{DoxyCode}
 \hypertarget{class_agenda_a07ef0637cc544831204b75d7e03f75f5}{\index{Agenda@{Agenda}!interpretar\-\_\-esborrar\-\_\-tasca@{interpretar\-\_\-esborrar\-\_\-tasca}}
 \index{interpretar\-\_\-esborrar\-\_\-tasca@{interpretar\-\_\-esborrar\-\_\-tasca}!Agenda@{Agenda}}
 \subsubsection[{interpretar\-\_\-esborrar\-\_\-tasca}]{\setlength{\rightskip}{0pt plus 5cm}void Agenda\-::interpretar\-\_\-esborrar\-\_\-tasca (
@@ -210,6 +248,16 @@ Definición en la línea 42 del archivo Agenda.\-cc.
 \item[{const {\bf Comanda} \&}]{c}
 \end{DoxyParamCaption}
 )}}\label{class_agenda_a07ef0637cc544831204b75d7e03f75f5}
+
+
+Definició a la línia 72 del fitxer Agenda.\-cc.
+
+
+\begin{DoxyCode}
+72                                                        \{
+73 
+74 \};
+\end{DoxyCode}
 \hypertarget{class_agenda_a77526b8f1b285b6e6d948454c80ed4d4}{\index{Agenda@{Agenda}!interpretar\-\_\-esborrar\-\_\-etiqueta@{interpretar\-\_\-esborrar\-\_\-etiqueta}}
 \index{interpretar\-\_\-esborrar\-\_\-etiqueta@{interpretar\-\_\-esborrar\-\_\-etiqueta}!Agenda@{Agenda}}
 \subsubsection[{interpretar\-\_\-esborrar\-\_\-etiqueta}]{\setlength{\rightskip}{0pt plus 5cm}void Agenda\-::interpretar\-\_\-esborrar\-\_\-etiqueta (
@@ -217,6 +265,16 @@ Definición en la línea 42 del archivo Agenda.\-cc.
 \item[{const {\bf Comanda} \&}]{c}
 \end{DoxyParamCaption}
 )}}\label{class_agenda_a77526b8f1b285b6e6d948454c80ed4d4}
+
+
+Definició a la línia 76 del fitxer Agenda.\-cc.
+
+
+\begin{DoxyCode}
+76                                                           \{
+77 
+78 \}
+\end{DoxyCode}
 \hypertarget{class_agenda_a3d8966a287c2eeb1764d5ebe7029724a}{\index{Agenda@{Agenda}!interpretar\-\_\-esborrar\-\_\-etiquetes@{interpretar\-\_\-esborrar\-\_\-etiquetes}}
 \index{interpretar\-\_\-esborrar\-\_\-etiquetes@{interpretar\-\_\-esborrar\-\_\-etiquetes}!Agenda@{Agenda}}
 \subsubsection[{interpretar\-\_\-esborrar\-\_\-etiquetes}]{\setlength{\rightskip}{0pt plus 5cm}void Agenda\-::interpretar\-\_\-esborrar\-\_\-etiquetes (
@@ -224,6 +282,16 @@ Definición en la línea 42 del archivo Agenda.\-cc.
 \item[{const {\bf Comanda} \&}]{c}
 \end{DoxyParamCaption}
 )}}\label{class_agenda_a3d8966a287c2eeb1764d5ebe7029724a}
+
+
+Definició a la línia 80 del fitxer Agenda.\-cc.
+
+
+\begin{DoxyCode}
+80                                                            \{
+81 
+82 \}
+\end{DoxyCode}
 \hypertarget{class_agenda_afe4f34f7926211f357e04299ddfea46d}{\index{Agenda@{Agenda}!consultar\-\_\-rellotge@{consultar\-\_\-rellotge}}
 \index{consultar\-\_\-rellotge@{consultar\-\_\-rellotge}!Agenda@{Agenda}}
 \subsubsection[{consultar\-\_\-rellotge}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Instant} Agenda\-::consultar\-\_\-rellotge (
@@ -231,6 +299,18 @@ Definición en la línea 42 del archivo Agenda.\-cc.
 {}
 \end{DoxyParamCaption}
 )}}\label{class_agenda_afe4f34f7926211f357e04299ddfea46d}
+
+
+Definició a la línia 84 del fitxer Agenda.\-cc.
+
+
+\begin{DoxyCode}
+84                                   \{
+85   \textcolor{comment}{/*}
+86 \textcolor{comment}{  return r;}
+87 \textcolor{comment}{  */}
+88 \}
+\end{DoxyCode}
 \hypertarget{class_agenda_ac7896e2cca1324f1cb182666e934c49e}{\index{Agenda@{Agenda}!escriure\-\_\-rellotge@{escriure\-\_\-rellotge}}
 \index{escriure\-\_\-rellotge@{escriure\-\_\-rellotge}!Agenda@{Agenda}}
 \subsubsection[{escriure\-\_\-rellotge}]{\setlength{\rightskip}{0pt plus 5cm}void Agenda\-::escriure\-\_\-rellotge (
@@ -238,33 +318,53 @@ Definición en la línea 42 del archivo Agenda.\-cc.
 {}
 \end{DoxyParamCaption}
 )}}\label{class_agenda_ac7896e2cca1324f1cb182666e934c49e}
-\hypertarget{class_agenda_ac23ecbfde9f0dea166f017fee10c2d14}{\index{Agenda@{Agenda}!tasques\-\_\-futures@{tasques\-\_\-futures}}
-\index{tasques\-\_\-futures@{tasques\-\_\-futures}!Agenda@{Agenda}}
-\subsubsection[{tasques\-\_\-futures}]{\setlength{\rightskip}{0pt plus 5cm}void Agenda\-::tasques\-\_\-futures (
+
+
+Definició a la línia 90 del fitxer Agenda.\-cc.
+
+
+\begin{DoxyCode}
+90                               \{
+91 
+92 \}
+\end{DoxyCode}
+\hypertarget{class_agenda_ae93a865556df581cd59c3f67f60a5609}{\index{Agenda@{Agenda}!escriure\-\_\-tasques\-\_\-futures@{escriure\-\_\-tasques\-\_\-futures}}
+\index{escriure\-\_\-tasques\-\_\-futures@{escriure\-\_\-tasques\-\_\-futures}!Agenda@{Agenda}}
+\subsubsection[{escriure\-\_\-tasques\-\_\-futures}]{\setlength{\rightskip}{0pt plus 5cm}void Agenda\-::escriure\-\_\-tasques\-\_\-futures (
 \begin{DoxyParamCaption}
 \item[{const {\bf Comanda} \&}]{c}
 \end{DoxyParamCaption}
-)}}\label{class_agenda_ac23ecbfde9f0dea166f017fee10c2d14}
-\hypertarget{class_agenda_a0c94bb1692ff940695931039500443b3}{\index{Agenda@{Agenda}!tasques\-\_\-passades@{tasques\-\_\-passades}}
-\index{tasques\-\_\-passades@{tasques\-\_\-passades}!Agenda@{Agenda}}
-\subsubsection[{tasques\-\_\-passades}]{\setlength{\rightskip}{0pt plus 5cm}void Agenda\-::tasques\-\_\-passades (
+)}}\label{class_agenda_ae93a865556df581cd59c3f67f60a5609}
+
+
+Definició a la línia 94 del fitxer Agenda.\-cc.
+
+
+\begin{DoxyCode}
+94                                                      \{
+95 
+96 \}
+\end{DoxyCode}
+\hypertarget{class_agenda_a4dbb0df94e50d82c3924b387b26a6bf2}{\index{Agenda@{Agenda}!escriure\-\_\-tasques\-\_\-passades@{escriure\-\_\-tasques\-\_\-passades}}
+\index{escriure\-\_\-tasques\-\_\-passades@{escriure\-\_\-tasques\-\_\-passades}!Agenda@{Agenda}}
+\subsubsection[{escriure\-\_\-tasques\-\_\-passades}]{\setlength{\rightskip}{0pt plus 5cm}void Agenda\-::escriure\-\_\-tasques\-\_\-passades (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_agenda_a0c94bb1692ff940695931039500443b3}
+)}}\label{class_agenda_a4dbb0df94e50d82c3924b387b26a6bf2}
 
 
-\subsection{Documentación de los datos miembro}
+\subsection{Documentació de les Dades Membre}
 \hypertarget{class_agenda_a97ffd092e208975c754a1ed7624e3cb5}{\index{Agenda@{Agenda}!r@{r}}
 \index{r@{r}!Agenda@{Agenda}}
 \subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Instant} Agenda\-::r\hspace{0.3cm}{\ttfamily [private]}}}\label{class_agenda_a97ffd092e208975c754a1ed7624e3cb5}
 
 
-Definición en la línea 12 del archivo Agenda.\-hh.
+Definició a la línia 17 del fitxer Agenda.\-hh.
 
 
 
-La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+La documentació d'aquesta classe es va generar a partir dels següents fitxers\-:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{_agenda_8hh}{Agenda.\-hh}\item 
 \hyperlink{_agenda_8cc}{Agenda.\-cc}\end{DoxyCompactItemize}

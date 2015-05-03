@@ -4,11 +4,11 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = UTF-8
-PROJECT_NAME           = "Caso de estudio: experimentos inmunologicos. Laboratorio de PRO2."
-PROJECT_NUMBER         = "v4.1 20-11-2014"
-OUTPUT_DIRECTORY       = "DOC/"
+PROJECT_NAME           = "Pràctica PRO2. Gestor de tasques."
+PROJECT_NUMBER         = "v1.0 5-5-2015"
+OUTPUT_DIRECTORY       = "../DOC/"
 CREATE_SUBDIRS         = YES
-OUTPUT_LANGUAGE        = Spanish
+OUTPUT_LANGUAGE        = Catalan
 BRIEF_MEMBER_DESC      = YES
 REPEAT_BRIEF           = YES
 ABBREVIATE_BRIEF       = "The $name class" \

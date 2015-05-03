@@ -9,26 +9,26 @@ using namespace std;
 
 class Tasca {
   
-  private:
+  	private:
 
-  	string nom;
-  	map<string,bool> etiquetes;
-
-
-  public:
-
-  	//Constructors
-
-  	Tasca(string n);
-
-  	Tasca(string n, map<string, bool> &e);
+		string nom;
+		map<string,bool> etiquetes;
 
 
-  	//Consultores
+  	public:
+
+		//Constructors
+
+		Tasca(string n);
+
+		Tasca(string n, map<string, bool> &e);
+
+
+		//Consultores
 	
-	//Pre: El p.i. no es buit
-	//POst: Escriu la tasca pel canal de sortida
-  	void escriure_tasca();
+		//Pre: El p.i. no es buit
+		//Post: Escriu la tasca pel canal de sortida
+		void escriure_tasca();
 
 };
 
