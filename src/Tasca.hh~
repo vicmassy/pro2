@@ -25,9 +25,7 @@ class Tasca {
 
 
   	//Consultores
-	
-	//Pre: El p.i. no es buit
-	//POst: Escriu la tasca pel canal de sortida
+
   	void escriure_tasca();
 
 };
