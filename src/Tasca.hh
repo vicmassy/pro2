@@ -28,6 +28,6 @@ class Tasca {
 
   	void escriure_tasca();
 
-}
+};
 
 #endif

@@ -78,6 +78,6 @@ class Agenda {
       //Post: s'han escrit totes les tasques passades al canal de sortida
       void tasques_passades();
     
-}
+};
 
 #endif

@@ -49,6 +49,10 @@ void Agenda::interpretar_escriure_tasques(const Comanda &c) {
         etiquetes = "";
 }    
    
-void Agenda::interpretar_modificar_tasca(c);
+void Agenda::interpretar_modificar_tasca(const Comanda &c){
 
-void Agenda::interpretar_esborrar_tasca(c);
+};
+
+void Agenda::interpretar_esborrar_tasca(const Comanda &c){
+
+};

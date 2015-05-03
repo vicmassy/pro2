@@ -21,7 +21,7 @@ public:
     //Post: es crea la data amb els valors dels parametres
     Instant (string d, string h);
 
-    Instant (Instant i);
+    Instant (const Instant &i);
     
     //Consultora
     
@@ -49,6 +49,6 @@ public:
     //Post: escriu la data i hora al canal de sortida
     void escriure_data();
     
-}
+};
 
 #endif
