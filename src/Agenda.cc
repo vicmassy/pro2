@@ -2,7 +2,6 @@
 
 Agenda::Agenda(string d, string h) {
 	// TODO: Hem de convertir els strings en un objecte instant i guardar-lo a r
-  	//r = Instant(d,h);
 }
 
 void Agenda::modificar_rellotge(const Comanda &c) {
@@ -95,6 +94,6 @@ void Agenda::escriure_tasques_futures(const Comanda &c){
 
 }
 
-void escriure_tasques_passades(){
+void Agenda::escriure_tasques_passades(){
 
 }

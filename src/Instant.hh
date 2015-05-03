@@ -17,6 +17,9 @@ class Instant {
     
         //Creadores
       
+
+        Instant ();
+
         //Pre: d i h tenen format de data i hora respectivament
         //Post: es crea la data amb els valors dels parametres
         Instant (string d, string h);
