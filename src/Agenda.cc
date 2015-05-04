@@ -6,27 +6,6 @@ Agenda::Agenda(string d, string h) {
 
 void Agenda::modificar_rellotge(const Comanda &c) {
 	/*
-  	if (c.nombre_dates() == 1)
-		r.modificar_data(c.data(1));
-  	if (c.te_hora())
-		r.modificar_hora(c.hora);
-	*/
-}
-
-void Agenda::inserir_tasca(const Comanda &c) {
-  
-}
-
-void Agenda::modificar_tasca(const Comanda &c){
-
-}
-
-void Agenda::esborrar_tasca(const Comanda &c){
-
-}
-
-void Agenda::interpretar_modificar_rellotge(const Comanda &c) {
-	/*
 	Instant nou(consultar_rellotge());
 	if (c.nombre_dates() == 1)
 		nou.modificar_data(c.data(1));
@@ -38,9 +17,15 @@ void Agenda::interpretar_modificar_rellotge(const Comanda &c) {
 	else
 		cout << ERROR << endl;
 	*/
+	/*
+  	if (c.nombre_dates() == 1)
+		r.modificar_data(c.data(1));
+  	if (c.te_hora())
+		r.modificar_hora(c.hora);
+	*/
 }
 
-void Agenda::interpretar_inserir_tasca(const Comanda &c) {
+void Agenda::inserir_tasca(const Comanda &c) {
 	/*
 	vector<string> etiquetes(c.nombre_etiquetes());
 	for (int i = 1; i <= c.nombre_etiquetes(); ++i)
@@ -50,33 +35,21 @@ void Agenda::interpretar_inserir_tasca(const Comanda &c) {
 	}
 	inserir_tasca(c.titol(), Instant(c.data(1), c.hora), etiquetes);
 	*/
-}    
+}
 
-void Agenda::interpretar_escriure_tasques(const Comanda &c) {
-	/*
-	string etiquetes;
-	if (c.nombre_etiquetes() == 1)
-		etiquetes = c.etiqueta(1);
-	else if (c.te_expressio())
-		etiquetes = c.expressio();
-	else
-		etiquetes = "";
-	*/
-}    
-   
-void Agenda::interpretar_modificar_tasca(const Comanda &c){
-
-};
-
-void Agenda::interpretar_esborrar_tasca(const Comanda &c){
-
-};
-
-void Agenda::interpretar_esborrar_etiqueta(const Comanda &c){
+void Agenda::modificar_tasca(const Comanda &c){
 
 }
 
-void Agenda::interpretar_esborrar_etiquetes(const Comanda &c){
+void Agenda::esborrar_tasca(const Comanda &c){
+
+}
+
+void Agenda::esborrar_etiqueta(const Comanda &c){
+
+}
+
+void Agenda::esborrar_etiquetes(const Comanda &c){
 
 }
 
@@ -91,7 +64,15 @@ void Agenda::escriure_rellotge(){
 }
 
 void Agenda::escriure_tasques_futures(const Comanda &c){
-
+	/*
+	string etiquetes;
+	if (c.nombre_etiquetes() == 1)
+		etiquetes = c.etiqueta(1);
+	else if (c.te_expressio())
+		etiquetes = c.expressio();
+	else
+		etiquetes = "";
+	*/
 }
 
 void Agenda::escriure_tasques_passades(){

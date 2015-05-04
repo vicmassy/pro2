@@ -8,47 +8,47 @@ using namespace std;
 
 class Instant {
 
-    private:
+	private:
   
-        int num(char c);
-        int hh, min, dd, mm, yy;
-    
-    public: 
-    
-        //Creadores
-      
-	//Pre: cert
-	//Post: es crea un instant sense valors
-        Instant ();
-
-        //Pre: d i h tenen format de data i hora respectivament
-        //Post: es crea la data amb els valors dels parametres
-        Instant (string d, string h);
+		int num(char c);
+		int hh, min, dd, mm, yy;
 	
-	//Pre: Instant i no esta buit
-	//Post: es crea una copia de l'instant i
-        Instant (const Instant &i);
-        
-        //Comparadors
-        
-        bool operator<(const Instant &i) const; 
-        
-        //Modificadors
-        
-        //Pre: h te format d'hora
-        //Post: la nova hora del parametre implicit es la d'h
-        void modificar_hora(string h);
-        
-        //Pre: d te format de data
-        //Post: la nova data del parametre implicit es la de d
-        void modificar_data(string d);
-        
-        //Escriptura
-        
-        //Pre: cert
-        //Post: escriu la data i hora al canal de sortida
-        void escriure_data();
-    
+	public: 
+	
+		//Creadores
+	  
+		//Pre: cert
+	   	//Post: es crea un instant sense valors
+	   	Instant ();
+
+		//Pre: d i h tenen format de data i hora respectivament
+		//Post: es crea la data amb els valors dels parametres
+		Instant (string d, string h);
+	
+	   	//Pre: Instant i no esta buit
+	   	//Post: es crea una copia de l'instant i
+		Instant (const Instant &i);
+		
+		//Comparadors
+		
+		bool operator<(const Instant &i) const; 
+		
+		//Modificadors
+		
+		//Pre: h te format d'hora
+		//Post: la nova hora del parametre implicit es la d'h
+		void modificar_hora(string h);
+		
+		//Pre: d te format de data
+		//Post: la nova data del parametre implicit es la de d
+		void modificar_data(string d);
+		
+		//Escriptura
+		
+		//Pre: cert
+		//Post: escriu la data i hora al canal de sortida
+		void escriure_data();
+	
 };
 
 #endif

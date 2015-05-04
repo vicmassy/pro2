@@ -15,25 +15,25 @@ int main() {
 				if (c.es_consulta())
 					a.escriure_rellotge();
 				else
-					a.interpretar_modificar_rellotge(c);
+					a.modificar_rellotge(c);
 			}
 			else if (c.es_insercio())
-				a.interpretar_inserir_tasca(c);
+				a.inserir_tasca(c);
 			else if (c.es_consulta()) {
 				if (c.es_passat())
 					a.escriure_tasques_passades();
 				else
-					a.interpretar_escriure_tasques(c);
+					a.escriure_tasques_futures(c);
 			}
 			else if (c.es_modificacio())
-				a.interpretar_modificar_tasca(c);
+				a.modificar_tasca(c);
 			else if (c.es_esborrat()) {
 				if (c.tipus_esborrat() == "tasca")
-					a.interpretar_esborrar_tasca(c);
+					a.esborrar_tasca(c);
 				else if(c.tipus_esborrat() == "etiqueta")
-					a.interpretar_esborrar_etiqueta(c);
+					a.esborrar_etiqueta(c);
 				else if(c.tipus_esborrat() == "etiquetes")
-					a.interpretar_esborrar_etiquetes(c);
+					a.esborrar_etiquetes(c);
 			}	
 		}
 	}
