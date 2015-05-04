@@ -17,13 +17,16 @@ class Instant {
     
         //Creadores
       
-
+	//Pre: cert
+	//Post: es crea un instant sense valors
         Instant ();
 
         //Pre: d i h tenen format de data i hora respectivament
         //Post: es crea la data amb els valors dels parametres
         Instant (string d, string h);
-
+	
+	//Pre: Instant i no esta buit
+	//Post: es crea una copia de l'instant i
         Instant (const Instant &i);
         
         //Comparadors

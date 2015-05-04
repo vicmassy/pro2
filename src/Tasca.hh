@@ -19,8 +19,12 @@ class Tasca {
 
 		//Constructors
 
+		//Pre: cert
+		//Post: es crea una tasca amb titol n
 		Tasca(string n);
-
+		
+		//Pre: cert
+		//Post: es crea una tasca amb titol n i e etiquetes
 		Tasca(string n, map<string,bool> &e);
 
 
