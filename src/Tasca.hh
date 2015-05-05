@@ -19,12 +19,16 @@ class Tasca {
 
 		//Constructors
 
-		//Pre: cert
-		//Post: es crea una tasca amb titol n
+  		/** @brief
+		\pre cert
+		\post es crea una tasca amb titol n
+		*/
 		Tasca(string n);
 		
-		//Pre: cert
-		//Post: es crea una tasca amb titol n i e etiquetes
+		/** @brief
+		\pre cert
+		\post es crea una tasca amb titol n i e etiquetes
+		*/
 		Tasca(string n, map<string,bool> &e);
 
 
@@ -33,8 +37,10 @@ class Tasca {
 
 		//Consultores
 	
-		//Pre: El p.i. no es buit
-		//Post: Escriu la tasca pel canal de sortida
+		/** @brief
+		\pre El p.i. no es buit
+		\post Escriu la tasca pel canal de sortida
+		*/
 		void escriure_tasca();
 
 };
