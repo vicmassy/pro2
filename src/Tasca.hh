@@ -3,7 +3,7 @@
 
 #ifndef __DIAGRAMA__
 #include <iostream>
-#include <map>
+#include <set>
 #endif
 
 using namespace std;
@@ -17,7 +17,7 @@ class Tasca {
     private:
     
         string nom;
-        map<string,bool> etiquetes;
+        set<string> etiquetes;
 
     public:
 
@@ -61,9 +61,15 @@ class Tasca {
     
         /** @brief Escriu la tasca
         \pre El p.i. no es buit.
-        \post S'ha escrit la tasca.
+        \post S'ha escrit el nom de la tasca.
         */
-        void escriure_tasca() const;
+        void escriure_nom() const;
+        
+        /** @brief Escriu la tasca
+        \pre El p.i. no es buit.
+        \post S'han escrit les etiquetes en ordre lexicografic.
+        */
+        void escriure_etiquetes() const;
 
 };
 
