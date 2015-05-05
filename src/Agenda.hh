@@ -1,10 +1,12 @@
 #ifndef __AGENDA__
 #define __AGENDA__
 
+#ifndef __DIAGRAMA__
 #include <iostream>
 #include <map>
 #include <string>
 #include <vector>
+#endif
 #include "comanda.hh"
 #include "Instant.hh"
 #include "Tasca.hh"

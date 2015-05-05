@@ -4,6 +4,10 @@ int Instant::num(char c) {
 	return int('c') - int('0');
 }
 
+Instant::Instant(){
+
+}
+
 Instant::Instant (string d, string h) {
 	modificar_data (d);
 	modificar_hora (h);

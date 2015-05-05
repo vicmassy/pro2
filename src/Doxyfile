@@ -96,7 +96,7 @@ WARN_LOGFILE           =
 INPUT                  = "."
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          = *.hh \
-                         *.cc
+                         main.cc
 RECURSIVE              = NO
 EXCLUDE                = *~
 EXCLUDE_SYMLINKS       = NO
@@ -211,7 +211,7 @@ EXPAND_ONLY_PREDEF     = NO
 SEARCH_INCLUDES        = YES
 INCLUDE_PATH           = 
 INCLUDE_FILE_PATTERNS  = 
-PREDEFINED             = 
+PREDEFINED             = __DIAGRAMA__
 EXPAND_AS_DEFINED      = 
 SKIP_FUNCTION_MACROS   = YES
 #---------------------------------------------------------------------------

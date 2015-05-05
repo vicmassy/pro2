@@ -2,6 +2,8 @@
 
 Agenda::Agenda(string d, string h) {
 	// TODO: Hem de convertir els strings en un objecte instant i guardar-lo a r
+	r.modificar_data(d);
+	r.modificar_hora(h);
 }
 
 void Agenda::modificar_rellotge(const Comanda &c) {

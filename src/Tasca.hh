@@ -1,8 +1,10 @@
 #ifndef __TASCA__
 #define __TASCA__
 
+#ifndef __DIAGRAMA__
 #include <iostream>
 #include <map>
+#endif
 
 using namespace std;
 

@@ -1,8 +1,10 @@
 #ifndef __INSTANT__
 #define __INSTANT__
 
+#ifndef __DIAGRAMA__
 #include <string>
 #include <iostream>
+#endif
 
 using namespace std;
 
@@ -20,6 +22,8 @@ class Instant {
 	public: 
 	
 		//Creadores
+
+		Instant ();
 
 	   	/** @brief
 		\pre d i h tenen format de data i hora respectivament.
