@@ -6,13 +6,16 @@
 
 using namespace std;
 
+/** @class Tasca
+	@brief Representa una tasca i les seves etiquetes
+*/
+
 class Tasca {
   
     private:
-
+    
         string nom;
         map<string,bool> etiquetes;
-
 
     public:
 
@@ -30,13 +33,13 @@ class Tasca {
         \pre Cert.
         \post S'ha afegit l'etiqueta al p.i., si ja hi era no fa res.
         */
-        void afegir_etiqueta(string tag);
+        void afegir_etiqueta(const string &tag);
         
         /** @brief Esborra una etiqueta de la tasca.
         \pre Cert.
-        \post Si tag pertany a la tasca, es esborrada.
+        \post Si tag pertany a la tasca, es esborrada i retorna true. Si no, no fa res i retorna false.
         */
-        void esborrar_etiqueta(string tag);
+        bool esborrar_etiqueta(const string &tag);
         
         /** @brief Esborra totes les etiquetes de la tasca.
         \pre Cert.
@@ -50,7 +53,7 @@ class Tasca {
         \pre Cert.
         \post Retorna true si tag pertany al p.i.
         */
-        bool te_etiqueta(string tag) const;
+        bool te_etiqueta(const string &tag) const;
         
         //IO
     
