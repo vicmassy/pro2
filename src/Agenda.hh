@@ -11,6 +11,10 @@
 
 using namespace std;
 
+typedef map<Instant,Tasca> Tasques;
+typedef vector<Tasques::iterator> Menu;
+typedef map<string,Menu> Mapa_Etiquetes;
+
 /** @class Agenda
 	@brief Representa una agenda
 */
@@ -20,12 +24,12 @@ class Agenda {
   	private:
 
 		Instant r;
-		map<Instant,Tasca> tasques;
-		vector<map<Instant,Tasca>::iterator> menu;
-		map<string,vector<map<Instant,Tasca>::iterator> > etiquetes;
+		Tasques tasques;
+		Menu menu;
+		Mapa_Etiquetes etiquetes;
     
   	public:
-    
+     
 		//Constructors
 		
 		/** @brief
