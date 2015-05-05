@@ -10,6 +10,10 @@
 
 using namespace std;
 
+/** @class Agenda
+	@brief Representa una agenda
+*/
+
 class Agenda {
 
   	private:
@@ -20,8 +24,10 @@ class Agenda {
     
 		//Constructors
 		
-		//Pre: cert
-		//Post: es crea una agenda buida amb rellotge 'r'
+		/** @brief
+		\pre Cert
+		\post Es crea una agenda buida amb rellotge 'r'
+		*/
 		Agenda(string d, string h);
 		
 		//Modificadors
@@ -32,7 +38,7 @@ class Agenda {
 		//Post: el valor del rellotge del parametre implicit passa a ser el contingut de la comanda
 		void modificar_rellotge(const Comanda &c);
 
-		//Pre: cert
+		//Pre: Pre ha de contenir una comanda d'inserir tasca
 		//Post: s'afegeix una tasca espicificada a la comanda
 		void inserir_tasca(const Comanda &c);
 
