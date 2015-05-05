@@ -10,7 +10,22 @@ Instant::Instant (string d, string h) {
 }
 
 bool Instant::operator<(const Instant &i) const {
-	//TODO: S'ha d'implementar la funcio. Retorno true nomes perque compili
+	if (this->yy > i.yy) 
+	  return false;
+	else if (this->yy == i.yy) {
+	  if (this->mm > i.mm) 
+	    return false;
+	  else if (this->mm == i.mm) {
+	     if (this->dd > i.dd) 
+	      return false;
+	     else if (this->dd == i.dd) {
+	       if (this->hh > i.hh) 
+		return false;
+	       else if (this->hh == i.hh)
+		return (this->min < i.min);
+	     }
+	  }
+	}
 	return true;
 }
 
