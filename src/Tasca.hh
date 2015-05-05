@@ -27,7 +27,7 @@ class Tasca {
         \pre Cert.
         \post Crea una tasca amb titol n.
         */
-        Tasca(string n);
+        Tasca(const string &n);
         
         //Modificadores
         

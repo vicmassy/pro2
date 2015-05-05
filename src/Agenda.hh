@@ -38,7 +38,7 @@ class Agenda {
         \pre Cert.
         \post Es crea una agenda buida amb data d i hora h.
         */
-        Agenda(string d, string h);
+        Agenda(const string &d, const string &h);
         
         //Modificadors
         
@@ -90,7 +90,7 @@ class Agenda {
         \pre Cert.
         \post Retorna la data i l'hora actuals de l'agenda.
         */
-        Instant consultar_rellotge();
+        Instant consultar_rellotge() const;
         
         //Lectura
         
