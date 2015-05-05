@@ -63,7 +63,7 @@ bool Agenda::esborrar_etiqueta(const Comanda &c) {
 \post Si el numero  de tasca no es al menu, si s'ha esborrat la tasca o si ja es al passat; retorna fals i no fa res.
 En cas contrari retorna true i esborra totes les etiquetes de la tasca.
 */
-void Agenda::esborrar_etiquetes(const Comanda &c) {
+bool Agenda::esborrar_etiquetes(const Comanda &c) {
 
 }
         
