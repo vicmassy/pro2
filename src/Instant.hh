@@ -26,12 +26,6 @@ class Instant {
 		\post Es crea la data amb els valors dels parametres.
 		*/
 		Instant (string d, string h);
-	
-		/** @brief
-	   	\pre Instant i no esta buit
-	   	\post es crea una copia de l'instant i
-	   	*/
-		Instant (const Instant &i);
 		
 		//Comparadors
 		

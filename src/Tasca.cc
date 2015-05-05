@@ -1,7 +1,7 @@
 #include "Tasca.hh"
 
-Tasca::Tasca(string n){
-
+Tasca::Tasca(string n) {
+  nom = n;
 }
 
 Tasca::Tasca(string n, map<string,bool> &e){

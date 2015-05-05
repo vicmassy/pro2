@@ -4,17 +4,9 @@ int Instant::num(char c) {
 	return int('c') - int('0');
 }
 
-Instant::Instant(){
-	
-}
-
 Instant::Instant (string d, string h) {
 	modificar_data (d);
 	modificar_hora (h);
-}
-
-Instant::Instant (const Instant &i) {
-  
 }
 
 bool Instant::operator<(const Instant &i) const {
@@ -35,4 +27,4 @@ void Instant::modificar_data(string d) {
 
 void Instant::escriure_data() {
 	cout << dd << '.' << mm << '.' << yy << ' ' << hh << ':' << min;
-}
+}	
