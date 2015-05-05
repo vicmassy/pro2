@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['tasca',['tasca',['../dc/d9d/class_comanda.html#a67591051e9c5977c324ad8f8c3ac16e3',1,'Comanda::tasca()'],['../d2/dae/class_tasca.html#a67cd792d19dc4073a940e4d8aa1eea36',1,'Tasca::Tasca(string n)'],['../d2/dae/class_tasca.html#a0ecdf23fc047a638e66206941343da06',1,'Tasca::Tasca(string n, map&lt; string, bool &gt; &amp;e)']]],
+  ['tasca',['Tasca',['../d2/dae/class_tasca.html#a67cd792d19dc4073a940e4d8aa1eea36',1,'Tasca::Tasca(string n)'],['../d2/dae/class_tasca.html#a0ecdf23fc047a638e66206941343da06',1,'Tasca::Tasca(string n, map&lt; string, bool &gt; &amp;e)'],['../dc/d9d/class_comanda.html#a67591051e9c5977c324ad8f8c3ac16e3',1,'Comanda::tasca()']]],
   ['te_5fexpressio',['te_expressio',['../dc/d9d/class_comanda.html#a81d17f4233e33f3baac7633546c066f0',1,'Comanda']]],
   ['te_5fhora',['te_hora',['../dc/d9d/class_comanda.html#abf8b926146f3664aacfd24d7800014e5',1,'Comanda']]],
   ['te_5ftitol',['te_titol',['../dc/d9d/class_comanda.html#a5452f5a877d58627cd2bd871cf31b074',1,'Comanda']]],

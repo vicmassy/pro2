@@ -1,9 +1,8 @@
-\hypertarget{class_comanda}{\section{Referència de la Classe Comanda}
+\hypertarget{class_comanda}{}\section{Referència de la Classe Comanda}
 \label{class_comanda}\index{Comanda@{Comanda}}
-}
 
 
-Representa una comanda (línia de text d'entrada). El mètode llegir permet utilitzar consultores sobre la comanda llegida i comprovar que no tingui errors sintàctics.  
+Representa una comanda (línia de text d\textquotesingle{}entrada). El mètode llegir permet utilitzar consultores sobre la comanda llegida i comprovar que no tingui errors sintàctics.  
 
 
 \subsection*{Mètodes públics}
@@ -12,41 +11,41 @@ Representa una comanda (línia de text d'entrada). El mètode llegir permet util
 \hyperlink{class_comanda_a0f09e7aa5b7c15f131020d04bf5a8a94}{Comanda} ()
 \item 
 bool \hyperlink{class_comanda_af2dbc8ccdbb94bed6ea26155edc71b57}{llegir} (bool \&be)
-\begin{DoxyCompactList}\small\item\em Llegeix una comanda (línia de text d'entrada) i actualitza la informació interna perquè funcionin bé les consultores. \end{DoxyCompactList}\item 
-bool \hyperlink{class_comanda_a614467bedacc9cf29cc5a9dcbba6b23d}{es\-\_\-insercio} ()
+\begin{DoxyCompactList}\small\item\em Llegeix una comanda (línia de text d\textquotesingle{}entrada) i actualitza la informació interna perquè funcionin bé les consultores. \end{DoxyCompactList}\item 
+bool \hyperlink{class_comanda_a614467bedacc9cf29cc5a9dcbba6b23d}{es\+\_\+insercio} ()
 \begin{DoxyCompactList}\small\item\em Comprova si la comanda és una inserció (\char`\"{}+\char`\"{} és el primer string) \end{DoxyCompactList}\item 
-bool \hyperlink{class_comanda_a847ee227fd7fea3a105dbd78735de453}{es\-\_\-consulta} ()
+bool \hyperlink{class_comanda_a847ee227fd7fea3a105dbd78735de453}{es\+\_\+consulta} ()
 \begin{DoxyCompactList}\small\item\em Comprova si la comanda és una consulta (\char`\"{}?\char`\"{}, \char`\"{}passat?\char`\"{} o \char`\"{}rellotge?\char`\"{} és el primer string) \end{DoxyCompactList}\item 
-bool \hyperlink{class_comanda_a1f435f8b605f0d1f5cbb06c8c6fe4005}{es\-\_\-passat} ()
+bool \hyperlink{class_comanda_a1f435f8b605f0d1f5cbb06c8c6fe4005}{es\+\_\+passat} ()
 \begin{DoxyCompactList}\small\item\em Comprova si la comanda és una consulta del passat (\char`\"{}passat?\char`\"{} és el primer string) \end{DoxyCompactList}\item 
-bool \hyperlink{class_comanda_a2a33a5497c7d156f22065656cb48d9a1}{es\-\_\-modificacio} ()
+bool \hyperlink{class_comanda_a2a33a5497c7d156f22065656cb48d9a1}{es\+\_\+modificacio} ()
 \begin{DoxyCompactList}\small\item\em Comprova si la comanda és una modificació (el primer string és un enter, però el segon no comença per \char`\"{}-\/\char`\"{}) \end{DoxyCompactList}\item 
-bool \hyperlink{class_comanda_aa8767f298317c3bb07f90676cabb8c43}{es\-\_\-rellotge} ()
+bool \hyperlink{class_comanda_aa8767f298317c3bb07f90676cabb8c43}{es\+\_\+rellotge} ()
 \begin{DoxyCompactList}\small\item\em Comprova si la comanda és sobre el rellotge (el primer string és \char`\"{}rellotge\char`\"{} o \char`\"{}rellotge?\char`\"{}) \end{DoxyCompactList}\item 
-bool \hyperlink{class_comanda_a9e71320e8617ce224c8d994d0969555a}{es\-\_\-esborrat} ()
-\begin{DoxyCompactList}\small\item\em Comprova si la comanda és d'esborrat (comença per \char`\"{}-\/k\char`\"{} o per \char`\"{}k -\/x\char`\"{}, on k és un enter) \end{DoxyCompactList}\item 
-string \hyperlink{class_comanda_a998dc172668a108837512f818ca5430f}{tipus\-\_\-esborrat} ()
-\begin{DoxyCompactList}\small\item\em Consulta el tipus d'esborrat. \end{DoxyCompactList}\item 
-int \hyperlink{class_comanda_aadabfc85ec7cdeb45039e8952a1ab124}{nombre\-\_\-dates} ()
+bool \hyperlink{class_comanda_a9e71320e8617ce224c8d994d0969555a}{es\+\_\+esborrat} ()
+\begin{DoxyCompactList}\small\item\em Comprova si la comanda és d\textquotesingle{}esborrat (comença per \char`\"{}-\/k\char`\"{} o per \char`\"{}k -\/x\char`\"{}, on k és un enter) \end{DoxyCompactList}\item 
+string \hyperlink{class_comanda_a998dc172668a108837512f818ca5430f}{tipus\+\_\+esborrat} ()
+\begin{DoxyCompactList}\small\item\em Consulta el tipus d\textquotesingle{}esborrat. \end{DoxyCompactList}\item 
+int \hyperlink{class_comanda_aadabfc85ec7cdeb45039e8952a1ab124}{nombre\+\_\+dates} ()
 \begin{DoxyCompactList}\small\item\em Consulta el nombre de dates contingudes en la comanda. \end{DoxyCompactList}\item 
 string \hyperlink{class_comanda_ab4ce0a50bde32145d11cbaee753526c7}{data} (int i)
 \begin{DoxyCompactList}\small\item\em Consulta una data individual de la comanda. \end{DoxyCompactList}\item 
-bool \hyperlink{class_comanda_abf8b926146f3664aacfd24d7800014e5}{te\-\_\-hora} ()
+bool \hyperlink{class_comanda_abf8b926146f3664aacfd24d7800014e5}{te\+\_\+hora} ()
 \begin{DoxyCompactList}\small\item\em Comprova si la comanda conté hora. \end{DoxyCompactList}\item 
 string \hyperlink{class_comanda_ae8bca2ad702d3316dc1c53dcab7cac02}{hora} ()
-\begin{DoxyCompactList}\small\item\em Consulta l'hora de la comanda. \end{DoxyCompactList}\item 
-bool \hyperlink{class_comanda_a5452f5a877d58627cd2bd871cf31b074}{te\-\_\-titol} ()
-\begin{DoxyCompactList}\small\item\em Comprova si la comanda conté un títol (una seqüència de paraules, és a dir, strings que comencen per una lletra i no contenen ni \char`\"{}.\char`\"{} ni \char`\"{},\char`\"{} ni \char`\"{}\-:\char`\"{} ni \char`\"{}\#\char`\"{}) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consulta l\textquotesingle{}hora de la comanda. \end{DoxyCompactList}\item 
+bool \hyperlink{class_comanda_a5452f5a877d58627cd2bd871cf31b074}{te\+\_\+titol} ()
+\begin{DoxyCompactList}\small\item\em Comprova si la comanda conté un títol (una seqüència de paraules, és a dir, strings que comencen per una lletra i no contenen ni \char`\"{}.\char`\"{} ni \char`\"{},\char`\"{} ni \char`\"{}\+:\char`\"{} ni \char`\"{}\#\char`\"{}) \end{DoxyCompactList}\item 
 string \hyperlink{class_comanda_ad1cefdda3db389d9ab536a59e2ee907d}{titol} ()
 \begin{DoxyCompactList}\small\item\em Consulta el títol de la comanda. \end{DoxyCompactList}\item 
-int \hyperlink{class_comanda_a4280b6ae2d435d9c21bbed364cb1db3d}{nombre\-\_\-etiquetes} ()
-\begin{DoxyCompactList}\small\item\em Consulta el nombre d'etiquetes de la comanda (strings que comencen per \# seguit d'una paraula) \end{DoxyCompactList}\item 
+int \hyperlink{class_comanda_a4280b6ae2d435d9c21bbed364cb1db3d}{nombre\+\_\+etiquetes} ()
+\begin{DoxyCompactList}\small\item\em Consulta el nombre d\textquotesingle{}etiquetes de la comanda (strings que comencen per \# seguit d\textquotesingle{}una paraula) \end{DoxyCompactList}\item 
 string \hyperlink{class_comanda_ac80e9a80d16c6bac9a134e431bca1ed0}{etiqueta} (int i)
 \begin{DoxyCompactList}\small\item\em Consulta una etiqueta de la comanda. \end{DoxyCompactList}\item 
-bool \hyperlink{class_comanda_a81d17f4233e33f3baac7633546c066f0}{te\-\_\-expressio} ()
-\begin{DoxyCompactList}\small\item\em Consulta la presència d'una expressió booleana d'etiquetes en la comanda, és a dir, una expressió ben parentitzada, on els operadors són \char`\"{},\char`\"{} (disjunció binària) i \char`\"{}.\char`\"{} (conjunció binària) i els operands són etiquetes. \end{DoxyCompactList}\item 
+bool \hyperlink{class_comanda_a81d17f4233e33f3baac7633546c066f0}{te\+\_\+expressio} ()
+\begin{DoxyCompactList}\small\item\em Consulta la presència d\textquotesingle{}una expressió booleana d\textquotesingle{}etiquetes en la comanda, és a dir, una expressió ben parentitzada, on els operadors són \char`\"{},\char`\"{} (disjunció binària) i \char`\"{}.\char`\"{} (conjunció binària) i els operands són etiquetes. \end{DoxyCompactList}\item 
 string \hyperlink{class_comanda_aa3191131592fbf58d20bed1052c31cd1}{expressio} ()
-\begin{DoxyCompactList}\small\item\em Consulta una expressió d'etiquetes. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consulta una expressió d\textquotesingle{}etiquetes. \end{DoxyCompactList}\item 
 int \hyperlink{class_comanda_a67591051e9c5977c324ad8f8c3ac16e3}{tasca} ()
 \begin{DoxyCompactList}\small\item\em Consulta el número de tasca que hi ha a la comanda. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Mètodes Privats}
@@ -54,31 +53,31 @@ int \hyperlink{class_comanda_a67591051e9c5977c324ad8f8c3ac16e3}{tasca} ()
 \item 
 void \hyperlink{class_comanda_a57a4df9cbf2f41ebbd36270f867e8694}{iniciar} ()
 \item 
-void \hyperlink{class_comanda_a97ba2fd8c8b5a6d8007efdbfbbcb3fae}{anotar\-\_\-titol} (int \&i)
+void \hyperlink{class_comanda_a97ba2fd8c8b5a6d8007efdbfbbcb3fae}{anotar\+\_\+titol} (int \&i)
 \item 
-void \hyperlink{class_comanda_a0a5bbe87d1bc18bb46b303d167c1794a}{anotar\-\_\-hora} (int \&i)
+void \hyperlink{class_comanda_a0a5bbe87d1bc18bb46b303d167c1794a}{anotar\+\_\+hora} (int \&i)
 \item 
-void \hyperlink{class_comanda_a77134aa747d804e8d62aba6f2e443eec}{anotar\-\_\-data} (int \&i)
+void \hyperlink{class_comanda_a77134aa747d804e8d62aba6f2e443eec}{anotar\+\_\+data} (int \&i)
 \item 
-void \hyperlink{class_comanda_acd79aaef42e1df67426e92b588c793f6}{anotar\-\_\-etiqueta} (int \&i)
+void \hyperlink{class_comanda_acd79aaef42e1df67426e92b588c793f6}{anotar\+\_\+etiqueta} (int \&i)
 \item 
-void \hyperlink{class_comanda_a32cf8807dce80ccd10b23d3c420be570}{anotar\-\_\-temps} (int \&i)
+void \hyperlink{class_comanda_a32cf8807dce80ccd10b23d3c420be570}{anotar\+\_\+temps} (int \&i)
 \item 
-void \hyperlink{class_comanda_a6394f34d947899ee711c598ad65882c5}{afegir\-\_\-elements} ()
+void \hyperlink{class_comanda_a6394f34d947899ee711c598ad65882c5}{afegir\+\_\+elements} ()
 \item 
-void \hyperlink{class_comanda_a2d6b1de1d935c3441b854165a30b6992}{tractar\-\_\-insercio} ()
+void \hyperlink{class_comanda_a2d6b1de1d935c3441b854165a30b6992}{tractar\+\_\+insercio} ()
 \item 
-void \hyperlink{class_comanda_afdfd9d24c135a173a87e3f6a406358d7}{tractar\-\_\-consulta} ()
+void \hyperlink{class_comanda_afdfd9d24c135a173a87e3f6a406358d7}{tractar\+\_\+consulta} ()
 \item 
-void \hyperlink{class_comanda_ae431b547161b575907fb0a093b0741bb}{tractar\-\_\-consulta\-\_\-rapida} (bool \&el\-\_\-que\-\_\-sigui)
+void \hyperlink{class_comanda_ae431b547161b575907fb0a093b0741bb}{tractar\+\_\+consulta\+\_\+rapida} (bool \&el\+\_\+que\+\_\+sigui)
 \item 
-void \hyperlink{class_comanda_ad217f019b2d65827a0dba40729311cff}{tractar\-\_\-modificacio} ()
+void \hyperlink{class_comanda_ad217f019b2d65827a0dba40729311cff}{tractar\+\_\+modificacio} ()
 \item 
-void \hyperlink{class_comanda_a6b70b1eafbfc69798994a5c23d3885b9}{tractar\-\_\-esborrat\-\_\-parcial} ()
+void \hyperlink{class_comanda_a6b70b1eafbfc69798994a5c23d3885b9}{tractar\+\_\+esborrat\+\_\+parcial} ()
 \item 
-void \hyperlink{class_comanda_ac453d63201eed34d7c0570e257e6bee4}{tractar\-\_\-esborrat\-\_\-tasca} ()
+void \hyperlink{class_comanda_ac453d63201eed34d7c0570e257e6bee4}{tractar\+\_\+esborrat\+\_\+tasca} ()
 \item 
-void \hyperlink{class_comanda_a421912bd32984118974509a8620f8923}{fixar\-\_\-temps\-\_\-rellotge} ()
+void \hyperlink{class_comanda_a421912bd32984118974509a8620f8923}{fixar\+\_\+temps\+\_\+rellotge} ()
 \end{DoxyCompactItemize}
 \subsection*{Atributs Privats}
 \begin{DoxyCompactItemize}
@@ -87,71 +86,71 @@ vector$<$ \hyperlink{class_token}{Token} $>$ \hyperlink{class_comanda_a4792137ff
 \item 
 int \hyperlink{class_comanda_abaf613f247586557027ad5857ace89c2}{mida}
 \item 
-bool \hyperlink{class_comanda_afa50474d0c9c08da1f3042cfddc9df24}{e\-\_\-insercio}
+bool \hyperlink{class_comanda_afa50474d0c9c08da1f3042cfddc9df24}{e\+\_\+insercio}
 \item 
-bool \hyperlink{class_comanda_a558a2944c2306c12df9f889fc96a58dd}{e\-\_\-consulta}
+bool \hyperlink{class_comanda_a558a2944c2306c12df9f889fc96a58dd}{e\+\_\+consulta}
 \item 
-bool \hyperlink{class_comanda_a38e7cdf2003076cbe88461f03dc2106c}{e\-\_\-passat}
+bool \hyperlink{class_comanda_a38e7cdf2003076cbe88461f03dc2106c}{e\+\_\+passat}
 \item 
-bool \hyperlink{class_comanda_a96d917429f6bfa73608d745ad1e1dfc7}{e\-\_\-modificacio}
+bool \hyperlink{class_comanda_a96d917429f6bfa73608d745ad1e1dfc7}{e\+\_\+modificacio}
 \item 
-bool \hyperlink{class_comanda_ad73910246f9c47c887a3c01b53350282}{e\-\_\-rellotge}
+bool \hyperlink{class_comanda_ad73910246f9c47c887a3c01b53350282}{e\+\_\+rellotge}
 \item 
-bool \hyperlink{class_comanda_a70a9790e90a45015dbcd4c6700ec0812}{e\-\_\-esborrat}
+bool \hyperlink{class_comanda_a70a9790e90a45015dbcd4c6700ec0812}{e\+\_\+esborrat}
 \item 
-bool \hyperlink{class_comanda_a0f7472af37d7f6c24f74fbac60e4a696}{e\-\_\-acabament}
+bool \hyperlink{class_comanda_a0f7472af37d7f6c24f74fbac60e4a696}{e\+\_\+acabament}
 \item 
-int \hyperlink{class_comanda_a0a4e13d8edba10c69d1b058d8fc6a7c3}{n\-\_\-dates}
+int \hyperlink{class_comanda_a0a4e13d8edba10c69d1b058d8fc6a7c3}{n\+\_\+dates}
 \item 
-vector$<$ string $>$ \hyperlink{class_comanda_a06ee1d3173ee0ae52c588689e9263099}{i\-\_\-data}
+vector$<$ string $>$ \hyperlink{class_comanda_a06ee1d3173ee0ae52c588689e9263099}{i\+\_\+data}
 \item 
-bool \hyperlink{class_comanda_ae481194a2016e940e655173e897d214d}{t\-\_\-hora}
+bool \hyperlink{class_comanda_ae481194a2016e940e655173e897d214d}{t\+\_\+hora}
 \item 
-string \hyperlink{class_comanda_a480a34460b3668a5b4a1fa7e796632db}{i\-\_\-hora}
+string \hyperlink{class_comanda_a480a34460b3668a5b4a1fa7e796632db}{i\+\_\+hora}
 \item 
-bool \hyperlink{class_comanda_a08e8674396e2125cf8b2900f289713a7}{t\-\_\-titol}
+bool \hyperlink{class_comanda_a08e8674396e2125cf8b2900f289713a7}{t\+\_\+titol}
 \item 
-string \hyperlink{class_comanda_aca04e90eab5ac14ddc3b25f154aabe48}{i\-\_\-titol}
+string \hyperlink{class_comanda_aca04e90eab5ac14ddc3b25f154aabe48}{i\+\_\+titol}
 \item 
-int \hyperlink{class_comanda_a1e525815f0745140e05da2ebb96ec39a}{n\-\_\-etiquetes}
+int \hyperlink{class_comanda_a1e525815f0745140e05da2ebb96ec39a}{n\+\_\+etiquetes}
 \item 
-vector$<$ string $>$ \hyperlink{class_comanda_a1d193f66ea6d2681ab79a16192da3114}{i\-\_\-etiqueta}
+vector$<$ string $>$ \hyperlink{class_comanda_a1d193f66ea6d2681ab79a16192da3114}{i\+\_\+etiqueta}
 \item 
-bool \hyperlink{class_comanda_ac7037525fc1cd9f49b02bd87cf4b6123}{t\-\_\-expressio}
+bool \hyperlink{class_comanda_ac7037525fc1cd9f49b02bd87cf4b6123}{t\+\_\+expressio}
 \item 
-string \hyperlink{class_comanda_a9236cdc5142b6a9f4116673abce06508}{i\-\_\-expressio}
+string \hyperlink{class_comanda_a9236cdc5142b6a9f4116673abce06508}{i\+\_\+expressio}
 \item 
-string \hyperlink{class_comanda_a269a43d5b283a23792791a2ba67747b0}{i\-\_\-esborrat}
+string \hyperlink{class_comanda_a269a43d5b283a23792791a2ba67747b0}{i\+\_\+esborrat}
 \item 
-int \hyperlink{class_comanda_aab152fe48a937f449c027a2274fc31e7}{i\-\_\-tasca}
+int \hyperlink{class_comanda_aab152fe48a937f449c027a2274fc31e7}{i\+\_\+tasca}
 \item 
 bool \hyperlink{class_comanda_a9a1bf4bf74940a4bac90140e67d11972}{error}
 \end{DoxyCompactItemize}
 \subsection*{Atributs Privats Estàtics}
 \begin{DoxyCompactItemize}
 \item 
-static const int \hyperlink{class_comanda_abf1249ea57fd3525306f1817be45177c}{M\-A\-X\-\_\-i\-\_\-data} = 2
+static const int \hyperlink{class_comanda_abf1249ea57fd3525306f1817be45177c}{M\+A\+X\+\_\+i\+\_\+data} = 2
 \end{DoxyCompactItemize}
 
 
 \subsection{Descripció Detallada}
-Representa una comanda (línia de text d'entrada). El mètode llegir permet utilitzar consultores sobre la comanda llegida i comprovar que no tingui errors sintàctics. 
+Representa una comanda (línia de text d\textquotesingle{}entrada). El mètode llegir permet utilitzar consultores sobre la comanda llegida i comprovar que no tingui errors sintàctics. 
 
-Definició a la línia 21 del fitxer comanda.\-hh.
+Definició a la línia 21 del fitxer comanda.\+hh.
 
 
 
 \subsection{Documentació del Constructor i el Destructor}
-\hypertarget{class_comanda_a0f09e7aa5b7c15f131020d04bf5a8a94}{\index{Comanda@{Comanda}!Comanda@{Comanda}}
+\hypertarget{class_comanda_a0f09e7aa5b7c15f131020d04bf5a8a94}{}\index{Comanda@{Comanda}!Comanda@{Comanda}}
 \index{Comanda@{Comanda}!Comanda@{Comanda}}
-\subsubsection[{Comanda}]{\setlength{\rightskip}{0pt plus 5cm}Comanda\-::\-Comanda (
+\subsubsection[{Comanda}]{\setlength{\rightskip}{0pt plus 5cm}Comanda\+::\+Comanda (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_a0f09e7aa5b7c15f131020d04bf5a8a94}
+)}\label{class_comanda_a0f09e7aa5b7c15f131020d04bf5a8a94}
 
 
-Definició a la línia 5 del fitxer comanda.\-cc.
+Definició a la línia 5 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -162,16 +161,16 @@ Definició a la línia 5 del fitxer comanda.\-cc.
 
 
 \subsection{Documentació de les Funcions Membre}
-\hypertarget{class_comanda_a57a4df9cbf2f41ebbd36270f867e8694}{\index{Comanda@{Comanda}!iniciar@{iniciar}}
+\hypertarget{class_comanda_a57a4df9cbf2f41ebbd36270f867e8694}{}\index{Comanda@{Comanda}!iniciar@{iniciar}}
 \index{iniciar@{iniciar}!Comanda@{Comanda}}
-\subsubsection[{iniciar}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::iniciar (
+\subsubsection[{iniciar}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::iniciar (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a57a4df9cbf2f41ebbd36270f867e8694}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a57a4df9cbf2f41ebbd36270f867e8694}
 
 
-Definició a la línia 9 del fitxer comanda.\-cc.
+Definició a la línia 9 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -194,16 +193,16 @@ Definició a la línia 9 del fitxer comanda.\-cc.
 25     \hyperlink{class_comanda_ac7037525fc1cd9f49b02bd87cf4b6123}{t\_expressio} = \textcolor{keyword}{false};
 26 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_a97ba2fd8c8b5a6d8007efdbfbbcb3fae}{\index{Comanda@{Comanda}!anotar\-\_\-titol@{anotar\-\_\-titol}}
-\index{anotar\-\_\-titol@{anotar\-\_\-titol}!Comanda@{Comanda}}
-\subsubsection[{anotar\-\_\-titol}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::anotar\-\_\-titol (
+\hypertarget{class_comanda_a97ba2fd8c8b5a6d8007efdbfbbcb3fae}{}\index{Comanda@{Comanda}!anotar\+\_\+titol@{anotar\+\_\+titol}}
+\index{anotar\+\_\+titol@{anotar\+\_\+titol}!Comanda@{Comanda}}
+\subsubsection[{anotar\+\_\+titol}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::anotar\+\_\+titol (
 \begin{DoxyParamCaption}
 \item[{int \&}]{i}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a97ba2fd8c8b5a6d8007efdbfbbcb3fae}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a97ba2fd8c8b5a6d8007efdbfbbcb3fae}
 
 
-Definició a la línia 28 del fitxer comanda.\-cc.
+Definició a la línia 28 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -221,16 +220,16 @@ Definició a la línia 28 del fitxer comanda.\-cc.
 39     \}
 40 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_a0a5bbe87d1bc18bb46b303d167c1794a}{\index{Comanda@{Comanda}!anotar\-\_\-hora@{anotar\-\_\-hora}}
-\index{anotar\-\_\-hora@{anotar\-\_\-hora}!Comanda@{Comanda}}
-\subsubsection[{anotar\-\_\-hora}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::anotar\-\_\-hora (
+\hypertarget{class_comanda_a0a5bbe87d1bc18bb46b303d167c1794a}{}\index{Comanda@{Comanda}!anotar\+\_\+hora@{anotar\+\_\+hora}}
+\index{anotar\+\_\+hora@{anotar\+\_\+hora}!Comanda@{Comanda}}
+\subsubsection[{anotar\+\_\+hora}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::anotar\+\_\+hora (
 \begin{DoxyParamCaption}
 \item[{int \&}]{i}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a0a5bbe87d1bc18bb46b303d167c1794a}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a0a5bbe87d1bc18bb46b303d167c1794a}
 
 
-Definició a la línia 42 del fitxer comanda.\-cc.
+Definició a la línia 42 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -244,16 +243,16 @@ Definició a la línia 42 del fitxer comanda.\-cc.
 49     \}
 50 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_a77134aa747d804e8d62aba6f2e443eec}{\index{Comanda@{Comanda}!anotar\-\_\-data@{anotar\-\_\-data}}
-\index{anotar\-\_\-data@{anotar\-\_\-data}!Comanda@{Comanda}}
-\subsubsection[{anotar\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::anotar\-\_\-data (
+\hypertarget{class_comanda_a77134aa747d804e8d62aba6f2e443eec}{}\index{Comanda@{Comanda}!anotar\+\_\+data@{anotar\+\_\+data}}
+\index{anotar\+\_\+data@{anotar\+\_\+data}!Comanda@{Comanda}}
+\subsubsection[{anotar\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::anotar\+\_\+data (
 \begin{DoxyParamCaption}
 \item[{int \&}]{i}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a77134aa747d804e8d62aba6f2e443eec}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a77134aa747d804e8d62aba6f2e443eec}
 
 
-Definició a la línia 52 del fitxer comanda.\-cc.
+Definició a la línia 52 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -267,16 +266,16 @@ Definició a la línia 52 del fitxer comanda.\-cc.
 59     \}
 60 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_acd79aaef42e1df67426e92b588c793f6}{\index{Comanda@{Comanda}!anotar\-\_\-etiqueta@{anotar\-\_\-etiqueta}}
-\index{anotar\-\_\-etiqueta@{anotar\-\_\-etiqueta}!Comanda@{Comanda}}
-\subsubsection[{anotar\-\_\-etiqueta}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::anotar\-\_\-etiqueta (
+\hypertarget{class_comanda_acd79aaef42e1df67426e92b588c793f6}{}\index{Comanda@{Comanda}!anotar\+\_\+etiqueta@{anotar\+\_\+etiqueta}}
+\index{anotar\+\_\+etiqueta@{anotar\+\_\+etiqueta}!Comanda@{Comanda}}
+\subsubsection[{anotar\+\_\+etiqueta}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::anotar\+\_\+etiqueta (
 \begin{DoxyParamCaption}
 \item[{int \&}]{i}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_acd79aaef42e1df67426e92b588c793f6}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_acd79aaef42e1df67426e92b588c793f6}
 
 
-Definició a la línia 62 del fitxer comanda.\-cc.
+Definició a la línia 62 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -286,16 +285,16 @@ Definició a la línia 62 del fitxer comanda.\-cc.
 65     ++\hyperlink{class_comanda_a1e525815f0745140e05da2ebb96ec39a}{n\_etiquetes};
 66 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_a32cf8807dce80ccd10b23d3c420be570}{\index{Comanda@{Comanda}!anotar\-\_\-temps@{anotar\-\_\-temps}}
-\index{anotar\-\_\-temps@{anotar\-\_\-temps}!Comanda@{Comanda}}
-\subsubsection[{anotar\-\_\-temps}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::anotar\-\_\-temps (
+\hypertarget{class_comanda_a32cf8807dce80ccd10b23d3c420be570}{}\index{Comanda@{Comanda}!anotar\+\_\+temps@{anotar\+\_\+temps}}
+\index{anotar\+\_\+temps@{anotar\+\_\+temps}!Comanda@{Comanda}}
+\subsubsection[{anotar\+\_\+temps}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::anotar\+\_\+temps (
 \begin{DoxyParamCaption}
 \item[{int \&}]{i}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a32cf8807dce80ccd10b23d3c420be570}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a32cf8807dce80ccd10b23d3c420be570}
 
 
-Definició a la línia 68 del fitxer comanda.\-cc.
+Definició a la línia 68 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -308,16 +307,16 @@ Definició a la línia 68 del fitxer comanda.\-cc.
 74         \hyperlink{class_comanda_a9a1bf4bf74940a4bac90140e67d11972}{error} = \textcolor{keyword}{true};
 75 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_a6394f34d947899ee711c598ad65882c5}{\index{Comanda@{Comanda}!afegir\-\_\-elements@{afegir\-\_\-elements}}
-\index{afegir\-\_\-elements@{afegir\-\_\-elements}!Comanda@{Comanda}}
-\subsubsection[{afegir\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::afegir\-\_\-elements (
+\hypertarget{class_comanda_a6394f34d947899ee711c598ad65882c5}{}\index{Comanda@{Comanda}!afegir\+\_\+elements@{afegir\+\_\+elements}}
+\index{afegir\+\_\+elements@{afegir\+\_\+elements}!Comanda@{Comanda}}
+\subsubsection[{afegir\+\_\+elements}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::afegir\+\_\+elements (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a6394f34d947899ee711c598ad65882c5}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a6394f34d947899ee711c598ad65882c5}
 
 
-Definició a la línia 77 del fitxer comanda.\-cc.
+Definició a la línia 77 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -337,16 +336,16 @@ Definició a la línia 77 del fitxer comanda.\-cc.
 90     \}
 91 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_a2d6b1de1d935c3441b854165a30b6992}{\index{Comanda@{Comanda}!tractar\-\_\-insercio@{tractar\-\_\-insercio}}
-\index{tractar\-\_\-insercio@{tractar\-\_\-insercio}!Comanda@{Comanda}}
-\subsubsection[{tractar\-\_\-insercio}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::tractar\-\_\-insercio (
+\hypertarget{class_comanda_a2d6b1de1d935c3441b854165a30b6992}{}\index{Comanda@{Comanda}!tractar\+\_\+insercio@{tractar\+\_\+insercio}}
+\index{tractar\+\_\+insercio@{tractar\+\_\+insercio}!Comanda@{Comanda}}
+\subsubsection[{tractar\+\_\+insercio}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::tractar\+\_\+insercio (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a2d6b1de1d935c3441b854165a30b6992}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a2d6b1de1d935c3441b854165a30b6992}
 
 
-Definició a la línia 93 del fitxer comanda.\-cc.
+Definició a la línia 93 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -357,16 +356,16 @@ Definició a la línia 93 del fitxer comanda.\-cc.
 97         \hyperlink{class_comanda_a9a1bf4bf74940a4bac90140e67d11972}{error} = \textcolor{keyword}{true};
 98 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_afdfd9d24c135a173a87e3f6a406358d7}{\index{Comanda@{Comanda}!tractar\-\_\-consulta@{tractar\-\_\-consulta}}
-\index{tractar\-\_\-consulta@{tractar\-\_\-consulta}!Comanda@{Comanda}}
-\subsubsection[{tractar\-\_\-consulta}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::tractar\-\_\-consulta (
+\hypertarget{class_comanda_afdfd9d24c135a173a87e3f6a406358d7}{}\index{Comanda@{Comanda}!tractar\+\_\+consulta@{tractar\+\_\+consulta}}
+\index{tractar\+\_\+consulta@{tractar\+\_\+consulta}!Comanda@{Comanda}}
+\subsubsection[{tractar\+\_\+consulta}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::tractar\+\_\+consulta (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_afdfd9d24c135a173a87e3f6a406358d7}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_afdfd9d24c135a173a87e3f6a406358d7}
 
 
-Definició a la línia 109 del fitxer comanda.\-cc.
+Definició a la línia 109 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -403,16 +402,16 @@ Definició a la línia 109 del fitxer comanda.\-cc.
 139     \}
 140 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_ae431b547161b575907fb0a093b0741bb}{\index{Comanda@{Comanda}!tractar\-\_\-consulta\-\_\-rapida@{tractar\-\_\-consulta\-\_\-rapida}}
-\index{tractar\-\_\-consulta\-\_\-rapida@{tractar\-\_\-consulta\-\_\-rapida}!Comanda@{Comanda}}
-\subsubsection[{tractar\-\_\-consulta\-\_\-rapida}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::tractar\-\_\-consulta\-\_\-rapida (
+\hypertarget{class_comanda_ae431b547161b575907fb0a093b0741bb}{}\index{Comanda@{Comanda}!tractar\+\_\+consulta\+\_\+rapida@{tractar\+\_\+consulta\+\_\+rapida}}
+\index{tractar\+\_\+consulta\+\_\+rapida@{tractar\+\_\+consulta\+\_\+rapida}!Comanda@{Comanda}}
+\subsubsection[{tractar\+\_\+consulta\+\_\+rapida}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::tractar\+\_\+consulta\+\_\+rapida (
 \begin{DoxyParamCaption}
-\item[{bool \&}]{el\-\_\-que\-\_\-sigui}
+\item[{bool \&}]{el\+\_\+que\+\_\+sigui}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_ae431b547161b575907fb0a093b0741bb}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_ae431b547161b575907fb0a093b0741bb}
 
 
-Definició a la línia 142 del fitxer comanda.\-cc.
+Definició a la línia 142 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -425,16 +424,16 @@ Definició a la línia 142 del fitxer comanda.\-cc.
 148     \}
 149 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_ad217f019b2d65827a0dba40729311cff}{\index{Comanda@{Comanda}!tractar\-\_\-modificacio@{tractar\-\_\-modificacio}}
-\index{tractar\-\_\-modificacio@{tractar\-\_\-modificacio}!Comanda@{Comanda}}
-\subsubsection[{tractar\-\_\-modificacio}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::tractar\-\_\-modificacio (
+\hypertarget{class_comanda_ad217f019b2d65827a0dba40729311cff}{}\index{Comanda@{Comanda}!tractar\+\_\+modificacio@{tractar\+\_\+modificacio}}
+\index{tractar\+\_\+modificacio@{tractar\+\_\+modificacio}!Comanda@{Comanda}}
+\subsubsection[{tractar\+\_\+modificacio}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::tractar\+\_\+modificacio (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_ad217f019b2d65827a0dba40729311cff}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_ad217f019b2d65827a0dba40729311cff}
 
 
-Definició a la línia 100 del fitxer comanda.\-cc.
+Definició a la línia 100 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -447,16 +446,16 @@ Definició a la línia 100 del fitxer comanda.\-cc.
 106         \hyperlink{class_comanda_a6394f34d947899ee711c598ad65882c5}{afegir\_elements}();
 107 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_a6b70b1eafbfc69798994a5c23d3885b9}{\index{Comanda@{Comanda}!tractar\-\_\-esborrat\-\_\-parcial@{tractar\-\_\-esborrat\-\_\-parcial}}
-\index{tractar\-\_\-esborrat\-\_\-parcial@{tractar\-\_\-esborrat\-\_\-parcial}!Comanda@{Comanda}}
-\subsubsection[{tractar\-\_\-esborrat\-\_\-parcial}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::tractar\-\_\-esborrat\-\_\-parcial (
+\hypertarget{class_comanda_a6b70b1eafbfc69798994a5c23d3885b9}{}\index{Comanda@{Comanda}!tractar\+\_\+esborrat\+\_\+parcial@{tractar\+\_\+esborrat\+\_\+parcial}}
+\index{tractar\+\_\+esborrat\+\_\+parcial@{tractar\+\_\+esborrat\+\_\+parcial}!Comanda@{Comanda}}
+\subsubsection[{tractar\+\_\+esborrat\+\_\+parcial}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::tractar\+\_\+esborrat\+\_\+parcial (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a6b70b1eafbfc69798994a5c23d3885b9}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a6b70b1eafbfc69798994a5c23d3885b9}
 
 
-Definició a la línia 151 del fitxer comanda.\-cc.
+Definició a la línia 151 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -479,16 +478,16 @@ Definició a la línia 151 del fitxer comanda.\-cc.
 167     \}
 168 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_ac453d63201eed34d7c0570e257e6bee4}{\index{Comanda@{Comanda}!tractar\-\_\-esborrat\-\_\-tasca@{tractar\-\_\-esborrat\-\_\-tasca}}
-\index{tractar\-\_\-esborrat\-\_\-tasca@{tractar\-\_\-esborrat\-\_\-tasca}!Comanda@{Comanda}}
-\subsubsection[{tractar\-\_\-esborrat\-\_\-tasca}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::tractar\-\_\-esborrat\-\_\-tasca (
+\hypertarget{class_comanda_ac453d63201eed34d7c0570e257e6bee4}{}\index{Comanda@{Comanda}!tractar\+\_\+esborrat\+\_\+tasca@{tractar\+\_\+esborrat\+\_\+tasca}}
+\index{tractar\+\_\+esborrat\+\_\+tasca@{tractar\+\_\+esborrat\+\_\+tasca}!Comanda@{Comanda}}
+\subsubsection[{tractar\+\_\+esborrat\+\_\+tasca}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::tractar\+\_\+esborrat\+\_\+tasca (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_ac453d63201eed34d7c0570e257e6bee4}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_ac453d63201eed34d7c0570e257e6bee4}
 
 
-Definició a la línia 170 del fitxer comanda.\-cc.
+Definició a la línia 170 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -503,16 +502,16 @@ Definició a la línia 170 del fitxer comanda.\-cc.
 178     \}
 179 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_a421912bd32984118974509a8620f8923}{\index{Comanda@{Comanda}!fixar\-\_\-temps\-\_\-rellotge@{fixar\-\_\-temps\-\_\-rellotge}}
-\index{fixar\-\_\-temps\-\_\-rellotge@{fixar\-\_\-temps\-\_\-rellotge}!Comanda@{Comanda}}
-\subsubsection[{fixar\-\_\-temps\-\_\-rellotge}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\-::fixar\-\_\-temps\-\_\-rellotge (
+\hypertarget{class_comanda_a421912bd32984118974509a8620f8923}{}\index{Comanda@{Comanda}!fixar\+\_\+temps\+\_\+rellotge@{fixar\+\_\+temps\+\_\+rellotge}}
+\index{fixar\+\_\+temps\+\_\+rellotge@{fixar\+\_\+temps\+\_\+rellotge}!Comanda@{Comanda}}
+\subsubsection[{fixar\+\_\+temps\+\_\+rellotge}]{\setlength{\rightskip}{0pt plus 5cm}void Comanda\+::fixar\+\_\+temps\+\_\+rellotge (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a421912bd32984118974509a8620f8923}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a421912bd32984118974509a8620f8923}
 
 
-Definició a la línia 181 del fitxer comanda.\-cc.
+Definició a la línia 181 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -529,26 +528,26 @@ Definició a la línia 181 del fitxer comanda.\-cc.
 191     \}
 192 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_af2dbc8ccdbb94bed6ea26155edc71b57}{\index{Comanda@{Comanda}!llegir@{llegir}}
+\hypertarget{class_comanda_af2dbc8ccdbb94bed6ea26155edc71b57}{}\index{Comanda@{Comanda}!llegir@{llegir}}
 \index{llegir@{llegir}!Comanda@{Comanda}}
-\subsubsection[{llegir}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::llegir (
+\subsubsection[{llegir}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::llegir (
 \begin{DoxyParamCaption}
 \item[{bool \&}]{be}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_af2dbc8ccdbb94bed6ea26155edc71b57}
+)}\label{class_comanda_af2dbc8ccdbb94bed6ea26155edc71b57}
 
 
-Llegeix una comanda (línia de text d'entrada) i actualitza la informació interna perquè funcionin bé les consultores. 
+Llegeix una comanda (línia de text d\textquotesingle{}entrada) i actualitza la informació interna perquè funcionin bé les consultores. 
 
 \begin{DoxyPrecond}{Precondició}
 cert 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-si s'ha llegit una comanda sense errors sintàctics, be = cert i s'escriu la comanda; si la comanda té errors sintàctics, be = fals i s'escriu \char`\"{}\-Error de format\char`\"{}; retorna cert quan la comanda no és \char`\"{}sortir\char`\"{} 
+si s\textquotesingle{}ha llegit una comanda sense errors sintàctics, be = cert i s\textquotesingle{}escriu la comanda; si la comanda té errors sintàctics, be = fals i s\textquotesingle{}escriu \char`\"{}\+Error de format\char`\"{}; retorna cert quan la comanda no és \char`\"{}sortir\char`\"{} 
 \end{DoxyPostcond}
 
 
-Definició a la línia 194 del fitxer comanda.\-cc.
+Definició a la línia 194 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -597,38 +596,38 @@ Definició a la línia 194 del fitxer comanda.\-cc.
 236     \textcolor{keywordflow}{return} not \hyperlink{class_comanda_a0f7472af37d7f6c24f74fbac60e4a696}{e\_acabament};
 237 \}
 \end{DoxyCode}
-\hypertarget{class_comanda_a614467bedacc9cf29cc5a9dcbba6b23d}{\index{Comanda@{Comanda}!es\-\_\-insercio@{es\-\_\-insercio}}
-\index{es\-\_\-insercio@{es\-\_\-insercio}!Comanda@{Comanda}}
-\subsubsection[{es\-\_\-insercio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::es\-\_\-insercio (
+\hypertarget{class_comanda_a614467bedacc9cf29cc5a9dcbba6b23d}{}\index{Comanda@{Comanda}!es\+\_\+insercio@{es\+\_\+insercio}}
+\index{es\+\_\+insercio@{es\+\_\+insercio}!Comanda@{Comanda}}
+\subsubsection[{es\+\_\+insercio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::es\+\_\+insercio (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_a614467bedacc9cf29cc5a9dcbba6b23d}
+)}\label{class_comanda_a614467bedacc9cf29cc5a9dcbba6b23d}
 
 
 Comprova si la comanda és una inserció (\char`\"{}+\char`\"{} és el primer string) 
 
 \begin{DoxyPrecond}{Precondició}
-\-: cert 
+\+: cert 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-\-: cert si és una inserció 
+\+: cert si és una inserció 
 \end{DoxyPostcond}
 
 
-Definició a la línia 239 del fitxer comanda.\-cc.
+Definició a la línia 239 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 239 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_afa50474d0c9c08da1f3042cfddc9df24}{e\_insercio};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_a847ee227fd7fea3a105dbd78735de453}{\index{Comanda@{Comanda}!es\-\_\-consulta@{es\-\_\-consulta}}
-\index{es\-\_\-consulta@{es\-\_\-consulta}!Comanda@{Comanda}}
-\subsubsection[{es\-\_\-consulta}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::es\-\_\-consulta (
+\hypertarget{class_comanda_a847ee227fd7fea3a105dbd78735de453}{}\index{Comanda@{Comanda}!es\+\_\+consulta@{es\+\_\+consulta}}
+\index{es\+\_\+consulta@{es\+\_\+consulta}!Comanda@{Comanda}}
+\subsubsection[{es\+\_\+consulta}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::es\+\_\+consulta (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_a847ee227fd7fea3a105dbd78735de453}
+)}\label{class_comanda_a847ee227fd7fea3a105dbd78735de453}
 
 
 Comprova si la comanda és una consulta (\char`\"{}?\char`\"{}, \char`\"{}passat?\char`\"{} o \char`\"{}rellotge?\char`\"{} és el primer string) 
@@ -641,19 +640,19 @@ cert si és una consulta
 \end{DoxyPostcond}
 
 
-Definició a la línia 241 del fitxer comanda.\-cc.
+Definició a la línia 241 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 241 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a558a2944c2306c12df9f889fc96a58dd}{e\_consulta};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_a1f435f8b605f0d1f5cbb06c8c6fe4005}{\index{Comanda@{Comanda}!es\-\_\-passat@{es\-\_\-passat}}
-\index{es\-\_\-passat@{es\-\_\-passat}!Comanda@{Comanda}}
-\subsubsection[{es\-\_\-passat}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::es\-\_\-passat (
+\hypertarget{class_comanda_a1f435f8b605f0d1f5cbb06c8c6fe4005}{}\index{Comanda@{Comanda}!es\+\_\+passat@{es\+\_\+passat}}
+\index{es\+\_\+passat@{es\+\_\+passat}!Comanda@{Comanda}}
+\subsubsection[{es\+\_\+passat}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::es\+\_\+passat (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_a1f435f8b605f0d1f5cbb06c8c6fe4005}
+)}\label{class_comanda_a1f435f8b605f0d1f5cbb06c8c6fe4005}
 
 
 Comprova si la comanda és una consulta del passat (\char`\"{}passat?\char`\"{} és el primer string) 
@@ -666,19 +665,19 @@ cert si és una consulta sobre el passat
 \end{DoxyPostcond}
 
 
-Definició a la línia 243 del fitxer comanda.\-cc.
+Definició a la línia 243 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 243 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a38e7cdf2003076cbe88461f03dc2106c}{e\_passat};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_a2a33a5497c7d156f22065656cb48d9a1}{\index{Comanda@{Comanda}!es\-\_\-modificacio@{es\-\_\-modificacio}}
-\index{es\-\_\-modificacio@{es\-\_\-modificacio}!Comanda@{Comanda}}
-\subsubsection[{es\-\_\-modificacio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::es\-\_\-modificacio (
+\hypertarget{class_comanda_a2a33a5497c7d156f22065656cb48d9a1}{}\index{Comanda@{Comanda}!es\+\_\+modificacio@{es\+\_\+modificacio}}
+\index{es\+\_\+modificacio@{es\+\_\+modificacio}!Comanda@{Comanda}}
+\subsubsection[{es\+\_\+modificacio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::es\+\_\+modificacio (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_a2a33a5497c7d156f22065656cb48d9a1}
+)}\label{class_comanda_a2a33a5497c7d156f22065656cb48d9a1}
 
 
 Comprova si la comanda és una modificació (el primer string és un enter, però el segon no comença per \char`\"{}-\/\char`\"{}) 
@@ -691,19 +690,19 @@ cert si és una modificació
 \end{DoxyPostcond}
 
 
-Definició a la línia 245 del fitxer comanda.\-cc.
+Definició a la línia 245 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 245 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a96d917429f6bfa73608d745ad1e1dfc7}{e\_modificacio};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_aa8767f298317c3bb07f90676cabb8c43}{\index{Comanda@{Comanda}!es\-\_\-rellotge@{es\-\_\-rellotge}}
-\index{es\-\_\-rellotge@{es\-\_\-rellotge}!Comanda@{Comanda}}
-\subsubsection[{es\-\_\-rellotge}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::es\-\_\-rellotge (
+\hypertarget{class_comanda_aa8767f298317c3bb07f90676cabb8c43}{}\index{Comanda@{Comanda}!es\+\_\+rellotge@{es\+\_\+rellotge}}
+\index{es\+\_\+rellotge@{es\+\_\+rellotge}!Comanda@{Comanda}}
+\subsubsection[{es\+\_\+rellotge}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::es\+\_\+rellotge (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_aa8767f298317c3bb07f90676cabb8c43}
+)}\label{class_comanda_aa8767f298317c3bb07f90676cabb8c43}
 
 
 Comprova si la comanda és sobre el rellotge (el primer string és \char`\"{}rellotge\char`\"{} o \char`\"{}rellotge?\char`\"{}) 
@@ -716,22 +715,22 @@ cert si la comanda és una consulta sobre el rellotge o una modificació del tem
 \end{DoxyPostcond}
 
 
-Definició a la línia 247 del fitxer comanda.\-cc.
+Definició a la línia 247 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 247 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_ad73910246f9c47c887a3c01b53350282}{e\_rellotge};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_a9e71320e8617ce224c8d994d0969555a}{\index{Comanda@{Comanda}!es\-\_\-esborrat@{es\-\_\-esborrat}}
-\index{es\-\_\-esborrat@{es\-\_\-esborrat}!Comanda@{Comanda}}
-\subsubsection[{es\-\_\-esborrat}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::es\-\_\-esborrat (
+\hypertarget{class_comanda_a9e71320e8617ce224c8d994d0969555a}{}\index{Comanda@{Comanda}!es\+\_\+esborrat@{es\+\_\+esborrat}}
+\index{es\+\_\+esborrat@{es\+\_\+esborrat}!Comanda@{Comanda}}
+\subsubsection[{es\+\_\+esborrat}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::es\+\_\+esborrat (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_a9e71320e8617ce224c8d994d0969555a}
+)}\label{class_comanda_a9e71320e8617ce224c8d994d0969555a}
 
 
-Comprova si la comanda és d'esborrat (comença per \char`\"{}-\/k\char`\"{} o per \char`\"{}k -\/x\char`\"{}, on k és un enter) 
+Comprova si la comanda és d\textquotesingle{}esborrat (comença per \char`\"{}-\/k\char`\"{} o per \char`\"{}k -\/x\char`\"{}, on k és un enter) 
 
 \begin{DoxyPrecond}{Precondició}
 cert 
@@ -741,44 +740,44 @@ cert si és un esborrat
 \end{DoxyPostcond}
 
 
-Definició a la línia 249 del fitxer comanda.\-cc.
+Definició a la línia 249 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 249 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a70a9790e90a45015dbcd4c6700ec0812}{e\_esborrat};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_a998dc172668a108837512f818ca5430f}{\index{Comanda@{Comanda}!tipus\-\_\-esborrat@{tipus\-\_\-esborrat}}
-\index{tipus\-\_\-esborrat@{tipus\-\_\-esborrat}!Comanda@{Comanda}}
-\subsubsection[{tipus\-\_\-esborrat}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\-::tipus\-\_\-esborrat (
+\hypertarget{class_comanda_a998dc172668a108837512f818ca5430f}{}\index{Comanda@{Comanda}!tipus\+\_\+esborrat@{tipus\+\_\+esborrat}}
+\index{tipus\+\_\+esborrat@{tipus\+\_\+esborrat}!Comanda@{Comanda}}
+\subsubsection[{tipus\+\_\+esborrat}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\+::tipus\+\_\+esborrat (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_a998dc172668a108837512f818ca5430f}
+)}\label{class_comanda_a998dc172668a108837512f818ca5430f}
 
 
-Consulta el tipus d'esborrat. 
+Consulta el tipus d\textquotesingle{}esborrat. 
 
 \begin{DoxyPrecond}{Precondició}
-la comanda és d'esborrat 
+la comanda és d\textquotesingle{}esborrat 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-retorna el tipus d'esborrat\-: \char`\"{}etiquetes\char`\"{} (si cal esborrar totes les etiquetes), \char`\"{}etiqueta\char`\"{} (si cal esborrar-\/ne una) o \char`\"{}tasca\char`\"{} (si cal esborrar la tasca) 
+retorna el tipus d\textquotesingle{}esborrat\+: \char`\"{}etiquetes\char`\"{} (si cal esborrar totes les etiquetes), \char`\"{}etiqueta\char`\"{} (si cal esborrar-\/ne una) o \char`\"{}tasca\char`\"{} (si cal esborrar la tasca) 
 \end{DoxyPostcond}
 
 
-Definició a la línia 251 del fitxer comanda.\-cc.
+Definició a la línia 251 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 251 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a269a43d5b283a23792791a2ba67747b0}{i\_esborrat};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_aadabfc85ec7cdeb45039e8952a1ab124}{\index{Comanda@{Comanda}!nombre\-\_\-dates@{nombre\-\_\-dates}}
-\index{nombre\-\_\-dates@{nombre\-\_\-dates}!Comanda@{Comanda}}
-\subsubsection[{nombre\-\_\-dates}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\-::nombre\-\_\-dates (
+\hypertarget{class_comanda_aadabfc85ec7cdeb45039e8952a1ab124}{}\index{Comanda@{Comanda}!nombre\+\_\+dates@{nombre\+\_\+dates}}
+\index{nombre\+\_\+dates@{nombre\+\_\+dates}!Comanda@{Comanda}}
+\subsubsection[{nombre\+\_\+dates}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\+::nombre\+\_\+dates (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_aadabfc85ec7cdeb45039e8952a1ab124}
+)}\label{class_comanda_aadabfc85ec7cdeb45039e8952a1ab124}
 
 
 Consulta el nombre de dates contingudes en la comanda. 
@@ -791,44 +790,44 @@ retorna el nombre de dates proporcionades en la comanda (0, 1 o 2)
 \end{DoxyPostcond}
 
 
-Definició a la línia 253 del fitxer comanda.\-cc.
+Definició a la línia 253 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 253 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a0a4e13d8edba10c69d1b058d8fc6a7c3}{n\_dates};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_ab4ce0a50bde32145d11cbaee753526c7}{\index{Comanda@{Comanda}!data@{data}}
+\hypertarget{class_comanda_ab4ce0a50bde32145d11cbaee753526c7}{}\index{Comanda@{Comanda}!data@{data}}
 \index{data@{data}!Comanda@{Comanda}}
-\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\-::data (
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\+::data (
 \begin{DoxyParamCaption}
 \item[{int}]{i}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_ab4ce0a50bde32145d11cbaee753526c7}
+)}\label{class_comanda_ab4ce0a50bde32145d11cbaee753526c7}
 
 
 Consulta una data individual de la comanda. 
 
 \begin{DoxyPrecond}{Precondició}
-1 $<$= i $<$= \hyperlink{class_comanda_aadabfc85ec7cdeb45039e8952a1ab124}{nombre\-\_\-dates()} 
+1 $<$= i $<$= \hyperlink{class_comanda_aadabfc85ec7cdeb45039e8952a1ab124}{nombre\+\_\+dates()} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
 retorna la data i-\/èsima de la comanda 
 \end{DoxyPostcond}
 
 
-Definició a la línia 255 del fitxer comanda.\-cc.
+Definició a la línia 255 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 255 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a06ee1d3173ee0ae52c588689e9263099}{i\_data}[i-1];\}
 \end{DoxyCode}
-\hypertarget{class_comanda_abf8b926146f3664aacfd24d7800014e5}{\index{Comanda@{Comanda}!te\-\_\-hora@{te\-\_\-hora}}
-\index{te\-\_\-hora@{te\-\_\-hora}!Comanda@{Comanda}}
-\subsubsection[{te\-\_\-hora}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::te\-\_\-hora (
+\hypertarget{class_comanda_abf8b926146f3664aacfd24d7800014e5}{}\index{Comanda@{Comanda}!te\+\_\+hora@{te\+\_\+hora}}
+\index{te\+\_\+hora@{te\+\_\+hora}!Comanda@{Comanda}}
+\subsubsection[{te\+\_\+hora}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::te\+\_\+hora (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_abf8b926146f3664aacfd24d7800014e5}
+)}\label{class_comanda_abf8b926146f3664aacfd24d7800014e5}
 
 
 Comprova si la comanda conté hora. 
@@ -841,47 +840,47 @@ cert si la comanda conté hora
 \end{DoxyPostcond}
 
 
-Definició a la línia 257 del fitxer comanda.\-cc.
+Definició a la línia 257 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 257 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_ae481194a2016e940e655173e897d214d}{t\_hora};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_ae8bca2ad702d3316dc1c53dcab7cac02}{\index{Comanda@{Comanda}!hora@{hora}}
+\hypertarget{class_comanda_ae8bca2ad702d3316dc1c53dcab7cac02}{}\index{Comanda@{Comanda}!hora@{hora}}
 \index{hora@{hora}!Comanda@{Comanda}}
-\subsubsection[{hora}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\-::hora (
+\subsubsection[{hora}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\+::hora (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_ae8bca2ad702d3316dc1c53dcab7cac02}
+)}\label{class_comanda_ae8bca2ad702d3316dc1c53dcab7cac02}
 
 
-Consulta l'hora de la comanda. 
+Consulta l\textquotesingle{}hora de la comanda. 
 
 \begin{DoxyPrecond}{Precondició}
 la comanda conté hora 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-retorna l'hora continguda en la comanda 
+retorna l\textquotesingle{}hora continguda en la comanda 
 \end{DoxyPostcond}
 
 
-Definició a la línia 259 del fitxer comanda.\-cc.
+Definició a la línia 259 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 259 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a480a34460b3668a5b4a1fa7e796632db}{i\_hora};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_a5452f5a877d58627cd2bd871cf31b074}{\index{Comanda@{Comanda}!te\-\_\-titol@{te\-\_\-titol}}
-\index{te\-\_\-titol@{te\-\_\-titol}!Comanda@{Comanda}}
-\subsubsection[{te\-\_\-titol}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::te\-\_\-titol (
+\hypertarget{class_comanda_a5452f5a877d58627cd2bd871cf31b074}{}\index{Comanda@{Comanda}!te\+\_\+titol@{te\+\_\+titol}}
+\index{te\+\_\+titol@{te\+\_\+titol}!Comanda@{Comanda}}
+\subsubsection[{te\+\_\+titol}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::te\+\_\+titol (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_a5452f5a877d58627cd2bd871cf31b074}
+)}\label{class_comanda_a5452f5a877d58627cd2bd871cf31b074}
 
 
-Comprova si la comanda conté un títol (una seqüència de paraules, és a dir, strings que comencen per una lletra i no contenen ni \char`\"{}.\char`\"{} ni \char`\"{},\char`\"{} ni \char`\"{}\-:\char`\"{} ni \char`\"{}\#\char`\"{}) 
+Comprova si la comanda conté un títol (una seqüència de paraules, és a dir, strings que comencen per una lletra i no contenen ni \char`\"{}.\char`\"{} ni \char`\"{},\char`\"{} ni \char`\"{}\+:\char`\"{} ni \char`\"{}\#\char`\"{}) 
 
 \begin{DoxyPrecond}{Precondició}
 cert 
@@ -891,19 +890,19 @@ retorna cert si la comanda conté un títol
 \end{DoxyPostcond}
 
 
-Definició a la línia 261 del fitxer comanda.\-cc.
+Definició a la línia 261 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 261 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a08e8674396e2125cf8b2900f289713a7}{t\_titol};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_ad1cefdda3db389d9ab536a59e2ee907d}{\index{Comanda@{Comanda}!titol@{titol}}
+\hypertarget{class_comanda_ad1cefdda3db389d9ab536a59e2ee907d}{}\index{Comanda@{Comanda}!titol@{titol}}
 \index{titol@{titol}!Comanda@{Comanda}}
-\subsubsection[{titol}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\-::titol (
+\subsubsection[{titol}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\+::titol (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_ad1cefdda3db389d9ab536a59e2ee907d}
+)}\label{class_comanda_ad1cefdda3db389d9ab536a59e2ee907d}
 
 
 Consulta el títol de la comanda. 
@@ -916,119 +915,119 @@ retorna el títol contingut en la comanda
 \end{DoxyPostcond}
 
 
-Definició a la línia 263 del fitxer comanda.\-cc.
+Definició a la línia 263 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 263 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_aca04e90eab5ac14ddc3b25f154aabe48}{i\_titol};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_a4280b6ae2d435d9c21bbed364cb1db3d}{\index{Comanda@{Comanda}!nombre\-\_\-etiquetes@{nombre\-\_\-etiquetes}}
-\index{nombre\-\_\-etiquetes@{nombre\-\_\-etiquetes}!Comanda@{Comanda}}
-\subsubsection[{nombre\-\_\-etiquetes}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\-::nombre\-\_\-etiquetes (
+\hypertarget{class_comanda_a4280b6ae2d435d9c21bbed364cb1db3d}{}\index{Comanda@{Comanda}!nombre\+\_\+etiquetes@{nombre\+\_\+etiquetes}}
+\index{nombre\+\_\+etiquetes@{nombre\+\_\+etiquetes}!Comanda@{Comanda}}
+\subsubsection[{nombre\+\_\+etiquetes}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\+::nombre\+\_\+etiquetes (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_a4280b6ae2d435d9c21bbed364cb1db3d}
+)}\label{class_comanda_a4280b6ae2d435d9c21bbed364cb1db3d}
 
 
-Consulta el nombre d'etiquetes de la comanda (strings que comencen per \# seguit d'una paraula) 
+Consulta el nombre d\textquotesingle{}etiquetes de la comanda (strings que comencen per \# seguit d\textquotesingle{}una paraula) 
 
 \begin{DoxyPrecond}{Precondició}
 cert 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-retorna el nombre d'etiquetes contingudes en la comanda 
+retorna el nombre d\textquotesingle{}etiquetes contingudes en la comanda 
 \end{DoxyPostcond}
 
 
-Definició a la línia 265 del fitxer comanda.\-cc.
+Definició a la línia 265 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 265 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a1e525815f0745140e05da2ebb96ec39a}{n\_etiquetes};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_ac80e9a80d16c6bac9a134e431bca1ed0}{\index{Comanda@{Comanda}!etiqueta@{etiqueta}}
+\hypertarget{class_comanda_ac80e9a80d16c6bac9a134e431bca1ed0}{}\index{Comanda@{Comanda}!etiqueta@{etiqueta}}
 \index{etiqueta@{etiqueta}!Comanda@{Comanda}}
-\subsubsection[{etiqueta}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\-::etiqueta (
+\subsubsection[{etiqueta}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\+::etiqueta (
 \begin{DoxyParamCaption}
 \item[{int}]{i}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_ac80e9a80d16c6bac9a134e431bca1ed0}
+)}\label{class_comanda_ac80e9a80d16c6bac9a134e431bca1ed0}
 
 
 Consulta una etiqueta de la comanda. 
 
 \begin{DoxyPrecond}{Precondició}
-1 $<$= i $<$= \hyperlink{class_comanda_a4280b6ae2d435d9c21bbed364cb1db3d}{nombre\-\_\-etiquetes()} 
+1 $<$= i $<$= \hyperlink{class_comanda_a4280b6ae2d435d9c21bbed364cb1db3d}{nombre\+\_\+etiquetes()} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-retorna l'etiqueta i-\/èsima de la comanda 
+retorna l\textquotesingle{}etiqueta i-\/èsima de la comanda 
 \end{DoxyPostcond}
 
 
-Definició a la línia 267 del fitxer comanda.\-cc.
+Definició a la línia 267 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 267 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a1d193f66ea6d2681ab79a16192da3114}{i\_etiqueta}[i-1];\}
 \end{DoxyCode}
-\hypertarget{class_comanda_a81d17f4233e33f3baac7633546c066f0}{\index{Comanda@{Comanda}!te\-\_\-expressio@{te\-\_\-expressio}}
-\index{te\-\_\-expressio@{te\-\_\-expressio}!Comanda@{Comanda}}
-\subsubsection[{te\-\_\-expressio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::te\-\_\-expressio (
+\hypertarget{class_comanda_a81d17f4233e33f3baac7633546c066f0}{}\index{Comanda@{Comanda}!te\+\_\+expressio@{te\+\_\+expressio}}
+\index{te\+\_\+expressio@{te\+\_\+expressio}!Comanda@{Comanda}}
+\subsubsection[{te\+\_\+expressio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::te\+\_\+expressio (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_a81d17f4233e33f3baac7633546c066f0}
+)}\label{class_comanda_a81d17f4233e33f3baac7633546c066f0}
 
 
-Consulta la presència d'una expressió booleana d'etiquetes en la comanda, és a dir, una expressió ben parentitzada, on els operadors són \char`\"{},\char`\"{} (disjunció binària) i \char`\"{}.\char`\"{} (conjunció binària) i els operands són etiquetes. 
+Consulta la presència d\textquotesingle{}una expressió booleana d\textquotesingle{}etiquetes en la comanda, és a dir, una expressió ben parentitzada, on els operadors són \char`\"{},\char`\"{} (disjunció binària) i \char`\"{}.\char`\"{} (conjunció binària) i els operands són etiquetes. 
 
 \begin{DoxyPrecond}{Precondició}
 cert 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-cert si la comanda conté una expressió booleana d'etiquetes 
+cert si la comanda conté una expressió booleana d\textquotesingle{}etiquetes 
 \end{DoxyPostcond}
 
 
-Definició a la línia 269 del fitxer comanda.\-cc.
+Definició a la línia 269 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 269 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_ac7037525fc1cd9f49b02bd87cf4b6123}{t\_expressio};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_aa3191131592fbf58d20bed1052c31cd1}{\index{Comanda@{Comanda}!expressio@{expressio}}
+\hypertarget{class_comanda_aa3191131592fbf58d20bed1052c31cd1}{}\index{Comanda@{Comanda}!expressio@{expressio}}
 \index{expressio@{expressio}!Comanda@{Comanda}}
-\subsubsection[{expressio}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\-::expressio (
+\subsubsection[{expressio}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\+::expressio (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_aa3191131592fbf58d20bed1052c31cd1}
+)}\label{class_comanda_aa3191131592fbf58d20bed1052c31cd1}
 
 
-Consulta una expressió d'etiquetes. 
+Consulta una expressió d\textquotesingle{}etiquetes. 
 
 \begin{DoxyPrecond}{Precondició}
-la comanda conté una expressió d'etiquetes 
+la comanda conté una expressió d\textquotesingle{}etiquetes 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-retorna l'expressio booleana d'etiquetes continguda en la comanda 
+retorna l\textquotesingle{}expressio booleana d\textquotesingle{}etiquetes continguda en la comanda 
 \end{DoxyPostcond}
 
 
-Definició a la línia 271 del fitxer comanda.\-cc.
+Definició a la línia 271 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
 271 \{\textcolor{keywordflow}{return} \hyperlink{class_comanda_a9236cdc5142b6a9f4116673abce06508}{i\_expressio};\}
 \end{DoxyCode}
-\hypertarget{class_comanda_a67591051e9c5977c324ad8f8c3ac16e3}{\index{Comanda@{Comanda}!tasca@{tasca}}
+\hypertarget{class_comanda_a67591051e9c5977c324ad8f8c3ac16e3}{}\index{Comanda@{Comanda}!tasca@{tasca}}
 \index{tasca@{tasca}!Comanda@{Comanda}}
-\subsubsection[{tasca}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\-::tasca (
+\subsubsection[{tasca}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\+::tasca (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_comanda_a67591051e9c5977c324ad8f8c3ac16e3}
+)}\label{class_comanda_a67591051e9c5977c324ad8f8c3ac16e3}
 
 
 Consulta el número de tasca que hi ha a la comanda. 
@@ -1037,11 +1036,11 @@ Consulta el número de tasca que hi ha a la comanda.
 la comanda és un esborrat o una modificació 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-retorna el número de tasca de l'operació continguda en la comanda 
+retorna el número de tasca de l\textquotesingle{}operació continguda en la comanda 
 \end{DoxyPostcond}
 
 
-Definició a la línia 273 del fitxer comanda.\-cc.
+Definició a la línia 273 del fitxer comanda.\+cc.
 
 
 \begin{DoxyCode}
@@ -1050,170 +1049,170 @@ Definició a la línia 273 del fitxer comanda.\-cc.
 
 
 \subsection{Documentació de les Dades Membre}
-\hypertarget{class_comanda_abf1249ea57fd3525306f1817be45177c}{\index{Comanda@{Comanda}!M\-A\-X\-\_\-i\-\_\-data@{M\-A\-X\-\_\-i\-\_\-data}}
-\index{M\-A\-X\-\_\-i\-\_\-data@{M\-A\-X\-\_\-i\-\_\-data}!Comanda@{Comanda}}
-\subsubsection[{M\-A\-X\-\_\-i\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}const int Comanda\-::\-M\-A\-X\-\_\-i\-\_\-data = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_comanda_abf1249ea57fd3525306f1817be45177c}
+\hypertarget{class_comanda_abf1249ea57fd3525306f1817be45177c}{}\index{Comanda@{Comanda}!M\+A\+X\+\_\+i\+\_\+data@{M\+A\+X\+\_\+i\+\_\+data}}
+\index{M\+A\+X\+\_\+i\+\_\+data@{M\+A\+X\+\_\+i\+\_\+data}!Comanda@{Comanda}}
+\subsubsection[{M\+A\+X\+\_\+i\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}const int Comanda\+::\+M\+A\+X\+\_\+i\+\_\+data = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_comanda_abf1249ea57fd3525306f1817be45177c}
 
 
-Definició a la línia 24 del fitxer comanda.\-hh.
+Definició a la línia 24 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_a4792137ffe62e366d017c085798e1de7}{\index{Comanda@{Comanda}!e@{e}}
+\hypertarget{class_comanda_a4792137ffe62e366d017c085798e1de7}{}\index{Comanda@{Comanda}!e@{e}}
 \index{e@{e}!Comanda@{Comanda}}
-\subsubsection[{e}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Token}$>$ Comanda\-::e\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a4792137ffe62e366d017c085798e1de7}
+\subsubsection[{e}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Token}$>$ Comanda\+::e\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a4792137ffe62e366d017c085798e1de7}
 
 
-Definició a la línia 26 del fitxer comanda.\-hh.
+Definició a la línia 26 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_abaf613f247586557027ad5857ace89c2}{\index{Comanda@{Comanda}!mida@{mida}}
+\hypertarget{class_comanda_abaf613f247586557027ad5857ace89c2}{}\index{Comanda@{Comanda}!mida@{mida}}
 \index{mida@{mida}!Comanda@{Comanda}}
-\subsubsection[{mida}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\-::mida\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_abaf613f247586557027ad5857ace89c2}
+\subsubsection[{mida}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\+::mida\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_abaf613f247586557027ad5857ace89c2}
 
 
-Definició a la línia 27 del fitxer comanda.\-hh.
+Definició a la línia 27 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_afa50474d0c9c08da1f3042cfddc9df24}{\index{Comanda@{Comanda}!e\-\_\-insercio@{e\-\_\-insercio}}
-\index{e\-\_\-insercio@{e\-\_\-insercio}!Comanda@{Comanda}}
-\subsubsection[{e\-\_\-insercio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::e\-\_\-insercio\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_afa50474d0c9c08da1f3042cfddc9df24}
-
-
-Definició a la línia 29 del fitxer comanda.\-hh.
-
-\hypertarget{class_comanda_a558a2944c2306c12df9f889fc96a58dd}{\index{Comanda@{Comanda}!e\-\_\-consulta@{e\-\_\-consulta}}
-\index{e\-\_\-consulta@{e\-\_\-consulta}!Comanda@{Comanda}}
-\subsubsection[{e\-\_\-consulta}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::e\-\_\-consulta\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a558a2944c2306c12df9f889fc96a58dd}
+\hypertarget{class_comanda_afa50474d0c9c08da1f3042cfddc9df24}{}\index{Comanda@{Comanda}!e\+\_\+insercio@{e\+\_\+insercio}}
+\index{e\+\_\+insercio@{e\+\_\+insercio}!Comanda@{Comanda}}
+\subsubsection[{e\+\_\+insercio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::e\+\_\+insercio\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_afa50474d0c9c08da1f3042cfddc9df24}
 
 
-Definició a la línia 30 del fitxer comanda.\-hh.
+Definició a la línia 29 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_a38e7cdf2003076cbe88461f03dc2106c}{\index{Comanda@{Comanda}!e\-\_\-passat@{e\-\_\-passat}}
-\index{e\-\_\-passat@{e\-\_\-passat}!Comanda@{Comanda}}
-\subsubsection[{e\-\_\-passat}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::e\-\_\-passat\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a38e7cdf2003076cbe88461f03dc2106c}
-
-
-Definició a la línia 31 del fitxer comanda.\-hh.
-
-\hypertarget{class_comanda_a96d917429f6bfa73608d745ad1e1dfc7}{\index{Comanda@{Comanda}!e\-\_\-modificacio@{e\-\_\-modificacio}}
-\index{e\-\_\-modificacio@{e\-\_\-modificacio}!Comanda@{Comanda}}
-\subsubsection[{e\-\_\-modificacio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::e\-\_\-modificacio\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a96d917429f6bfa73608d745ad1e1dfc7}
+\hypertarget{class_comanda_a558a2944c2306c12df9f889fc96a58dd}{}\index{Comanda@{Comanda}!e\+\_\+consulta@{e\+\_\+consulta}}
+\index{e\+\_\+consulta@{e\+\_\+consulta}!Comanda@{Comanda}}
+\subsubsection[{e\+\_\+consulta}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::e\+\_\+consulta\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a558a2944c2306c12df9f889fc96a58dd}
 
 
-Definició a la línia 32 del fitxer comanda.\-hh.
+Definició a la línia 30 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_ad73910246f9c47c887a3c01b53350282}{\index{Comanda@{Comanda}!e\-\_\-rellotge@{e\-\_\-rellotge}}
-\index{e\-\_\-rellotge@{e\-\_\-rellotge}!Comanda@{Comanda}}
-\subsubsection[{e\-\_\-rellotge}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::e\-\_\-rellotge\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_ad73910246f9c47c887a3c01b53350282}
-
-
-Definició a la línia 33 del fitxer comanda.\-hh.
-
-\hypertarget{class_comanda_a70a9790e90a45015dbcd4c6700ec0812}{\index{Comanda@{Comanda}!e\-\_\-esborrat@{e\-\_\-esborrat}}
-\index{e\-\_\-esborrat@{e\-\_\-esborrat}!Comanda@{Comanda}}
-\subsubsection[{e\-\_\-esborrat}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::e\-\_\-esborrat\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a70a9790e90a45015dbcd4c6700ec0812}
+\hypertarget{class_comanda_a38e7cdf2003076cbe88461f03dc2106c}{}\index{Comanda@{Comanda}!e\+\_\+passat@{e\+\_\+passat}}
+\index{e\+\_\+passat@{e\+\_\+passat}!Comanda@{Comanda}}
+\subsubsection[{e\+\_\+passat}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::e\+\_\+passat\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a38e7cdf2003076cbe88461f03dc2106c}
 
 
-Definició a la línia 34 del fitxer comanda.\-hh.
+Definició a la línia 31 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_a0f7472af37d7f6c24f74fbac60e4a696}{\index{Comanda@{Comanda}!e\-\_\-acabament@{e\-\_\-acabament}}
-\index{e\-\_\-acabament@{e\-\_\-acabament}!Comanda@{Comanda}}
-\subsubsection[{e\-\_\-acabament}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::e\-\_\-acabament\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a0f7472af37d7f6c24f74fbac60e4a696}
-
-
-Definició a la línia 35 del fitxer comanda.\-hh.
-
-\hypertarget{class_comanda_a0a4e13d8edba10c69d1b058d8fc6a7c3}{\index{Comanda@{Comanda}!n\-\_\-dates@{n\-\_\-dates}}
-\index{n\-\_\-dates@{n\-\_\-dates}!Comanda@{Comanda}}
-\subsubsection[{n\-\_\-dates}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\-::n\-\_\-dates\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a0a4e13d8edba10c69d1b058d8fc6a7c3}
+\hypertarget{class_comanda_a96d917429f6bfa73608d745ad1e1dfc7}{}\index{Comanda@{Comanda}!e\+\_\+modificacio@{e\+\_\+modificacio}}
+\index{e\+\_\+modificacio@{e\+\_\+modificacio}!Comanda@{Comanda}}
+\subsubsection[{e\+\_\+modificacio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::e\+\_\+modificacio\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a96d917429f6bfa73608d745ad1e1dfc7}
 
 
-Definició a la línia 37 del fitxer comanda.\-hh.
+Definició a la línia 32 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_a06ee1d3173ee0ae52c588689e9263099}{\index{Comanda@{Comanda}!i\-\_\-data@{i\-\_\-data}}
-\index{i\-\_\-data@{i\-\_\-data}!Comanda@{Comanda}}
-\subsubsection[{i\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Comanda\-::i\-\_\-data\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a06ee1d3173ee0ae52c588689e9263099}
-
-
-Definició a la línia 38 del fitxer comanda.\-hh.
-
-\hypertarget{class_comanda_ae481194a2016e940e655173e897d214d}{\index{Comanda@{Comanda}!t\-\_\-hora@{t\-\_\-hora}}
-\index{t\-\_\-hora@{t\-\_\-hora}!Comanda@{Comanda}}
-\subsubsection[{t\-\_\-hora}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::t\-\_\-hora\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_ae481194a2016e940e655173e897d214d}
+\hypertarget{class_comanda_ad73910246f9c47c887a3c01b53350282}{}\index{Comanda@{Comanda}!e\+\_\+rellotge@{e\+\_\+rellotge}}
+\index{e\+\_\+rellotge@{e\+\_\+rellotge}!Comanda@{Comanda}}
+\subsubsection[{e\+\_\+rellotge}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::e\+\_\+rellotge\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_ad73910246f9c47c887a3c01b53350282}
 
 
-Definició a la línia 40 del fitxer comanda.\-hh.
+Definició a la línia 33 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_a480a34460b3668a5b4a1fa7e796632db}{\index{Comanda@{Comanda}!i\-\_\-hora@{i\-\_\-hora}}
-\index{i\-\_\-hora@{i\-\_\-hora}!Comanda@{Comanda}}
-\subsubsection[{i\-\_\-hora}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\-::i\-\_\-hora\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a480a34460b3668a5b4a1fa7e796632db}
-
-
-Definició a la línia 41 del fitxer comanda.\-hh.
-
-\hypertarget{class_comanda_a08e8674396e2125cf8b2900f289713a7}{\index{Comanda@{Comanda}!t\-\_\-titol@{t\-\_\-titol}}
-\index{t\-\_\-titol@{t\-\_\-titol}!Comanda@{Comanda}}
-\subsubsection[{t\-\_\-titol}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::t\-\_\-titol\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a08e8674396e2125cf8b2900f289713a7}
+\hypertarget{class_comanda_a70a9790e90a45015dbcd4c6700ec0812}{}\index{Comanda@{Comanda}!e\+\_\+esborrat@{e\+\_\+esborrat}}
+\index{e\+\_\+esborrat@{e\+\_\+esborrat}!Comanda@{Comanda}}
+\subsubsection[{e\+\_\+esborrat}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::e\+\_\+esborrat\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a70a9790e90a45015dbcd4c6700ec0812}
 
 
-Definició a la línia 43 del fitxer comanda.\-hh.
+Definició a la línia 34 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_aca04e90eab5ac14ddc3b25f154aabe48}{\index{Comanda@{Comanda}!i\-\_\-titol@{i\-\_\-titol}}
-\index{i\-\_\-titol@{i\-\_\-titol}!Comanda@{Comanda}}
-\subsubsection[{i\-\_\-titol}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\-::i\-\_\-titol\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_aca04e90eab5ac14ddc3b25f154aabe48}
-
-
-Definició a la línia 44 del fitxer comanda.\-hh.
-
-\hypertarget{class_comanda_a1e525815f0745140e05da2ebb96ec39a}{\index{Comanda@{Comanda}!n\-\_\-etiquetes@{n\-\_\-etiquetes}}
-\index{n\-\_\-etiquetes@{n\-\_\-etiquetes}!Comanda@{Comanda}}
-\subsubsection[{n\-\_\-etiquetes}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\-::n\-\_\-etiquetes\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a1e525815f0745140e05da2ebb96ec39a}
+\hypertarget{class_comanda_a0f7472af37d7f6c24f74fbac60e4a696}{}\index{Comanda@{Comanda}!e\+\_\+acabament@{e\+\_\+acabament}}
+\index{e\+\_\+acabament@{e\+\_\+acabament}!Comanda@{Comanda}}
+\subsubsection[{e\+\_\+acabament}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::e\+\_\+acabament\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a0f7472af37d7f6c24f74fbac60e4a696}
 
 
-Definició a la línia 46 del fitxer comanda.\-hh.
+Definició a la línia 35 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_a1d193f66ea6d2681ab79a16192da3114}{\index{Comanda@{Comanda}!i\-\_\-etiqueta@{i\-\_\-etiqueta}}
-\index{i\-\_\-etiqueta@{i\-\_\-etiqueta}!Comanda@{Comanda}}
-\subsubsection[{i\-\_\-etiqueta}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Comanda\-::i\-\_\-etiqueta\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a1d193f66ea6d2681ab79a16192da3114}
-
-
-Definició a la línia 47 del fitxer comanda.\-hh.
-
-\hypertarget{class_comanda_ac7037525fc1cd9f49b02bd87cf4b6123}{\index{Comanda@{Comanda}!t\-\_\-expressio@{t\-\_\-expressio}}
-\index{t\-\_\-expressio@{t\-\_\-expressio}!Comanda@{Comanda}}
-\subsubsection[{t\-\_\-expressio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::t\-\_\-expressio\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_ac7037525fc1cd9f49b02bd87cf4b6123}
+\hypertarget{class_comanda_a0a4e13d8edba10c69d1b058d8fc6a7c3}{}\index{Comanda@{Comanda}!n\+\_\+dates@{n\+\_\+dates}}
+\index{n\+\_\+dates@{n\+\_\+dates}!Comanda@{Comanda}}
+\subsubsection[{n\+\_\+dates}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\+::n\+\_\+dates\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a0a4e13d8edba10c69d1b058d8fc6a7c3}
 
 
-Definició a la línia 49 del fitxer comanda.\-hh.
+Definició a la línia 37 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_a9236cdc5142b6a9f4116673abce06508}{\index{Comanda@{Comanda}!i\-\_\-expressio@{i\-\_\-expressio}}
-\index{i\-\_\-expressio@{i\-\_\-expressio}!Comanda@{Comanda}}
-\subsubsection[{i\-\_\-expressio}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\-::i\-\_\-expressio\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a9236cdc5142b6a9f4116673abce06508}
-
-
-Definició a la línia 50 del fitxer comanda.\-hh.
-
-\hypertarget{class_comanda_a269a43d5b283a23792791a2ba67747b0}{\index{Comanda@{Comanda}!i\-\_\-esborrat@{i\-\_\-esborrat}}
-\index{i\-\_\-esborrat@{i\-\_\-esborrat}!Comanda@{Comanda}}
-\subsubsection[{i\-\_\-esborrat}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\-::i\-\_\-esborrat\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a269a43d5b283a23792791a2ba67747b0}
+\hypertarget{class_comanda_a06ee1d3173ee0ae52c588689e9263099}{}\index{Comanda@{Comanda}!i\+\_\+data@{i\+\_\+data}}
+\index{i\+\_\+data@{i\+\_\+data}!Comanda@{Comanda}}
+\subsubsection[{i\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Comanda\+::i\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a06ee1d3173ee0ae52c588689e9263099}
 
 
-Definició a la línia 52 del fitxer comanda.\-hh.
+Definició a la línia 38 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_aab152fe48a937f449c027a2274fc31e7}{\index{Comanda@{Comanda}!i\-\_\-tasca@{i\-\_\-tasca}}
-\index{i\-\_\-tasca@{i\-\_\-tasca}!Comanda@{Comanda}}
-\subsubsection[{i\-\_\-tasca}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\-::i\-\_\-tasca\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_aab152fe48a937f449c027a2274fc31e7}
+\hypertarget{class_comanda_ae481194a2016e940e655173e897d214d}{}\index{Comanda@{Comanda}!t\+\_\+hora@{t\+\_\+hora}}
+\index{t\+\_\+hora@{t\+\_\+hora}!Comanda@{Comanda}}
+\subsubsection[{t\+\_\+hora}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::t\+\_\+hora\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_ae481194a2016e940e655173e897d214d}
 
 
-Definició a la línia 54 del fitxer comanda.\-hh.
+Definició a la línia 40 del fitxer comanda.\+hh.
 
-\hypertarget{class_comanda_a9a1bf4bf74940a4bac90140e67d11972}{\index{Comanda@{Comanda}!error@{error}}
+\hypertarget{class_comanda_a480a34460b3668a5b4a1fa7e796632db}{}\index{Comanda@{Comanda}!i\+\_\+hora@{i\+\_\+hora}}
+\index{i\+\_\+hora@{i\+\_\+hora}!Comanda@{Comanda}}
+\subsubsection[{i\+\_\+hora}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\+::i\+\_\+hora\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a480a34460b3668a5b4a1fa7e796632db}
+
+
+Definició a la línia 41 del fitxer comanda.\+hh.
+
+\hypertarget{class_comanda_a08e8674396e2125cf8b2900f289713a7}{}\index{Comanda@{Comanda}!t\+\_\+titol@{t\+\_\+titol}}
+\index{t\+\_\+titol@{t\+\_\+titol}!Comanda@{Comanda}}
+\subsubsection[{t\+\_\+titol}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::t\+\_\+titol\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a08e8674396e2125cf8b2900f289713a7}
+
+
+Definició a la línia 43 del fitxer comanda.\+hh.
+
+\hypertarget{class_comanda_aca04e90eab5ac14ddc3b25f154aabe48}{}\index{Comanda@{Comanda}!i\+\_\+titol@{i\+\_\+titol}}
+\index{i\+\_\+titol@{i\+\_\+titol}!Comanda@{Comanda}}
+\subsubsection[{i\+\_\+titol}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\+::i\+\_\+titol\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_aca04e90eab5ac14ddc3b25f154aabe48}
+
+
+Definició a la línia 44 del fitxer comanda.\+hh.
+
+\hypertarget{class_comanda_a1e525815f0745140e05da2ebb96ec39a}{}\index{Comanda@{Comanda}!n\+\_\+etiquetes@{n\+\_\+etiquetes}}
+\index{n\+\_\+etiquetes@{n\+\_\+etiquetes}!Comanda@{Comanda}}
+\subsubsection[{n\+\_\+etiquetes}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\+::n\+\_\+etiquetes\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a1e525815f0745140e05da2ebb96ec39a}
+
+
+Definició a la línia 46 del fitxer comanda.\+hh.
+
+\hypertarget{class_comanda_a1d193f66ea6d2681ab79a16192da3114}{}\index{Comanda@{Comanda}!i\+\_\+etiqueta@{i\+\_\+etiqueta}}
+\index{i\+\_\+etiqueta@{i\+\_\+etiqueta}!Comanda@{Comanda}}
+\subsubsection[{i\+\_\+etiqueta}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Comanda\+::i\+\_\+etiqueta\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a1d193f66ea6d2681ab79a16192da3114}
+
+
+Definició a la línia 47 del fitxer comanda.\+hh.
+
+\hypertarget{class_comanda_ac7037525fc1cd9f49b02bd87cf4b6123}{}\index{Comanda@{Comanda}!t\+\_\+expressio@{t\+\_\+expressio}}
+\index{t\+\_\+expressio@{t\+\_\+expressio}!Comanda@{Comanda}}
+\subsubsection[{t\+\_\+expressio}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::t\+\_\+expressio\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_ac7037525fc1cd9f49b02bd87cf4b6123}
+
+
+Definició a la línia 49 del fitxer comanda.\+hh.
+
+\hypertarget{class_comanda_a9236cdc5142b6a9f4116673abce06508}{}\index{Comanda@{Comanda}!i\+\_\+expressio@{i\+\_\+expressio}}
+\index{i\+\_\+expressio@{i\+\_\+expressio}!Comanda@{Comanda}}
+\subsubsection[{i\+\_\+expressio}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\+::i\+\_\+expressio\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a9236cdc5142b6a9f4116673abce06508}
+
+
+Definició a la línia 50 del fitxer comanda.\+hh.
+
+\hypertarget{class_comanda_a269a43d5b283a23792791a2ba67747b0}{}\index{Comanda@{Comanda}!i\+\_\+esborrat@{i\+\_\+esborrat}}
+\index{i\+\_\+esborrat@{i\+\_\+esborrat}!Comanda@{Comanda}}
+\subsubsection[{i\+\_\+esborrat}]{\setlength{\rightskip}{0pt plus 5cm}string Comanda\+::i\+\_\+esborrat\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a269a43d5b283a23792791a2ba67747b0}
+
+
+Definició a la línia 52 del fitxer comanda.\+hh.
+
+\hypertarget{class_comanda_aab152fe48a937f449c027a2274fc31e7}{}\index{Comanda@{Comanda}!i\+\_\+tasca@{i\+\_\+tasca}}
+\index{i\+\_\+tasca@{i\+\_\+tasca}!Comanda@{Comanda}}
+\subsubsection[{i\+\_\+tasca}]{\setlength{\rightskip}{0pt plus 5cm}int Comanda\+::i\+\_\+tasca\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_aab152fe48a937f449c027a2274fc31e7}
+
+
+Definició a la línia 54 del fitxer comanda.\+hh.
+
+\hypertarget{class_comanda_a9a1bf4bf74940a4bac90140e67d11972}{}\index{Comanda@{Comanda}!error@{error}}
 \index{error@{error}!Comanda@{Comanda}}
-\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\-::error\hspace{0.3cm}{\ttfamily [private]}}}\label{class_comanda_a9a1bf4bf74940a4bac90140e67d11972}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}bool Comanda\+::error\hspace{0.3cm}{\ttfamily [private]}}\label{class_comanda_a9a1bf4bf74940a4bac90140e67d11972}
 
 
-Definició a la línia 56 del fitxer comanda.\-hh.
+Definició a la línia 56 del fitxer comanda.\+hh.
 
 
 
-La documentació d'aquesta classe es va generar a partir dels següents fitxers\-:\begin{DoxyCompactItemize}
+La documentació d\textquotesingle{}aquesta classe es va generar a partir dels següents fitxers\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{comanda_8hh}{comanda.\-hh}\item 
-\hyperlink{comanda_8cc}{comanda.\-cc}\end{DoxyCompactItemize}
+\hyperlink{comanda_8hh}{comanda.\+hh}\item 
+\hyperlink{comanda_8cc}{comanda.\+cc}\end{DoxyCompactItemize}

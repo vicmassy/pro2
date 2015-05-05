@@ -3,15 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
 <title>Pràctica PRO2. Gestor de tasques.: Fitxer de Codi token.cc</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
+  $(document).ready(function() { init_search(); });
 </script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -31,7 +32,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generat per Doxygen 1.8.6 -->
+<!-- Generat per Doxygen 1.8.9.1 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "../../search",false,'Cerca');
 </script>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Cerca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tot</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fitxers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funcions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+</div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -267,8 +268,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Cerca');
 <div class="ttc" id="class_token_html_a12c961c772aa760b719dc3becb523ac4"><div class="ttname"><a href="../../db/dc1/class_token.html#a12c961c772aa760b719dc3becb523ac4">Token::tipus_esborrat</a></div><div class="ttdeci">string tipus_esborrat()</div><div class="ttdoc">Consulta el tipus d&#39;esborrat. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00172">token.cc:172</a></div></div>
 <div class="ttc" id="class_token_html_aa3c5868ba4115f3189df6b2ac5b36f39"><div class="ttname"><a href="../../db/dc1/class_token.html#aa3c5868ba4115f3189df6b2ac5b36f39">Token::Token</a></div><div class="ttdeci">Token()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00106">token.cc:106</a></div></div>
 <div class="ttc" id="class_token_html_a29e03315052975e392b62f78f026fb41"><div class="ttname"><a href="../../db/dc1/class_token.html#a29e03315052975e392b62f78f026fb41">Token::es_lletra</a></div><div class="ttdeci">static bool es_lletra(const char &amp;c)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00033">token.cc:33</a></div></div>
-<div class="ttc" id="class_token_html_ab49eee0e53697bbbbbcbf0c105b3cf77"><div class="ttname"><a href="../../db/dc1/class_token.html#ab49eee0e53697bbbbbcbf0c105b3cf77">Token::es_esborrat</a></div><div class="ttdeci">bool es_esborrat()</div><div class="ttdoc">Comprova si és un esborrat (una seqüència de símbols que comença per &quot;-&quot;) </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00170">token.cc:170</a></div></div>
-<div class="ttc" id="class_token_html_a81c4eba71c6257da6cadfab43cb237da"><div class="ttname"><a href="../../db/dc1/class_token.html#a81c4eba71c6257da6cadfab43cb237da">Token::es_consulta</a></div><div class="ttdeci">bool es_consulta()</div><div class="ttdoc">Comprova si és una consulta (&quot;?&quot; o &quot;passat?&quot; o &quot;rellotge?&quot;) </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00174">token.cc:174</a></div></div>
+<div class="ttc" id="class_token_html_ab49eee0e53697bbbbbcbf0c105b3cf77"><div class="ttname"><a href="../../db/dc1/class_token.html#ab49eee0e53697bbbbbcbf0c105b3cf77">Token::es_esborrat</a></div><div class="ttdeci">bool es_esborrat()</div><div class="ttdoc">Comprova si és un esborrat (una seqüència de símbols que comença per "-") </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00170">token.cc:170</a></div></div>
+<div class="ttc" id="class_token_html_a81c4eba71c6257da6cadfab43cb237da"><div class="ttname"><a href="../../db/dc1/class_token.html#a81c4eba71c6257da6cadfab43cb237da">Token::es_consulta</a></div><div class="ttdeci">bool es_consulta()</div><div class="ttdoc">Comprova si és una consulta ("?" o "passat?" o "rellotge?") </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00174">token.cc:174</a></div></div>
 <div class="ttc" id="class_token_html_abcc042ca3e95feefac091792ee526fc2"><div class="ttname"><a href="../../db/dc1/class_token.html#abcc042ca3e95feefac091792ee526fc2">Token::tractar_expressio</a></div><div class="ttdeci">void tractar_expressio()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00086">token.cc:86</a></div></div>
 <div class="ttc" id="class_token_html_a64b32630460ba9c9e43b0ab4954e346d"><div class="ttname"><a href="../../db/dc1/class_token.html#a64b32630460ba9c9e43b0ab4954e346d">Token::hora</a></div><div class="ttdeci">bool hora</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7d/token_8hh_source.html#l00024">token.hh:24</a></div></div>
 <div class="ttc" id="token_8hh_html"><div class="ttname"><a href="../../d1/d7d/token_8hh.html">token.hh</a></div><div class="ttdoc">Classe Token. </div></div>
@@ -278,9 +279,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Cerca');
 <div class="ttc" id="class_token_html_a7ebc9777007c54f9a83d6197f3023d07"><div class="ttname"><a href="../../db/dc1/class_token.html#a7ebc9777007c54f9a83d6197f3023d07">Token::m</a></div><div class="ttdeci">string m</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7d/token_8hh_source.html#l00020">token.hh:20</a></div></div>
 <div class="ttc" id="class_token_html_a16aead065c986f34b51c6193bd42882c"><div class="ttname"><a href="../../db/dc1/class_token.html#a16aead065c986f34b51c6193bd42882c">Token::es_hora</a></div><div class="ttdeci">bool es_hora()</div><div class="ttdoc">Comprova si és una hora (amb format **:**, on * és un dígit) </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00164">token.cc:164</a></div></div>
 <div class="ttc" id="class_token_html_a37eb2cacee3a373bff5794e0eeffe7b4"><div class="ttname"><a href="../../db/dc1/class_token.html#a37eb2cacee3a373bff5794e0eeffe7b4">Token::tractar_hora</a></div><div class="ttdeci">void tractar_hora()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00048">token.cc:48</a></div></div>
-<div class="ttc" id="class_token_html_ab40c482fd70278c5f8ce53aa364d957e"><div class="ttname"><a href="../../db/dc1/class_token.html#ab40c482fd70278c5f8ce53aa364d957e">Token::es_text</a></div><div class="ttdeci">bool es_text()</div><div class="ttdoc">Comprova si és una paraula (seqüència de símbols que comença per una lletra i no conté ni &quot;...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00160">token.cc:160</a></div></div>
+<div class="ttc" id="class_token_html_ab40c482fd70278c5f8ce53aa364d957e"><div class="ttname"><a href="../../db/dc1/class_token.html#ab40c482fd70278c5f8ce53aa364d957e">Token::es_text</a></div><div class="ttdeci">bool es_text()</div><div class="ttdoc">Comprova si és una paraula (seqüència de símbols que comença per una lletra i no conté ni "...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00160">token.cc:160</a></div></div>
 <div class="ttc" id="class_token_html_a6caad8c345876742de8ee08fc9a13910"><div class="ttname"><a href="../../db/dc1/class_token.html#a6caad8c345876742de8ee08fc9a13910">Token::tractar_data</a></div><div class="ttdeci">void tractar_data()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00057">token.cc:57</a></div></div>
-<div class="ttc" id="class_token_html_a09eb1782d5b5d9d4a2a92f33c950bfc1"><div class="ttname"><a href="../../db/dc1/class_token.html#a09eb1782d5b5d9d4a2a92f33c950bfc1">Token::es_expressio</a></div><div class="ttdeci">bool es_expressio()</div><div class="ttdoc">Comprova si és una expressió booleana d&#39;etiquetes (ben parentitzada, on els operadors són &quot;...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00168">token.cc:168</a></div></div>
+<div class="ttc" id="class_token_html_a09eb1782d5b5d9d4a2a92f33c950bfc1"><div class="ttname"><a href="../../db/dc1/class_token.html#a09eb1782d5b5d9d4a2a92f33c950bfc1">Token::es_expressio</a></div><div class="ttdeci">bool es_expressio()</div><div class="ttdoc">Comprova si és una expressió booleana d&#39;etiquetes (ben parentitzada, on els operadors són "...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00168">token.cc:168</a></div></div>
 <div class="ttc" id="class_token_html_a3cadf105c92e161b50eea2d8096cb608"><div class="ttname"><a href="../../db/dc1/class_token.html#a3cadf105c92e161b50eea2d8096cb608">Token::cos</a></div><div class="ttdeci">string cos()</div><div class="ttdoc">Consulta l&#39;string contingut en el p.i. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00156">token.cc:156</a></div></div>
 <div class="ttc" id="class_token_html_a4910b5b17b9398996a51a8ad9193420c"><div class="ttname"><a href="../../db/dc1/class_token.html#a4910b5b17b9398996a51a8ad9193420c">Token::llegir_etiqueta</a></div><div class="ttdeci">static void llegir_etiqueta(string &amp;s, int &amp;i)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d55/token_8cc_source.html#l00080">token.cc:80</a></div></div>
 <div class="ttc" id="class_token_html_ad1f7addc8379df272399a71189a3d234"><div class="ttname"><a href="../../db/dc1/class_token.html#ad1f7addc8379df272399a71189a3d234">Token::text</a></div><div class="ttdeci">bool text</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7d/token_8hh_source.html#l00022">token.hh:22</a></div></div>
@@ -293,9 +294,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Cerca');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generat a Dg Mai 3 2015 17:20:00 per a Pràctica PRO2. Gestor de tasques. per &#160;<a href="http://www.doxygen.org/index.html">
+Generat a Dt Mai 5 2015 06:38:09 per a Pràctica PRO2. Gestor de tasques. per &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.6
+</a> 1.8.9.1
 </small></address>
 </body>
 </html>

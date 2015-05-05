@@ -54,9 +54,7 @@ void Agenda::esborrar_etiquetes(const Comanda &c){
 }
 
 Instant Agenda::consultar_rellotge(){
-	/*
 	return r;
-	*/
 }
 
 void Agenda::escriure_rellotge(){

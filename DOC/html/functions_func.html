@@ -3,15 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
 <title>Pràctica PRO2. Gestor de tasques.: Membres de Classes - Funcions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
+  $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -31,7 +32,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generat per Doxygen 1.8.6 -->
+<!-- Generat per Doxygen 1.8.9.1 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
@@ -93,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tot</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fitxers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funcions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+</div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -198,6 +199,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 <li>es_text()
 : <a class="el" href="db/dc1/class_token.html#ab40c482fd70278c5f8ce53aa364d957e">Token</a>
 </li>
+<li>esborrar_etiqueta()
+: <a class="el" href="d7/d79/class_agenda.html#a657d2997d9e48b83c99690c1de906d22">Agenda</a>
+</li>
+<li>esborrar_etiquetes()
+: <a class="el" href="d7/d79/class_agenda.html#a5099d72df0fb0cbd0029190d7f49de22">Agenda</a>
+</li>
 <li>esborrar_tasca()
 : <a class="el" href="d7/d79/class_agenda.html#a8dff51b098687e4c0c1eb8f30de2fa67">Agenda</a>
 </li>
@@ -248,28 +255,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 : <a class="el" href="d7/d79/class_agenda.html#a059521520bbff1406580f43870b7e6b0">Agenda</a>
 </li>
 <li>Instant()
-: <a class="el" href="d6/d6f/class_instant.html#ad49e0d8095a5f9be466421641ca71a8b">Instant</a>
-</li>
-<li>interpretar_esborrar_etiqueta()
-: <a class="el" href="d7/d79/class_agenda.html#a77526b8f1b285b6e6d948454c80ed4d4">Agenda</a>
-</li>
-<li>interpretar_esborrar_etiquetes()
-: <a class="el" href="d7/d79/class_agenda.html#a3d8966a287c2eeb1764d5ebe7029724a">Agenda</a>
+: <a class="el" href="d6/d6f/class_instant.html#aff8f53e252e3db55883cedf3f2ab46ce">Instant</a>
 </li>
 <li>interpretar_esborrar_tasca()
 : <a class="el" href="d7/d79/class_agenda.html#a07ef0637cc544831204b75d7e03f75f5">Agenda</a>
-</li>
-<li>interpretar_escriure_tasques()
-: <a class="el" href="d7/d79/class_agenda.html#ac09bb2bf7cf5d1d6d4c30d4c021ada34">Agenda</a>
-</li>
-<li>interpretar_inserir_tasca()
-: <a class="el" href="d7/d79/class_agenda.html#ae0fbad6af5d4132169b2daadacb8ea42">Agenda</a>
-</li>
-<li>interpretar_modificar_rellotge()
-: <a class="el" href="d7/d79/class_agenda.html#aabd932aa3bf3d31c8b285c1df820cb03">Agenda</a>
-</li>
-<li>interpretar_modificar_tasca()
-: <a class="el" href="d7/d79/class_agenda.html#a02f6c89125af8bc3f4851ce169dd5f73">Agenda</a>
 </li>
 </ul>
 
@@ -325,7 +314,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 : <a class="el" href="dc/d9d/class_comanda.html#a67591051e9c5977c324ad8f8c3ac16e3">Comanda</a>
 </li>
 <li>Tasca()
-: <a class="el" href="d2/dae/class_tasca.html#a67cd792d19dc4073a940e4d8aa1eea36">Tasca</a>
+: <a class="el" href="d2/dae/class_tasca.html#a0ecdf23fc047a638e66206941343da06">Tasca</a>
 </li>
 <li>te_expressio()
 : <a class="el" href="dc/d9d/class_comanda.html#a81d17f4233e33f3baac7633546c066f0">Comanda</a>
@@ -377,9 +366,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generat a Dg Mai 3 2015 17:20:00 per a Pràctica PRO2. Gestor de tasques. per &#160;<a href="http://www.doxygen.org/index.html">
+Generat a Dt Mai 5 2015 06:38:09 per a Pràctica PRO2. Gestor de tasques. per &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
+</a> 1.8.9.1
 </small></address>
 </body>
 </html>
