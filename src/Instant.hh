@@ -51,7 +51,7 @@ class Instant {
 		
 		//Escriptura
 		
-		/** @brief Escriu 
+		/** @brief Escriu la data i l'hora actuals.
 		\pre Cert.
 		\post Escriu la data i hora al canal de sortida.
 		*/
