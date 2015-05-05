@@ -20,12 +20,6 @@ class Instant {
 	public: 
 	
 		//Creadores
-	  
-	  	/** @brief
-		\pre Cert.
-	   	\post Es crea un instant sense valors.
-	   	*/
-	   	Instant ();
 
 	   	/** @brief
 		\pre d i h tenen format de data i hora respectivament.
@@ -42,8 +36,8 @@ class Instant {
 		//Comparadors
 		
 		/** @brief
-		\pre LOLXD
-		\post LOLA
+		\pre 
+		\post 
 		**/
 		bool operator<(const Instant &i) const; 
 		
