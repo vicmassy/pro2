@@ -28,38 +28,38 @@ class Instant {
 		Instant (string d, string h);
 	
 		/** @brief
-	   	\pre Instant i no esta buit
-	   	\post es crea una copia de l'instant i
+	   	\pre Instant i no esta buit.
+	   	\post Es crea una copia de l'instant i.
 	   	*/
 		Instant (const Instant &i);
 		
 		//Comparadors
 		
 		/** @brief
-		\pre 
-		\post 
+		\pre TODO
+		\post TODO
 		**/
 		bool operator<(const Instant &i) const; 
 		
 		//Modificadors
 		
-		/** @brief
-		\pre h te format d'hora
-		\post la nova hora del parametre implicit es la d'h
+		/** @brief Modifiquem l'hora del rellotge.
+		\pre h te format d'hora.
+		\post La nova hora del parametre implicit es la d'h.
 		*/
 		void modificar_hora(string h);
 		
-		/** @brief
-		\pre d te format de data
-		\post la nova data del parametre implicit es la de d
+		/** @brief Modifiquem la data del rellotge.
+		\pre d te format de data.
+		\post La nova data del parametre implicit es la de d.
 		*/
 		void modificar_data(string d);
 		
 		//Escriptura
 		
-		/** @brief
-		\pre cert
-		\post escriu la data i hora al canal de sortida
+		/** @brief Escriu 
+		\pre Cert.
+		\post Escriu la data i hora al canal de sortida.
 		*/
 		void escriure_data();
 	
