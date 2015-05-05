@@ -5,8 +5,9 @@
 #include <map>
 #include <string>
 #include <vector>
-#include "Instant.hh"
 #include "comanda.hh"
+#include "Instant.hh"
+#include "Tasca.hh"
 
 using namespace std;
 
@@ -19,6 +20,8 @@ class Agenda {
   	private:
 
 		Instant r;
+		map<Instant,Tasca> tasques;
+		vector<map<Instant,Tasca>::iterator> menu;
     
   	public:
     
