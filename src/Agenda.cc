@@ -14,7 +14,7 @@ Agenda::Agenda(const string &d, const string &h) {
 s'utilitzen les actuals) i retorna true. Si no son valides no fa res i retorna false.
 */
 bool Agenda::modificar_rellotge(const Comanda &c) {
-
+	return true;
 }
 
 
@@ -24,7 +24,7 @@ bool Agenda::modificar_rellotge(const Comanda &c) {
 Si no, retorna false i no es fa res. Si falten hora i/o data s'utilitzen les actuals.
 */
 bool Agenda::inserir_tasca(const Comanda &c) {
-
+	return true;
 }
 
 
@@ -34,7 +34,7 @@ bool Agenda::inserir_tasca(const Comanda &c) {
 si s'ha esborrat la tasca o si ja es al passat; retorna fals i no fa res. En cas contrari modifica la tasca i retorna true.
 */
 bool Agenda::modificar_tasca(const Comanda &c) {
-
+	return true;
 }
 
 
@@ -44,7 +44,7 @@ bool Agenda::modificar_tasca(const Comanda &c) {
 En cas contrari retorna true i esborra la tasca.
 */
 bool Agenda::esborrar_tasca(const Comanda &c) {
-
+	return true;
 }
 
 
@@ -54,7 +54,7 @@ bool Agenda::esborrar_tasca(const Comanda &c) {
 retorna fals i no fa res. En cas contrari retorna true i esborra l'etiqueta de la tasca.
 */
 bool Agenda::esborrar_etiqueta(const Comanda &c) {
-
+	return true;
 }
 
 
@@ -64,7 +64,7 @@ bool Agenda::esborrar_etiqueta(const Comanda &c) {
 En cas contrari retorna true i esborra totes les etiquetes de la tasca.
 */
 bool Agenda::esborrar_etiquetes(const Comanda &c) {
-
+	return true;
 }
         
 
@@ -73,7 +73,7 @@ bool Agenda::esborrar_etiquetes(const Comanda &c) {
 \post Retorna la data i l'hora actuals de l'agenda.
 */
 Instant Agenda::consultar_rellotge() const {
-
+	return r;
 }
 
 
