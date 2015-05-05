@@ -25,13 +25,6 @@ class Tasca {
 		*/
 		Tasca(string n);
 		
-		/** @brief
-		\pre cert
-		\post es crea una tasca amb titol n i e etiquetes
-		*/
-		Tasca(string n, map<string,bool> &e);
-
-
 		//Modificadores
 		
 		/** @brief Afegeix una etiqueta a la tasca

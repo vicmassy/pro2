@@ -4,10 +4,6 @@ Tasca::Tasca(string n) {
   nom = n;
 }
 
-Tasca::Tasca(string n, map<string,bool> &e){
-
-}
-
 void Tasca::afegir_etiqueta(string tag){
 
 }
