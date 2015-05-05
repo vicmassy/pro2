@@ -34,54 +34,71 @@ class Agenda {
 		
 		// TODO: Potser retornar un bool si la funcio sha executat OK?
 
-		//Pre: cert
-		//Post: el valor del rellotge del parametre implicit passa a ser el contingut de la comanda
+		/** @brief Canvia el valor del rellotge intern
+		\pre cert
+		\post el valor del rellotge del parametre implicit passa a ser el contingut de la comanda
+		*/
 		void modificar_rellotge(const Comanda &c);
 
-		//Pre: Pre ha de contenir una comanda d'inserir tasca
-		//Post: s'afegeix una tasca espicificada a la comanda
+		/** @brief Insereix una nova tasca a l'agenda
+		\pre Pre ha de contenir una comanda d'inserir tasca
+		\post s'afegeix una tasca espicificada a la comanda
+		*/
 		void inserir_tasca(const Comanda &c);
 
-		//Pre: s'ha realitzat una consulta de tasques futures
-		//Post: modifica la tasca espicificada o retorna error si aquesta no existeix
+		/** @brief Modifica una tasca existent de la agenda que es trobi al menu
+		\pre s'ha realitzat una consulta de tasques futures
+		\post modifica la tasca espicificada o retorna error si aquesta no existeix
+		*/
 		void modificar_tasca(const Comanda &c);
 
-		//Pre: 
-		//Post: 
+		/** @brief Esborra una tasca de l'agenda
+		\pre 
+		\post 
+		*/
 		void esborrar_tasca(const Comanda &c);
 
-		//Pre: L'etiqueta existeix en la tasca
-		//Post: S'ha esborrat l'etiqueta de la tasca
+		/** @brief Esborra una etiqueta d'una tasca
+		\pre L'etiqueta existeix en la tasca
+		\post S'ha esborrat l'etiqueta de la tasca
+		*/
 		void esborrar_etiqueta(const Comanda &c);
 
-		//Pre: Hi ha una o mes etiquetes en la tasca
-		//Post: s'han esborrat totes les etiquetes de la tasca
+		/** @brief Esborra diverses etqieutes d'una tasca
+		\pre Hi ha una o mes etiquetes en la tasca
+		\post s'han esborrat totes les etiquetes de la tasca
+		*/
 		void esborrar_etiquetes(const Comanda &c);
 		
-		//Pre: s'ha realitzat una consulta de tasques
-		//Post: s'ha esborrat la tasca especificada o retorna error si aquesta no existeix
-		void interpretar_esborrar_tasca(const Comanda &c);	
 		
 		//Consultores
 
-		//Pre: cert
-		//Post: retorna la data i l'hora actuals de l'agenda
+		/** @brief Retorna el rellotge intern
+		\pre cert
+		\post retorna la data i l'hora actuals de l'agenda
+		*/
 		Instant consultar_rellotge();
 		
 		//Lectura
 		
 		//Escriptura
 		
-		//Pre: cert
-		//Post: s'ha escrit el rellotge (data i hora) al canal de sortida
+		/** @brief Escriu el rellotge intern
+		\pre cert
+		\post s'ha escrit el rellotge (data i hora) al canal de sortida
+		*/
 		void escriure_rellotge();
 
-		//Pre: 
-		//Post: 
+		/** @brief Escriu les tasques especificades a la comanda i genera el menu pertinent
+		\pre 
+		\post 
+		*/
 		void escriure_tasques_futures(const Comanda &c);
 
-		//Pre: cert
-		//Post: s'han escrit totes les tasques passades al canal de sortida
+		/** @brief Escriu les tasques passades
+		\pre cert
+		\post s'han escrit totes les tasques passades al canal de sortida
+		*/
 		void escriure_tasques_passades();
     
 };
