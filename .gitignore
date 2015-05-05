@@ -5,6 +5,9 @@
 *.obj
 *.x
 
+# Doxygen out
+DOC/
+
 # Precompiled Headers
 *.gch
 *.pch
