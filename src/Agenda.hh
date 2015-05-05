@@ -23,7 +23,7 @@ class Agenda {
 
   	private:
 
-		Instant r;
+        Instant r;
 		Tasques tasques;
 		Menu menu;
 		Mapa_Etiquetes etiquetes;
@@ -33,24 +33,25 @@ class Agenda {
 		//Constructors
 		
 		/** @brief
-		\pre Cert
-		\post Es crea una agenda buida amb rellotge 'r'.
+		\pre Cert.
+		\post Es crea una agenda buida amb data d i hora h.
 		*/
 		Agenda(string d, string h);
 		
 		//Modificadors
 		
-		/** @brief Canvia el valor del rellotge intern.
-		\pre Cert.
-		\post El valor del rellotge del parametre implicit passa a ser el contingut de la comanda.
+		/** @brief Canvia el valor del rellotge intern
+		\pre c es una comanda de modificar rellotge.
+		\post S'actualitza el valor del rellotge amb les dades de la comanda si son valides (si en falten 
+        s'utilitzen les actuals) i retorna true. Si no son valides no fa res i retorna false.
 		*/
-		void modificar_rellotge(const Comanda &c);
+		bool modificar_rellotge(const Comanda &c);
 
 		/** @brief Insereix una nova tasca a l'agenda.
-		\pre Pre ha de contenir una comanda d'inserir tasca.
+		\pre c es una comanda d'inserir tasca.
 		\post S'afegeix una tasca espicificada a la comanda.
 		*/
-		void inserir_tasca(const Comanda &c);
+		bool inserir_tasca(const Comanda &c);
 
 		/** @brief Modifica una tasca existent de la agenda que es trobi al menu.
 		\pre S'ha realitzat una consulta de tasques futures.

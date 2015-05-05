@@ -6,60 +6,59 @@
 
 using namespace std;
 
-
 class Tasca {
   
-  	private:
+    private:
 
-		string nom;
-		map<string,bool> etiquetes;
+        string nom;
+        map<string,bool> etiquetes;
 
 
-  	public:
+    public:
 
-		//Constructors
+        //Constructors
 
-  		/** @brief
-		\pre cert
-		\post es crea una tasca amb titol n
-		*/
-		Tasca(string n);
-		
-		//Modificadores
-		
-		/** @brief Afegeix una etiqueta a la tasca
-		\pre cert
-		\post s'afegeix l'etiqueta al p.i.
-		*/
-		void afegir_etiqueta(string tag);
-		
-		/** @brief Esborra una etiqueta de la tasca
-		\pre cert
-		\post si tag pertany a la tasca, es esborrada
-		*/
-		void esborrar_etiqueta(string tag);
-		
-		/** @brief Esborra totes les etiquetes de la tasca
-		\pre cert
-		\post s'han esborrat totes les etiquetes
-		*/
-		void esborrar_totes_etiquetes();
+        /** @brief
+        \pre Cert.
+        \post Crea una tasca amb titol n.
+        */
+        Tasca(string n);
+        
+        //Modificadores
+        
+        /** @brief Afegeix una etiqueta a la tasca.
+        \pre Cert.
+        \post S'ha afegit l'etiqueta al p.i., si ja hi era no fa res.
+        */
+        void afegir_etiqueta(string tag);
+        
+        /** @brief Esborra una etiqueta de la tasca.
+        \pre Cert.
+        \post Si tag pertany a la tasca, es esborrada.
+        */
+        void esborrar_etiqueta(string tag);
+        
+        /** @brief Esborra totes les etiquetes de la tasca.
+        \pre Cert.
+        \post S'han esborrat totes les etiquetes del p.i.
+        */
+        void esborrar_totes_etiquetes();
 
-		//Consultores
-		
-		/** @brief Retorna si la etiqueta pertany a la tasca
-		\pre cert
-		\post retorna true si tag es al pi
-		*/
-		bool te_etiqueta(string tag);
-		
-		//IO
-	
-		/** @brief
-		\pre El p.i. no es buit
-		\post Escriu la tasca pel canal de sortida
-		*/
-		void escriure_tasca();
+        //Consultores
+        
+        /** @brief Retorna si la etiqueta pertany a la tasca.
+        \pre Cert.
+        \post Retorna true si tag pertany al p.i.
+        */
+        bool te_etiqueta(string tag) const;
+        
+        //IO
+    
+        /** @brief Escriu la tasca
+        \pre El p.i. no es buit.
+        \post S'ha escrit la tasca.
+        */
+        void escriure_tasca() const;
 
 };
 
