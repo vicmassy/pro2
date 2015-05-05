@@ -33,9 +33,34 @@ class Tasca {
 
 
 		//Modificadores
-
+		
+		/** @brief Afegeix una etiqueta a la tasca
+		\pre cert
+		\post s'afegeix l'etiqueta al p.i.
+		*/
+		void afegir_etiqueta(string tag);
+		
+		/** @brief Esborra una etiqueta de la tasca
+		\pre cert
+		\post si tag pertany a la tasca, es esborrada
+		*/
+		void esborrar_etiqueta(string tag);
+		
+		/** @brief Esborra totes les etiquetes de la tasca
+		\pre cert
+		\post s'han esborrat totes les etiquetes
+		*/
+		void esborrar_totes_etiquetes();
 
 		//Consultores
+		
+		/** @brief Retorna si la etiqueta pertany a la tasca
+		\pre cert
+		\post retorna true si tag es al pi
+		*/
+		bool te_etiqueta(string tag);
+		
+		//IO
 	
 		/** @brief
 		\pre El p.i. no es buit

@@ -22,6 +22,7 @@ class Agenda {
 		Instant r;
 		map<Instant,Tasca> tasques;
 		vector<map<Instant,Tasca>::iterator> menu;
+		map<string,vector<map<Instant,Tasca>::iterator> > etiquetes;
     
   	public:
     
