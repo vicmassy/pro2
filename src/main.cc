@@ -13,26 +13,40 @@ int main() {
             if(c.es_rellotge()){
                 if(c.es_consulta())
                     a.escriure_rellotge();
-                else
-                    a.modificar_rellotge(c);
+                else {
+                    if(not a.modificar_rellotge(c))
+                        cout << ERROR << endl;
+                }
             }
-            else if(c.es_insercio())
-                a.inserir_tasca(c);
+            else if(c.es_insercio()) {
+                if(not a.inserir_tasca(c))
+                    cout << ERROR << endl;
+            }
             else if(c.es_consulta()){
                 if(c.es_passat())
                     a.escriure_tasques_passades();
-                else
-                    a.escriure_tasques_futures(c);
+                else {
+                    if (not a.escriure_tasques_futures(c))
+                        cout << ERROR << endl;
+                }
             }
-            else if(c.es_modificacio())
-                a.modificar_tasca(c);
+            else if(c.es_modificacio()) {
+                if (not a.modificar_tasca(c))
+                    cout << ERROR << endl;
+            }
             else if(c.es_esborrat()){
-                if(c.tipus_esborrat() == "tasca")
-                    a.esborrar_tasca(c);
-                else if(c.tipus_esborrat() == "etiqueta")
-                    a.esborrar_etiqueta(c);
-                else if(c.tipus_esborrat() == "etiquetes")
-                    a.esborrar_etiquetes(c);
+                if(c.tipus_esborrat() == "tasca") {
+                    if (not a.esborrar_tasca(c))
+                        cout << ERROR << endl;
+                }
+                else if(c.tipus_esborrat() == "etiqueta") {
+                    if (not a.esborrar_etiqueta(c))
+                        cout << ERROR << endl;
+                }
+                else if(c.tipus_esborrat() == "etiquetes") {
+                    if (not a.esborrar_etiquetes(c))
+                        cout << ERROR << endl;
+                }
             }   
         }
     }

@@ -44,6 +44,18 @@ class Instant {
         **/
         bool operator<(const Instant &i) const; 
         
+        /** @brief Consulta l'hora del rellotge.
+        \pre Cert.
+        \post Retorna l'hora del parametre implicit.
+        */
+        void modificar_hora();
+        
+        /** @brief Consulta la data del rellotge.
+        \pre Cert.
+        \post Retorna la data del parametre implicit.
+        */
+        void modificar_data(const string &d);
+        
         //Modificadors
         
         /** @brief Modifica l'hora del rellotge.

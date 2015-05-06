@@ -9,7 +9,7 @@
 using namespace std;
 
 /** @class Tasca
-	@brief Representa una tasca i les seves etiquetes
+    @brief Representa una tasca i les seves etiquetes
 */
 
 class Tasca {

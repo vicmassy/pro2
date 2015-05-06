@@ -5,7 +5,7 @@
 #include <iostream>
 #include <map>
 #include <string>
-#include <vector>
+#include <set>
 #endif
 #include "comanda.hh"
 #include "Instant.hh"
@@ -17,19 +17,20 @@ using namespace std;
     @brief Representa l'agenda i gestiona les interaccions amb les comandes
 */
 
-typedef map<Instant,Tasca> Tasques;
-typedef vector<Tasques::iterator> Menu;
-typedef map<string,Menu> Mapa_Etiquetes;
+typedef map<Instant,Tasca>::iterator tasques_it;
 
 class Agenda {
 
     private:
 
         Instant r;
-        Tasques tasques;
-        Menu menu;
-        Mapa_Etiquetes etiquetes;
-    
+        map<Instant,Tasca> tasques;
+        vector<tasques_it> menu;
+        map< string,map<Instant,tasques_it> > etiquetes;
+        void escriure_tasca(tasques_it it);
+        bool comprovar_modificable(tasques_it it)
+        void agenda_afegir_etiqueta(tasques_it it, const string &tag)
+        
     public:
     
         //Constructors
@@ -110,7 +111,7 @@ class Agenda {
         void escriure_tasques_futures(const Comanda &c);
 
         /** @brief Escriu les tasques passades.
-        \pre c conte una comnanda de consulta de tasques passades.
+        \pre Cert.
         \post Escriu totes les tasques passades.
         */
         void escriure_tasques_passades() const;
