@@ -50,12 +50,6 @@ class Instant {
         */
         void modificar_hora();
         
-        /** @brief Consulta la data del rellotge.
-        \pre Cert.
-        \post Retorna la data del parametre implicit.
-        */
-        void modificar_data(const string &d);
-        
         //Modificadors
         
         /** @brief Modifica l'hora del rellotge.

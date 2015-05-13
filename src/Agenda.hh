@@ -26,10 +26,10 @@ class Agenda {
         Instant r;
         map<Instant,Tasca> tasques;
         vector<tasques_it> menu;
-        map< string,map<Instant,tasques_it> > etiquetes;
+        map<string,map<Instant,tasques_it> > etiquetes;
         void escriure_tasca(tasques_it it);
-        bool comprovar_modificable(tasques_it it)
-        void agenda_afegir_etiqueta(tasques_it it, const string &tag)
+        bool comprovar_modificable(tasques_it it);
+        void agenda_afegir_etiqueta(tasques_it it, const string &tag);
         
     public:
     
