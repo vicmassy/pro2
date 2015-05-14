@@ -56,8 +56,8 @@ bool Instant::operator<(const Instant &i) const {
 \post La nova hora del parametre implicit es h.
 */
 void Instant::modificar_hora(const string &h) {
-    min = num(h[3])*10 + num(h[4]);
-    hh = num(h[0])*10 + num(h[1]);
+    //min = num(h[3])*10 + num(h[4]);
+    //hh = num(h[0])*10 + num(h[1]);
 }
 
 /** @brief Modifica la data del rellotge.
@@ -65,9 +65,9 @@ void Instant::modificar_hora(const string &h) {
 \post La nova data del parametre implicit es d.
 */
 void Instant::modificar_data(const string &d) {
-    dd = num(d[6])*10 + num(d[7]);
-    mm = num(d[3])*10 + num(d[4]);
-    yy = num(d[0])*10 + num(d[1]);
+    //dd = num(d[6])*10 + num(d[7]);
+    //mm = num(d[3])*10 + num(d[4]);
+    //yy = num(d[0])*10 + num(d[1]);
 }
 
 /** @brief Escriu la data i l'hora del p.i.
