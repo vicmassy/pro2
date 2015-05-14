@@ -98,6 +98,11 @@ bool Agenda::esborrar_tasca(Comanda &c) {
     int i = c.tasca() - 1;
     if (not comprovar_modificable(i))
         return false;
+    set<string>::iterator it;
+    while((*menu[i]).second.primera_etiqueta(it)){
+        etiquetes[*it].erase((*menu[i]).first);
+        (*menu[i]).second.esborrar_etiqueta(it);
+    }
     tasques.erase(menu[i]);
     menu[i] = tasques.end();
     return true;

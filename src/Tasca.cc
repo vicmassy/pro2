@@ -24,12 +24,28 @@ bool Tasca::esborrar_etiqueta(const string &tag) {
     return (etiquetes.erase(tag) == 1);
 }
 
+
+void Tasca::esborrar_etiqueta(set<string>::iterator it){
+    etiquetes.erase(it);
+}
+
 /** @brief Esborra totes les etiquetes de la tasca.
 \pre Cert.
 \post S'han esborrat totes les etiquetes del p.i.
 */
 void Tasca::esborrar_totes_etiquetes() {
     etiquetes.clear();
+}
+
+/** @brief 
+\pre 
+\post
+*/
+bool Tasca::primera_etiqueta(set<string>::iterator &it){
+    it = etiquetes.begin();
+    if(it == etiquetes.end())
+        return false;
+    return true;
 }
 
 /** @brief Retorna si la etiqueta pertany a la tasca.
