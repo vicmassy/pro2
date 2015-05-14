@@ -63,9 +63,9 @@ void Instant::modificar_hora(const string &h) {
 \post La nova data del parametre implicit es d.
 */
 void Instant::modificar_data(const string &d) {
-    dd = num(d[6])*10 + num(d[7]);
+    dd = num(d[0])*10 + num(d[1]);
     mm = num(d[3])*10 + num(d[4]);
-    yy = num(d[0])*10 + num(d[1]);
+    yy = num(d[6])*10 + num(d[7]);
 }
 
 /** @brief Escriu la data i l'hora del p.i.

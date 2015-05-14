@@ -67,10 +67,8 @@ void Agenda::escriure_tasques_interval(Comanda &c) {
     else {
 	Instant t1 (c.data(1), "00:00");
 	Instant t2 (c.data(2), "23:59");
-	if (t2 < t1) {
-	    cout << endl;
+	if (t2 < t1) 
 	    return;
-	}
 	begin = tasques.lower_bound(t1);
 	end = tasques.upper_bound(t2);
     }
@@ -120,9 +118,9 @@ Si no, retorna false i no es fa res. Si falten hora i/o data s'utilitzen les act
 */
 bool Agenda::inserir_tasca(Comanda &c) {
     Instant t = r;
-    r.modificar_hora(c.hora());
+    t.modificar_hora(c.hora());
     if (c.nombre_dates() == 1)
-        r.modificar_data(c.data(1));
+        t.modificar_data(c.data(1));
     if (t < r)
         return false;
     if (tasques.count(t) == 1)
@@ -145,7 +143,7 @@ bool Agenda::modificar_tasca(Comanda &c) {
     if (not comprovar_modificable(k))
         return false;  
     bool canviar_temps = false;
-    Instant i = r;
+    Instant i = (*menu[k]).first;
     if (c.nombre_dates() == 1) {
 	i.modificar_data(c.data(1));
 	canviar_temps = true;
