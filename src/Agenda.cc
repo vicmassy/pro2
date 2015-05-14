@@ -93,6 +93,7 @@ bool Agenda::inserir_tasca(Comanda &c) {
 si s'ha esborrat la tasca o si ja es al passat; retorna fals i no fa res. En cas contrari modifica la tasca i retorna true.
 */
 bool Agenda::modificar_tasca(Comanda &c) {
+    
     return true;   
 }
 
