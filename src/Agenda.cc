@@ -1,6 +1,6 @@
 #include "Agenda.hh"
 
-void escriure_tasca(tasques_it it) {
+void Agenda::escriure_tasca(tasques_it it) {
     (*it).second.escriure_nom();
     cout << ' ';
     (*it).first.escriure();
@@ -8,7 +8,7 @@ void escriure_tasca(tasques_it it) {
     (*it).second.escriure_etiquetes();
 }
 
-void agenda_afegir_etiqueta(tasques_it it, const string &tag) {
+void Agenda::agenda_afegir_etiqueta(tasques_it it, const string &tag) {
     /*
     (*it).afegir_etiqueta(tag);
     map<string,map<Instant,tasques_it> >::iterator it2 = etiquetes.find(tag);
@@ -22,15 +22,13 @@ void agenda_afegir_etiqueta(tasques_it it, const string &tag) {
     */
 }
 
-bool comprovar_modificable(int i) {
-    /*
+bool Agenda::comprovar_modificable(int i) {
     if (i < 0 or i >= menu.size())
         return false;
     if (menu[i] == tasques.end())
         return false;
     if (*(menu[i])->first < r)
         return false;
-    */
     return true;
 }    
         
@@ -180,7 +178,6 @@ void Agenda::escriure_tasques_futures(const Comanda &c) {
 \post Escriu totes les tasques passades.
 */
 void Agenda::escriure_tasques_passades() const {
-    /*
     tasques_it it = tasques.begin();
     int i = 1;
     while ((*it)->first < r and it != tasques.end()) {
@@ -190,5 +187,4 @@ void Agenda::escriure_tasques_passades() const {
         ++i;
         ++it;
     }
-    */
 }
