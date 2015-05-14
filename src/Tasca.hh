@@ -56,6 +56,13 @@ class Tasca {
         \post
         */
         bool primera_etiqueta(set<string>::iterator &it);
+	
+	/** @brief
+        \pre
+        \post
+        */
+        void modificar_titol(const string &s);
+
 
         //Consultores
         

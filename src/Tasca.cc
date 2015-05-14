@@ -37,6 +37,10 @@ void Tasca::esborrar_totes_etiquetes() {
     etiquetes.clear();
 }
 
+void Tasca::modificar_titol(const string &s) {
+    nom = s;
+}
+
 /** @brief 
 \pre 
 \post

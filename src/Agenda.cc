@@ -36,7 +36,21 @@ bool Agenda::comprovar_modificable(int i) {
     if ((*menu[i]).first < r)
         return false;
     return true;
-}    
+}
+
+void Agenda::modificar_temps(tasques_it &it, const Instant &i) {
+    tasques_it it_original = it;
+    it = (tasques.insert(pair<Instant,Tasca> (i, (*it).second))).first;
+    set<string>::iterator tag_it;
+    while((*it_original).second.primera_etiqueta(tag_it)) {
+        map<string,map<Instant,tasques_it> >::iterator it1 = etiquetes.find(*tag_it);
+	(*it1).second.erase((*it_original).first);
+	(*it1).second.insert(pair<Instant,tasques_it> (i, it));
+        (*it_original).second.esborrar_etiqueta(tag_it);
+    }
+    tasques.erase(it_original);
+}
+    
         
 /** @brief
 \pre Cert.
@@ -93,8 +107,31 @@ bool Agenda::inserir_tasca(Comanda &c) {
 si s'ha esborrat la tasca o si ja es al passat; retorna fals i no fa res. En cas contrari modifica la tasca i retorna true.
 */
 bool Agenda::modificar_tasca(Comanda &c) {
-    
-    return true;   
+    int k = c.tasca() - 1;
+    if (not comprovar_modificable(k))
+        return false;  
+    bool canviar_temps = false;
+    Instant i = r;
+    if (c.nombre_dates() == 1) {
+	i.modificar_data(c.data(1));
+	canviar_temps = true;
+    }
+    if (c.te_hora()) {
+	i.modificar_hora(c.hora());
+	canviar_temps = true;
+    }
+    if (canviar_temps) {
+	if (i < r)
+	    return false;
+	if (tasques.count(i) == 1)
+	    return false;
+	modificar_temps(menu[k], i);
+    }
+    if (c.te_titol())
+	(*menu[k]).second.modificar_titol(c.titol());
+    for (int j = 1; j <= c.nombre_etiquetes(); ++j)
+	agenda_afegir_etiqueta(menu[k], c.etiqueta(j));
+    return true;
 }
 
 

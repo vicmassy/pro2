@@ -32,6 +32,7 @@ class Agenda {
         void esborrar_totes_etiquetes_agenda(tasques_it m_it);
         bool comprovar_modificable(int i);
         void agenda_afegir_etiqueta(tasques_it it, const string &tag);
+	void modificar_temps(tasques_it &it, const Instant &i);
         
     public:
     
