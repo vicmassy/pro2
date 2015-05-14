@@ -20,6 +20,14 @@ void Agenda::agenda_afegir_etiqueta(tasques_it it, const string &tag) {
     }
 }
 
+void Agenda::esborrar_totes_etiquetes_agenda(tasques_it m_it){
+    set<string>::iterator it;
+    while((*m_it).second.primera_etiqueta(it)){
+        etiquetes[*it].erase((*m_it).first);
+        (*m_it).second.esborrar_etiqueta(it);
+    }
+}
+
 bool Agenda::comprovar_modificable(int i) {
     if (i < 0 or i >= menu.size())
         return false;
@@ -98,11 +106,7 @@ bool Agenda::esborrar_tasca(Comanda &c) {
     int i = c.tasca() - 1;
     if (not comprovar_modificable(i))
         return false;
-    set<string>::iterator it;
-    while((*menu[i]).second.primera_etiqueta(it)){
-        etiquetes[*it].erase((*menu[i]).first);
-        (*menu[i]).second.esborrar_etiqueta(it);
-    }
+    esborrar_totes_etiquetes_agenda(menu[i]);
     tasques.erase(menu[i]);
     menu[i] = tasques.end();
     return true;
@@ -116,13 +120,15 @@ retorna fals i no fa res. En cas contrari retorna true i esborra l'etiqueta de l
 */
 bool Agenda::esborrar_etiqueta(Comanda &c) {
     int i = c.tasca() - 1;
-    if (not comprovar_modificable(i))
-        return false;
-    return (*menu[i]).second.esborrar_etiqueta(c.etiqueta(1));
+    if (comprovar_modificable(i) and (*menu[i]).second.esborrar_etiqueta(c.etiqueta(1))){
+        etiquetes[c.etiqueta(1)].erase((*menu[i]).first);
+        return true;
+    }
+    return false;
 }
 
 
-/** @brief Esborra totes les etqieutes d'una tasca.
+/** @brief Esborra totes les etiquetes d'una tasca.
 \pre c es una comanda d'esborrar totes les etiquetes i existeix un menu (s'ha realitzat una escriptura de tasques previament).
 \post Si el numero  de tasca no es al menu, si s'ha esborrat la tasca o si ja es al passat; retorna fals i no fa res.
 En cas contrari retorna true i esborra totes les etiquetes de la tasca.
@@ -131,7 +137,7 @@ bool Agenda::esborrar_etiquetes(Comanda &c) {
     int i = c.tasca() - 1;
     if (not comprovar_modificable(i))
         return false;
-    (*menu[i]).second.esborrar_totes_etiquetes();
+    esborrar_totes_etiquetes_agenda(menu[i]);
     return true;
 }
         
