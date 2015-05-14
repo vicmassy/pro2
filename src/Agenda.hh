@@ -18,6 +18,7 @@ using namespace std;
 */
 
 typedef map<Instant,Tasca>::iterator tasques_it;
+typedef map<Instant,Tasca>::const_iterator tasques_it_c;
 
 class Agenda {
 
@@ -27,7 +28,7 @@ class Agenda {
         map<Instant,Tasca> tasques;
         vector<tasques_it> menu;
         map<string,map<Instant,tasques_it> > etiquetes;
-        void escriure_tasca(tasques_it it);
+        void escriure_tasca(tasques_it_c it) const;
         bool comprovar_modificable(int i);
         void agenda_afegir_etiqueta(tasques_it it, const string &tag);
         

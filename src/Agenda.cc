@@ -1,6 +1,6 @@
 #include "Agenda.hh"
 
-void Agenda::escriure_tasca(tasques_it it) {
+void Agenda::escriure_tasca(tasques_it_c it) const {
     (*it).second.escriure_nom();
     cout << ' ';
     (*it).first.escriure();
@@ -21,14 +21,12 @@ void Agenda::agenda_afegir_etiqueta(tasques_it it, const string &tag) {
 }
 
 bool Agenda::comprovar_modificable(int i) {
-    /*
     if (i < 0 or i >= menu.size())
         return false;
     if (menu[i] == tasques.end())
         return false;
-    if (*(menu[i])->first < r)
+    if ((*menu[i]).first < r)
         return false;
-    */
     return true;
 }    
         
@@ -125,12 +123,10 @@ bool Agenda::esborrar_etiqueta(Comanda &c) {
 En cas contrari retorna true i esborra totes les etiquetes de la tasca.
 */
 bool Agenda::esborrar_etiquetes(Comanda &c) {
-    /*
     int i = c.tasca() - 1;
     if (not comprovar_modificable(i))
         return false;
-    *(menu[i])->second.esborrar_totes_etiquetes();
-    */
+    (*menu[i]).second.esborrar_totes_etiquetes();
     return true;
 }
         
@@ -169,15 +165,13 @@ void Agenda::escriure_tasques_futures(Comanda &c) {
 \post Escriu totes les tasques passades.
 */
 void Agenda::escriure_tasques_passades() const {
-    /*
-    map<Instant,Tasca>::const_iterator it = tasques.begin();
+    tasques_it_c it = tasques.begin();
     int i = 1;
-    while ((*it)->first < r and it != tasques.end()) {
+    while ((*it).first < r and it != tasques.end()) {
         cout << i << ' ';
         escriure_tasca(it);
         cout << endl;
         ++i;
         ++it;
     }
-    */
 }
