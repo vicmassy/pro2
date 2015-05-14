@@ -37,7 +37,7 @@ void Tasca::esborrar_totes_etiquetes() {
 \post Retorna true si tag pertany al p.i.
 */
 bool Tasca::te_etiqueta(const string &tag) const {
-    return (etiquetes.count(tag) == 1)
+    return (etiquetes.count(tag) == 1);
 }
 
 /** @brief Escriu la tasca
@@ -52,7 +52,8 @@ void Tasca::escriure_nom() const {
 \pre El p.i. no es buit.
 \post S'han escrit les etiquetes en ordre lexicografic.
 */
-void escriure_etiquetes() const {
+void Tasca::escriure_etiquetes() const {
+    /*
     set<string>::const_iterator it = etiquetes.begin();
     if (it != etiquetes.end()) {
         cout << '#' << *it;
@@ -62,4 +63,5 @@ void escriure_etiquetes() const {
         cout << ' ' << '#' << *it;
         ++it;
     }
+    */
 }

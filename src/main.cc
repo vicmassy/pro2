@@ -26,8 +26,7 @@ int main() {
                 if(c.es_passat())
                     a.escriure_tasques_passades();
                 else {
-                    if (not a.escriure_tasques_futures(c))
-                        cout << ERROR << endl;
+                    a.escriure_tasques_futures(c);
                 }
             }
             else if(c.es_modificacio()) {

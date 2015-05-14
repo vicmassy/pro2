@@ -30,6 +30,7 @@ Instant::Instant (const string &d, const string &h) {
 \post Retorna true si el parametre implicit es estrictament mes petit que i. Si no retorna false.
 **/
 bool Instant::operator<(const Instant &i) const {
+    /*
     if (this->yy < i.yy)
         return true;
     if (this->yy == i.yy) {
@@ -46,6 +47,7 @@ bool Instant::operator<(const Instant &i) const {
             }
         }
     }
+    */
     return false;     
 }
 
@@ -73,6 +75,7 @@ void Instant::modificar_data(const string &d) {
 \post Ha escrit la data i hora al canal de sortida.
 */
 void Instant::escriure() const {
+    /*
     escriurenum(dd);
     cout << '.';
     escriurenum(mm);
@@ -82,4 +85,5 @@ void Instant::escriure() const {
     escriurenum(hh);
     cout << ':';
     escriurenum(min);
+    */
 }
