@@ -23,12 +23,14 @@ void Agenda::agenda_afegir_etiqueta(tasques_it it, const string &tag) {
 }
 
 bool Agenda::comprovar_modificable(int i) {
+    /*
     if (i < 0 or i >= menu.size())
         return false;
     if (menu[i] == tasques.end())
         return false;
     if (*(menu[i])->first < r)
         return false;
+    */
     return true;
 }    
         
@@ -178,7 +180,8 @@ void Agenda::escriure_tasques_futures(const Comanda &c) {
 \post Escriu totes les tasques passades.
 */
 void Agenda::escriure_tasques_passades() const {
-    tasques_it it = tasques.begin();
+    /*
+    map<Instant,Tasca>::const_iterator it = tasques.begin();
     int i = 1;
     while ((*it)->first < r and it != tasques.end()) {
         cout << i << ' ';
@@ -187,4 +190,5 @@ void Agenda::escriure_tasques_passades() const {
         ++i;
         ++it;
     }
+    */
 }
