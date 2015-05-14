@@ -1,10 +1,10 @@
 #include "Instant.hh"
 
-int num(char c) {
+int Instant::num(char c) const {
     return int(c) - int('0');
 }
 
-void escriurenum(int n) {
+void Instant::escriurenum(int n) const {
     if (n < 10)
         cout << '0';
     cout << n;
@@ -30,7 +30,6 @@ Instant::Instant (const string &d, const string &h) {
 \post Retorna true si el parametre implicit es estrictament mes petit que i. Si no retorna false.
 **/
 bool Instant::operator<(const Instant &i) const {
-    /*
     if (this->yy < i.yy)
         return true;
     if (this->yy == i.yy) {
@@ -47,7 +46,6 @@ bool Instant::operator<(const Instant &i) const {
             }
         }
     }
-    */
     return false;     
 }
 
@@ -56,8 +54,8 @@ bool Instant::operator<(const Instant &i) const {
 \post La nova hora del parametre implicit es h.
 */
 void Instant::modificar_hora(const string &h) {
-    //min = num(h[3])*10 + num(h[4]);
-    //hh = num(h[0])*10 + num(h[1]);
+    min = num(h[3])*10 + num(h[4]);
+    hh = num(h[0])*10 + num(h[1]);
 }
 
 /** @brief Modifica la data del rellotge.
@@ -65,9 +63,9 @@ void Instant::modificar_hora(const string &h) {
 \post La nova data del parametre implicit es d.
 */
 void Instant::modificar_data(const string &d) {
-    //dd = num(d[6])*10 + num(d[7]);
-    //mm = num(d[3])*10 + num(d[4]);
-    //yy = num(d[0])*10 + num(d[1]);
+    dd = num(d[6])*10 + num(d[7]);
+    mm = num(d[3])*10 + num(d[4]);
+    yy = num(d[0])*10 + num(d[1]);
 }
 
 /** @brief Escriu la data i l'hora del p.i.
@@ -75,7 +73,6 @@ void Instant::modificar_data(const string &d) {
 \post Ha escrit la data i hora al canal de sortida.
 */
 void Instant::escriure() const {
-    /*
     escriurenum(dd);
     cout << '.';
     escriurenum(mm);
@@ -85,5 +82,4 @@ void Instant::escriure() const {
     escriurenum(hh);
     cout << ':';
     escriurenum(min);
-    */
 }

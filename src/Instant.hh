@@ -16,8 +16,8 @@ class Instant {
 
     private:
   
-        int num(char c);
-        void escriurenum(int n);
+        int num(char c) const;
+        void escriurenum(int n) const;
         int hh, min, dd, mm, yy;
     
     public: 

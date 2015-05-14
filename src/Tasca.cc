@@ -53,7 +53,6 @@ void Tasca::escriure_nom() const {
 \post S'han escrit les etiquetes en ordre lexicografic.
 */
 void Tasca::escriure_etiquetes() const {
-    /*
     set<string>::const_iterator it = etiquetes.begin();
     if (it != etiquetes.end()) {
         cout << '#' << *it;
@@ -63,5 +62,4 @@ void Tasca::escriure_etiquetes() const {
         cout << ' ' << '#' << *it;
         ++it;
     }
-    */
 }
