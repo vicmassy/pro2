@@ -86,7 +86,6 @@ void Agenda::escriure_tasques_interval(tasques_it &begin, tasques_it &end){
 }
 
 void Agenda::escriure_tasques_etiquetes(Comanda &c, tasques_it &begin, tasques_it &end){
-    int nombre_etiquetes = c.nombre_etiquetes();
     int num_menu = 1;
     while(begin != end){
         if((*begin).second.te_etiqueta(c.etiqueta(1))){
@@ -264,7 +263,7 @@ void Agenda::escriure_tasques_futures(Comanda &c) {
 
     if(c.te_expressio()){
     	escriure_tasques_expressio(c,begin,end);
-    } else if(c.nombre_etiquetes() > 0){
+    } else if(c.nombre_etiquetes() == 1){
     	escriure_tasques_etiquetes(c,begin,end);
     } else {
     	escriure_tasques_interval(begin,end);
