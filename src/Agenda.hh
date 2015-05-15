@@ -28,6 +28,7 @@ class Agenda {
         map<Instant,Tasca> tasques;
         vector<tasques_it> menu;
         map<string,map<Instant,tasques_it> > etiquetes;
+        
         void escriure_tasca(tasques_it_c it) const;
         void esborrar_totes_etiquetes_agenda(tasques_it m_it);
         bool comprovar_modificable(int i);

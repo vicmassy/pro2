@@ -63,10 +63,13 @@ void Agenda::obtenir_tasques_interval(Comanda &c, tasques_it &begin, tasques_it 
     } else {
 	   Instant t1 (c.data(1), "00:00");
 	   Instant t2 (c.data(2), "23:59");
-	   if (t2 < t1)
-	       return;
-	   begin = tasques.lower_bound(t1);
-	   end = tasques.upper_bound(t2);
+	   if (t2 < t1){
+            begin = tasques.end();
+	        end = tasques.end();
+        } else {
+            begin = tasques.lower_bound(t1);
+            end = tasques.upper_bound(t2);
+        }
     }
 }
 
@@ -84,11 +87,17 @@ void Agenda::escriure_tasques_interval(Comanda &c, tasques_it &begin, tasques_it
 
 void Agenda::escriure_tasques_etiquetes(Comanda &c, tasques_it &begin, tasques_it &end){
     int nombre_etiquetes = c.nombre_etiquetes();
-    if(c.nombre_dates() > 0){
-        
-    } else {
-
-    } 
+    int num_menu = 1;
+    while(begin != end){
+        if((*begin).second.te_etiqueta(c.etiqueta(1))){
+            cout << num_menu << ' ';
+            escriure_tasca(begin);
+            cout << endl;
+            menu.push_back(begin);
+            num_menu++;
+        }
+        begin++;
+    }
 }
 
 void Agenda::escriure_tasques_expressio(Comanda &c, tasques_it &begin, tasques_it &end){
