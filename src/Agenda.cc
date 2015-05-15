@@ -51,38 +51,49 @@ void Agenda::modificar_temps(tasques_it &it, const Instant &i) {
     tasques.erase(it_original);
 }
 
-void Agenda::escriure_tasques_interval(Comanda &c) {
-    tasques_it begin;
-    tasques_it end;
+void Agenda::obtenir_tasques_interval(Comanda &c, tasques_it &begin, tasques_it &end) {
     if (c.nombre_dates() == 0) {
-	begin = tasques.lower_bound(r);
-	end = tasques.end();	
-    }
-    else if (c.nombre_dates() == 1) {
-	Instant t1 (c.data(1), "00:00");
-	Instant t2 (c.data(1), "23:59");
-	begin = tasques.lower_bound(t1);
-	end = tasques.upper_bound(t2);	
-    }
-    else {
-	Instant t1 (c.data(1), "00:00");
-	Instant t2 (c.data(2), "23:59");
-	if (t2 < t1) 
-	    return;
-	begin = tasques.lower_bound(t1);
-	end = tasques.upper_bound(t2);
-    }
-    int i = 1;
-    while (begin != end) {
-	cout << i << ' ';
-	escriure_tasca(begin);
-	cout << endl;
-	menu.push_back(begin);
-	++begin;
-	++i;
+	   begin = tasques.lower_bound(r);
+	   end = tasques.end();	
+    } else if (c.nombre_dates() == 1) {
+	   Instant t1 (c.data(1), "00:00");
+	   Instant t2 (c.data(1), "23:59");
+	   begin = tasques.lower_bound(t1);
+	   end = tasques.upper_bound(t2);	
+    } else {
+	   Instant t1 (c.data(1), "00:00");
+	   Instant t2 (c.data(2), "23:59");
+	   if (t2 < t1)
+	       return;
+	   begin = tasques.lower_bound(t1);
+	   end = tasques.upper_bound(t2);
     }
 }
-    
+
+void Agenda::escriure_tasques_interval(Comanda &c, tasques_it &begin, tasques_it &end){
+	int i = 1;
+    while (begin != end) {
+    	cout << i << ' ';
+    	escriure_tasca(begin);
+    	cout << endl;
+    	menu.push_back(begin);
+    	++begin;
+    	++i;
+    }
+}
+
+void Agenda::escriure_tasques_etiquetes(Comanda &c, tasques_it &begin, tasques_it &end){
+    int nombre_etiquetes = c.nombre_etiquetes();
+    if(c.nombre_dates() > 0){
+        
+    } else {
+
+    } 
+}
+
+void Agenda::escriure_tasques_expressio(Comanda &c, tasques_it &begin, tasques_it &end){
+	
+}
         
 /** @brief
 \pre Cert.
@@ -238,8 +249,16 @@ una expressio amb etiquetes; o ambdues. Esborra el menu anterior i en crea un de
 */
 void Agenda::escriure_tasques_futures(Comanda &c) {
     menu.clear();
-    if (c.nombre_etiquetes() == 0 and not c.te_expressio()) {
-	escriure_tasques_interval(c);
+	tasques_it begin;
+    tasques_it end;
+    obtenir_tasques_interval(c,begin,end);
+
+    if(c.te_expressio()){
+    	escriure_tasques_expressio(c,begin,end);
+    } else if(c.nombre_etiquetes() > 0){
+    	escriure_tasques_etiquetes(c,begin,end);
+    } else {
+    	escriure_tasques_interval(c,begin,end);
     }
 }
 

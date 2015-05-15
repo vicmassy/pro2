@@ -96,7 +96,7 @@ WARN_LOGFILE           =
 INPUT                  = "."
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          = *.hh \
-                         main.cc
+                         *.cc
 RECURSIVE              = NO
 EXCLUDE                = *~
 EXCLUDE_SYMLINKS       = NO
