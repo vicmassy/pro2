@@ -64,9 +64,8 @@ bool Tasca::compleix_expressio(const string &expressio, int &i){
     char base = expressio[i];
     if(base == '#'){
         int pos_inicial = i;
-        while(expressio[i] != ')' or expressio[i] != ',' or expressio[i] != '.'){
+        while(expressio[i] != ')' or expressio[i] != ',' or expressio[i] != '.')
             i++;
-        }
         string etiqueta = expressio.substr(pos_inicial,i-pos_inicial);
         return te_etiqueta(etiqueta);
     } else {
