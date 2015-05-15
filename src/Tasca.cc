@@ -60,6 +60,29 @@ bool Tasca::te_etiqueta(const string &tag) const {
     return (etiquetes.count(tag) == 1);
 }
 
+bool Tasca::compleix_expressio(const string &expressio, int &i){
+    char base = expressio[i];
+    if(base == '#'){
+        int pos_inicial = i;
+        while(expressio[i] != ')' or expressio[i] != ',' or expressio[i] != '.'){
+            i++;
+        }
+        string etiqueta = expressio.substr(pos_inicial,i-pos_inicial);
+        return te_etiqueta(etiqueta);
+    } else {
+        i++;
+        bool e1 = compleix_expressio(expressio,i);
+        char op = expressio[i];
+        i++;
+        bool e2 = compleix_expressio(expressio,i);
+        i++;
+        if(op == '.')
+            return (e1 and e2);
+        else 
+            return (e1 or e2);
+    }
+}
+
 /** @brief Escriu la tasca
 \pre El p.i. no es buit.
 \post S'ha escrit la tasca.

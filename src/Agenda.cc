@@ -100,7 +100,18 @@ void Agenda::escriure_tasques_etiquetes(Comanda &c, tasques_it &begin, tasques_i
 }
 
 void Agenda::escriure_tasques_expressio(Comanda &c, tasques_it &begin, tasques_it &end){
-	
+	int num_menu = 1;
+    int i = 0;
+    while(begin!=end){
+        if((*begin).second.compleix_expressio(c.expressio(), i)){
+            cout << num_menu << ' ';
+            escriure_tasca(begin);
+            cout << endl;
+            menu.push_back(begin);
+            num_menu++;
+        }
+        begin++;
+    }
 }
         
 /** @brief

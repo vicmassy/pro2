@@ -71,6 +71,9 @@ class Tasca {
         \post Retorna true si tag pertany al p.i.
         */
         bool te_etiqueta(const string &tag) const;
+
+
+        bool compleix_expressio(const string &expressio, int &i);
         
         //IO
     
