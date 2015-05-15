@@ -35,7 +35,7 @@ class Agenda {
         void agenda_afegir_etiqueta(tasques_it it, const string &tag);
 	    void modificar_temps(tasques_it &it, const Instant &i);
         void obtenir_tasques_interval(Comanda &c,tasques_it &begin, tasques_it &end);
-        void escriure_tasques_interval(Comanda &c, tasques_it &begin, tasques_it &end);
+        void escriure_tasques_interval(tasques_it &begin, tasques_it &end);
         void escriure_tasques_etiquetes(Comanda &c, tasques_it &begin, tasques_it &end);
         void escriure_tasques_expressio(Comanda &c, tasques_it &begin, tasques_it &end);
 

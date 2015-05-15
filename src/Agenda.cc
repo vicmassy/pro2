@@ -73,7 +73,7 @@ void Agenda::obtenir_tasques_interval(Comanda &c, tasques_it &begin, tasques_it 
     }
 }
 
-void Agenda::escriure_tasques_interval(Comanda &c, tasques_it &begin, tasques_it &end){
+void Agenda::escriure_tasques_interval(tasques_it &begin, tasques_it &end){
 	int i = 1;
     while (begin != end) {
     	cout << i << ' ';
@@ -267,7 +267,7 @@ void Agenda::escriure_tasques_futures(Comanda &c) {
     } else if(c.nombre_etiquetes() > 0){
     	escriure_tasques_etiquetes(c,begin,end);
     } else {
-    	escriure_tasques_interval(c,begin,end);
+    	escriure_tasques_interval(begin,end);
     }
 }
 
