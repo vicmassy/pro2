@@ -1,5 +1,26 @@
 #include "Tasca.hh"
 
+bool Tasca::compleix_expressio_i(const string &s, int &i, int &j) {
+    if (s[i] == '#')
+        return (etiquetes.count(s.substr(i, j-i+1)) == 1);
+    ++i; --j;
+    int k = i;
+    int p = 0;
+    while (p != 0 or (s[k] != '.' and s[k] != ',')) {
+        if (s[i] == '(') ++p;
+        else if (s[i] == ')') --p;
+        ++k;
+    }
+    if (s[k] == '.') {
+        return compleix_expressio_i(s, i, k-1) and
+               compleix_expressio_i(s, k+1, j);
+    }
+    else {
+        return compleix_expressio_i(s, i, k-1) or
+               compleix_expressio_i(s, k+1, j);
+    }
+}
+
 /** @brief
 \pre Cert.
 \post Crea una tasca amb titol n.
@@ -60,34 +81,9 @@ bool Tasca::te_etiqueta(const string &tag) const {
     return (etiquetes.count(tag) == 1);
 }
 
-bool Tasca::compleix_expressio(const string &expressio, int &i){
-    char base = expressio[i];
-    if(base == '#'){
-        cout << "EXPRESSIO " << expressio << " " << i << endl;
-        int pos_inicial = i;
-        while(expressio[i] != ')' and expressio[i] != ',' and expressio[i] != '.'){
-            cout << expressio[i] << " ";
-            i++;
-        }
-        cout << endl;
-        string etiqueta = expressio.substr(pos_inicial,i-pos_inicial);
-        return te_etiqueta(etiqueta);
-    } else {
-        i++;
-        cout << expressio[i] << " ";
-        bool e1 = compleix_expressio(expressio,i);
-        char op = expressio[i];
-        i++;
-        cout << expressio[i] << " ";
-        bool e2 = compleix_expressio(expressio,i);
-        i++;
-        cout << expressio[i] << " ";
-        if(op == '.')
-            return (e1 and e2);
-        else 
-            return (e1 or e2);
-    }
-}
+bool Tasca::compleix_expressio(const string &expressio){
+    return compleix_expressio_i(expressio, 0, expressio.size()-1);
+}        
 
 /** @brief Escriu la tasca
 \pre El p.i. no es buit.

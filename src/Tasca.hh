@@ -18,6 +18,7 @@ class Tasca {
     
         string nom;
         set<string> etiquetes;
+        bool compleix_expressio_i(const string &s, int &i, int &j)
 
     public:
 
