@@ -63,18 +63,25 @@ bool Tasca::te_etiqueta(const string &tag) const {
 bool Tasca::compleix_expressio(const string &expressio, int &i){
     char base = expressio[i];
     if(base == '#'){
+        cout << "EXPRESSIO " << expressio << " " << i << endl;
         int pos_inicial = i;
-        while(expressio[i] != ')' or expressio[i] != ',' or expressio[i] != '.')
+        while(expressio[i] != ')' and expressio[i] != ',' and expressio[i] != '.'){
+            cout << expressio[i] << " ";
             i++;
+        }
+        cout << endl;
         string etiqueta = expressio.substr(pos_inicial,i-pos_inicial);
         return te_etiqueta(etiqueta);
     } else {
         i++;
+        cout << expressio[i] << " ";
         bool e1 = compleix_expressio(expressio,i);
         char op = expressio[i];
         i++;
+        cout << expressio[i] << " ";
         bool e2 = compleix_expressio(expressio,i);
         i++;
+        cout << expressio[i] << " ";
         if(op == '.')
             return (e1 and e2);
         else 

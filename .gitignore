@@ -4,6 +4,7 @@
 *.o
 *.obj
 *.x
+*.exe
 
 # Doxygen out
 DOC/
