@@ -1,1 +1,0 @@
-? ((#feina.#esport).(#docencia,#recerca)) 20.04.15 13.05.15
