@@ -101,9 +101,8 @@ void Agenda::escriure_tasques_etiquetes(Comanda &c, tasques_it &begin, tasques_i
 
 void Agenda::escriure_tasques_expressio(Comanda &c, tasques_it &begin, tasques_it &end){
 	int num_menu = 1;
-    int i = 0;
     while(begin!=end){
-        if((*begin).second.compleix_expressio(c.expressio(), i)){
+        if((*begin).second.compleix_expressio(c.expressio())){
             cout << num_menu << ' ';
             escriure_tasca(begin);
             cout << endl;
@@ -113,6 +112,44 @@ void Agenda::escriure_tasques_expressio(Comanda &c, tasques_it &begin, tasques_i
         begin++;
     }
 }
+
+/* FUNCIONS DE LA PART DE CERCA PER ETIQUETES (EN PROGRES!)
+
+void convertir_expressio(const string &s, vector<expressio_processada> &v) {
+    int i = 0;
+    while(i < s.size()) {
+        int n;
+        map<string,map<Instant,tasques_it> >::const_iterator tag_it;
+        map<Instant,tasques_it>::const_iterator it;
+        if (s[i] == '#') {
+            int j = i;
+            while (s[i] != '.' and s[i] != ',' and s[i] != ')') ++i;
+            v.push_back({etiquetes.find(s.substr(j, i-j))));
+        }
+        else {
+            if (s[i] == '(') n = 1;
+            else if (s[i] == ')') n = 2;
+            else if (s[i] == '.') n = 3;
+            else n = 4;
+            ++i;
+        }
+    }
+}
+
+tasques_it seguent_element (const vector<pair<char, tasques_it> > &v, int &i, int &j) {
+    if (v[i].first == '#') {
+        return v[i].second;
+    }
+    ++i; --j;
+    int k = i;
+    int p = 0;
+    while (p != 0 or (v[k].first != '.' and v[k].first != ',')) {
+        if (v[k].first == '(') ++p;
+        else if (v[k].first == ')') --p;
+        ++k;
+    }
+    
+} */ 
         
 /** @brief
 \pre Cert.

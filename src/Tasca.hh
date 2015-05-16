@@ -18,7 +18,7 @@ class Tasca {
     
         string nom;
         set<string> etiquetes;
-        bool compleix_expressio_i(const string &s, int &i, int &j)
+        bool compleix_expressio_i(const string &s, int i, int j);
 
     public:
 
@@ -74,7 +74,7 @@ class Tasca {
         bool te_etiqueta(const string &tag) const;
 
 
-        bool compleix_expressio(const string &expressio, int &i);
+        bool compleix_expressio(const string &expressio);
         
         //IO
     

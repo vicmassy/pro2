@@ -1,14 +1,14 @@
 #include "Tasca.hh"
 
-bool Tasca::compleix_expressio_i(const string &s, int &i, int &j) {
+bool Tasca::compleix_expressio_i(const string &s, int i, int j) {
     if (s[i] == '#')
         return (etiquetes.count(s.substr(i, j-i+1)) == 1);
     ++i; --j;
     int k = i;
     int p = 0;
     while (p != 0 or (s[k] != '.' and s[k] != ',')) {
-        if (s[i] == '(') ++p;
-        else if (s[i] == ')') --p;
+        if (s[k] == '(') ++p;
+        else if (s[k] == ')') --p;
         ++k;
     }
     if (s[k] == '.') {

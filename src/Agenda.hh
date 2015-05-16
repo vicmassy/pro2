@@ -29,6 +29,12 @@ class Agenda {
         vector<tasques_it> menu;
         map<string,map<Instant,tasques_it> > etiquetes;
         
+        /*struct expressio_processada {
+            int n;
+            map<string,map<Instant,tasques_it> >::const_iterator tag_it;
+            map<Instant,tasques_it>::const_iterator it;
+        };*/
+        
         void escriure_tasca(tasques_it_c it) const;
         void esborrar_totes_etiquetes_agenda(tasques_it m_it);
         bool comprovar_modificable(int i);
