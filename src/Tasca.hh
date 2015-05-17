@@ -18,13 +18,18 @@ class Tasca {
     
         string nom;
         set<string> etiquetes;
+
+        /** @brief Funció d'immersió de compleix_expressio
+        \pre 
+        \post
+        */
         bool compleix_expressio_i(const string &s, int i, int j);
 
     public:
 
         //Constructors
 
-        /** @brief
+        /** @brief Crea una tasca amb titol n.
         \pre Cert.
         \post Crea una tasca amb titol n.
         */
@@ -44,6 +49,10 @@ class Tasca {
         */
         bool esborrar_etiqueta(const string &tag);
 
+        /** @brief 
+        \pre Cert.
+        \post 
+        */
         void esborrar_etiqueta(set<string>::iterator it);
         
         /** @brief Esborra totes les etiquetes de la tasca.
@@ -58,9 +67,9 @@ class Tasca {
         */
         bool primera_etiqueta(set<string>::iterator &it);
 	
-	/** @brief
-        \pre
-        \post
+	   	/** @brief
+        \pre Cert.
+        \post El titol del parametre implicit queda modificat amb el valor de s.
         */
         void modificar_titol(const string &s);
 
@@ -73,8 +82,11 @@ class Tasca {
         */
         bool te_etiqueta(const string &tag) const;
 
-
-        bool compleix_expressio(const string &expressio);
+        /** @brief 
+        \pre
+        \post
+        */
+		bool compleix_expressio(const string &expressio);
         
         //IO
     
