@@ -265,7 +265,7 @@ void Agenda::escriure_tasques_futures(Comanda &c) {
 
 void Agenda::escriure_tasques_passades() const {
     tasques_it_c it = tasques.begin();
-    tasques_it_c it_end = tasques.upper_bound(r);
+    tasques_it_c it_end = tasques.lower_bound(r);
     int i = 1;
     while (it != it_end) {
         cout << i << ' ';
