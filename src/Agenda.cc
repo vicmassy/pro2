@@ -161,7 +161,7 @@ bool Agenda::modificar_rellotge(Comanda &c) {
     if (c.nombre_dates() == 1)
         t.modificar_data(c.data(1));
     if (c.te_hora())
-        t.modificar_data(c.hora());
+        t.modificar_hora(c.hora());
     if (t < r)
         return false;
     r = t;
