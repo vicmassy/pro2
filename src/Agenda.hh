@@ -38,9 +38,9 @@ class Agenda {
         
         void escriure_tasca(Tasques::const_iterator it) const;
         void esborrar_totes_etiquetes_agenda(Tasques::iterator m_it);
-        bool comprovar_modificable(int i);
+        bool comprovar_modificable(int i) const;
         void agenda_afegir_etiqueta(Tasques::iterator it, const string &tag);
-	    void modificar_temps(Tasques::iterator &it, const Instant &i);
+        void modificar_temps(Tasques::iterator &it, const Instant &i);
         void obtenir_tasques_interval(Comanda &c,Tasques::iterator &begin, Tasques::iterator &end);
         void escriure_tasques_interval(Tasques::iterator &begin, Tasques::iterator &end);
         void escriure_tasques_etiquetes(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end);

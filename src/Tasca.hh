@@ -61,8 +61,8 @@ class Tasca {
         \post
         */
         bool primera_etiqueta(set<string>::iterator &it) const;
-	
-	   	/** @brief
+    
+        /** @brief
         \pre Cert.
         \post El titol del parametre implicit queda modificat amb el valor de s.
         */
@@ -81,7 +81,7 @@ class Tasca {
         \pre
         \post
         */
-		bool compleix_expressio(const string &expressio) const;
+        bool compleix_expressio(const string &expressio) const;
         
         //IO
     

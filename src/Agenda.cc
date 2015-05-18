@@ -19,7 +19,7 @@ void Agenda::agenda_afegir_etiqueta(Tasques::iterator it, const string &tag) {
     }
 }
 
-void Agenda::esborrar_totes_etiquetes_agenda(Tasques::iterator it){
+void Agenda::esborrar_totes_etiquetes_agenda(Tasques::iterator it) {
     set<string>::iterator etiq_it;
     while((*it).second.primera_etiqueta(etiq_it)){
         Etiquetes::iterator map_it = etiquetes.find(*etiq_it);
@@ -30,7 +30,7 @@ void Agenda::esborrar_totes_etiquetes_agenda(Tasques::iterator it){
     }
 }
 
-bool Agenda::comprovar_modificable(int i) {
+bool Agenda::comprovar_modificable(int i) const {
     if (i < 0 or i >= menu.size())
         return false;
     if (menu[i] == tasques.end())
@@ -45,9 +45,9 @@ void Agenda::modificar_temps(Tasques::iterator &it, const Instant &i) {
     it = (tasques.insert(pair<Instant,Tasca> (i, (*it).second))).first;
     set<string>::iterator tag_it;
     while((*it_original).second.primera_etiqueta(tag_it)) {
-        Etiquetes::iterator it1 = etiquetes.find(*tag_it);
-	(*it1).second.erase((*it_original).first);
-	(*it1).second.insert(pair<Instant,Tasques::iterator> (i, it));
+        Etiquetes::iterator map_it = etiquetes.find(*tag_it);
+        (*map_it).second.erase((*it_original).first);
+        (*map_it).second.insert(pair<Instant,Tasques::iterator> (i, it));
         (*it_original).second.esborrar_etiqueta(tag_it);
     }
     tasques.erase(it_original);
@@ -55,19 +55,19 @@ void Agenda::modificar_temps(Tasques::iterator &it, const Instant &i) {
 
 void Agenda::obtenir_tasques_interval(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end) {
     if (c.nombre_dates() == 0) {
-	   begin = tasques.lower_bound(r);
-	   end = tasques.end();	
+       begin = tasques.lower_bound(r);
+       end = tasques.end(); 
     } else if (c.nombre_dates() == 1) {
-	   Instant t1 (c.data(1), "00:00");
-	   Instant t2 (c.data(1), "23:59");
-	   begin = tasques.lower_bound(t1);
-	   end = tasques.upper_bound(t2);	
+       Instant t1 (c.data(1), "00:00");
+       Instant t2 (c.data(1), "23:59");
+       begin = tasques.lower_bound(t1);
+       end = tasques.upper_bound(t2);   
     } else {
-	   Instant t1 (c.data(1), "00:00");
-	   Instant t2 (c.data(2), "23:59");
-	   if (t2 < t1){
+       Instant t1 (c.data(1), "00:00");
+       Instant t2 (c.data(2), "23:59");
+       if (t2 < t1){
             begin = tasques.end();
-	        end = tasques.end();
+            end = tasques.end();
         } else {
             begin = tasques.lower_bound(t1);
             end = tasques.upper_bound(t2);
@@ -76,14 +76,14 @@ void Agenda::obtenir_tasques_interval(Comanda &c, Tasques::iterator &begin, Tasq
 }
 
 void Agenda::escriure_tasques_interval(Tasques::iterator &begin, Tasques::iterator &end){
-	int i = 1;
+    int i = 1;
     while (begin != end) {
-    	cout << i << ' ';
-    	escriure_tasca(begin);
-    	cout << endl;
-    	menu.push_back(begin);
-    	++begin;
-    	++i;
+        cout << i << ' ';
+        escriure_tasca(begin);
+        cout << endl;
+        menu.push_back(begin);
+        ++begin;
+        ++i;
     }
 }
 
@@ -102,7 +102,7 @@ void Agenda::escriure_tasques_etiquetes(Comanda &c, Tasques::iterator &begin, Ta
 }
 
 void Agenda::escriure_tasques_expressio(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end){
-	int num_menu = 1;
+    int num_menu = 1;
     while(begin!=end){
         if((*begin).second.compleix_expressio(c.expressio())){
             cout << num_menu << ' ';
@@ -193,24 +193,24 @@ bool Agenda::modificar_tasca(Comanda &c) {
     bool canviar_temps = false;
     Instant i = (*menu[k]).first;
     if (c.nombre_dates() == 1) {
-	i.modificar_data(c.data(1));
-	canviar_temps = true;
+        i.modificar_data(c.data(1));
+        canviar_temps = true;
     }
     if (c.te_hora()) {
-	i.modificar_hora(c.hora());
-	canviar_temps = true;
+        i.modificar_hora(c.hora());
+        canviar_temps = true;
     }
     if (canviar_temps) {
-	if (i < r)
-	    return false;
-	if (tasques.count(i) == 1)
-	    return false;
-	modificar_temps(menu[k], i);
+        if (i < r)
+            return false;
+        if (tasques.count(i) == 1)
+            return false;
+        modificar_temps(menu[k], i);
     }
     if (c.te_titol())
-	(*menu[k]).second.modificar_titol(c.titol());
+        (*menu[k]).second.modificar_titol(c.titol());
     for (int j = 1; j <= c.nombre_etiquetes(); ++j)
-	agenda_afegir_etiqueta(menu[k], c.etiqueta(j));
+        agenda_afegir_etiqueta(menu[k], c.etiqueta(j));
     return true;
 }
 
@@ -252,17 +252,15 @@ void Agenda::escriure_rellotge() const {
 
 void Agenda::escriure_tasques_futures(Comanda &c) {
     menu.clear();
-	Tasques::iterator begin;
+    Tasques::iterator begin;
     Tasques::iterator end;
     obtenir_tasques_interval(c,begin,end);
-
-    if(c.te_expressio()){
-    	escriure_tasques_expressio(c,begin,end);
-    } else if(c.nombre_etiquetes() == 1){
-    	escriure_tasques_etiquetes(c,begin,end);
-    } else {
-    	escriure_tasques_interval(begin,end);
-    }
+    if(c.te_expressio())
+        escriure_tasques_expressio(c,begin,end);
+    else if(c.nombre_etiquetes() == 1)
+        escriure_tasques_etiquetes(c,begin,end);
+    else
+        escriure_tasques_interval(begin,end);
 }
 
 void Agenda::escriure_tasques_passades() const {
