@@ -77,9 +77,9 @@ class Tasca {
         */
         bool te_etiqueta(const string &tag) const;
 
-        /** @brief 
-        \pre
-        \post
+        /** @brief Comprova si el p.i. compleix l'expressio d'etiquetes corresponent
+        \pre expressio te el format correcte d'una expressio booleana d'etiquetes.
+        \post Retorna true si les etiquetes de la tasca compleixen les condicions de l'expressio.
         */
         bool compleix_expressio(const string &expressio) const;
         
