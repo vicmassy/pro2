@@ -2,7 +2,7 @@
 
 const string DATA0 = "20.04.15";
 const string HORA0 = "00:00";
-const string ERROR = "No s'ha realitzat.";
+const string ERROR = "No s'ha realitzat";
 
 int main() {    
     Agenda a(DATA0, HORA0);
