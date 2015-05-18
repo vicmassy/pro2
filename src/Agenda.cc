@@ -4,7 +4,6 @@ void Agenda::escriure_tasca(tasques_it_c it) const {
     (*it).second.escriure_nom();
     cout << ' ';
     (*it).first.escriure();
-    cout << ' ';
     (*it).second.escriure_etiquetes();
 }
 

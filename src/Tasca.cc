@@ -66,10 +66,6 @@ void Tasca::escriure_nom() const {
 
 void Tasca::escriure_etiquetes() const {
     set<string>::const_iterator it = etiquetes.begin();
-    if (it != etiquetes.end()) {
-        cout << *it;
-        ++it;
-    }
     while (it != etiquetes.end()) {
         cout << ' ' << *it;
         ++it;
