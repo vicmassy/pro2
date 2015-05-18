@@ -5,6 +5,7 @@
 *.obj
 *.x
 *.exe
+*.swp
 
 # Doxygen out
 DOC/
