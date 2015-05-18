@@ -17,33 +17,34 @@ using namespace std;
     @brief Representa l'agenda i gestiona les interaccions amb les comandes
 */
 
-typedef map<Instant,Tasca>::iterator tasques_it;
-typedef map<Instant,Tasca>::const_iterator tasques_it_c;
+typedef map<Instant,Tasca> Tasques;
+typedef map<Instant,Tasques::iterator> Tasques_ref;
+typedef map<string,Tasques_ref> Etiquetes;
 
 class Agenda {
 
     private:
 
         Instant r;
-        map<Instant,Tasca> tasques;
-        vector<tasques_it> menu;
-        map<string,map<Instant,tasques_it> > etiquetes;
+        Tasques tasques;
+        vector<Tasques::iterator> menu;
+        Etiquetes etiquetes;
         
         /*struct expressio_processada {
             int n;
-            map<string,map<Instant,tasques_it> >::const_iterator tag_it;
-            map<Instant,tasques_it>::const_iterator it;
+            Etiquetes::const_iterator tag_it;
+            Tasques_ref::const_iterator it;
         };*/
         
-        void escriure_tasca(tasques_it_c it) const;
-        void esborrar_totes_etiquetes_agenda(tasques_it m_it);
+        void escriure_tasca(Tasques::const_iterator it) const;
+        void esborrar_totes_etiquetes_agenda(Tasques::iterator m_it);
         bool comprovar_modificable(int i);
-        void agenda_afegir_etiqueta(tasques_it it, const string &tag);
-	    void modificar_temps(tasques_it &it, const Instant &i);
-        void obtenir_tasques_interval(Comanda &c,tasques_it &begin, tasques_it &end);
-        void escriure_tasques_interval(tasques_it &begin, tasques_it &end);
-        void escriure_tasques_etiquetes(Comanda &c, tasques_it &begin, tasques_it &end);
-        void escriure_tasques_expressio(Comanda &c, tasques_it &begin, tasques_it &end);
+        void agenda_afegir_etiqueta(Tasques::iterator it, const string &tag);
+	    void modificar_temps(Tasques::iterator &it, const Instant &i);
+        void obtenir_tasques_interval(Comanda &c,Tasques::iterator &begin, Tasques::iterator &end);
+        void escriure_tasques_interval(Tasques::iterator &begin, Tasques::iterator &end);
+        void escriure_tasques_etiquetes(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end);
+        void escriure_tasques_expressio(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end);
 
     public:
     

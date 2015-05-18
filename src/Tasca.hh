@@ -18,12 +18,7 @@ class Tasca {
     
         string nom;
         set<string> etiquetes;
-
-        /** @brief Funció d'immersió de compleix_expressio
-        \pre 
-        \post
-        */
-        bool compleix_expressio_i(const string &s, int i, int j);
+        bool compleix_expressio_i(const string &s, int i, int j) const;
 
     public:
 
@@ -65,7 +60,7 @@ class Tasca {
         \pre
         \post
         */
-        bool primera_etiqueta(set<string>::iterator &it);
+        bool primera_etiqueta(set<string>::iterator &it) const;
 	
 	   	/** @brief
         \pre Cert.
@@ -86,7 +81,7 @@ class Tasca {
         \pre
         \post
         */
-		bool compleix_expressio(const string &expressio);
+		bool compleix_expressio(const string &expressio) const;
         
         //IO
     

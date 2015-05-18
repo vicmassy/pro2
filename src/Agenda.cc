@@ -1,29 +1,32 @@
 #include "Agenda.hh"
 
-void Agenda::escriure_tasca(tasques_it_c it) const {
+void Agenda::escriure_tasca(Tasques::const_iterator it) const {
     (*it).second.escriure_nom();
     cout << ' ';
     (*it).first.escriure();
     (*it).second.escriure_etiquetes();
 }
 
-void Agenda::agenda_afegir_etiqueta(tasques_it it, const string &tag) {
+void Agenda::agenda_afegir_etiqueta(Tasques::iterator it, const string &tag) {
     (*it).second.afegir_etiqueta(tag);
-    map<string,map<Instant,tasques_it> >::iterator it2 = etiquetes.find(tag);
-    if (it2 != etiquetes.end())
-        (*it2).second.insert(pair<Instant,tasques_it> ((*it).first, it));
+    Etiquetes::iterator et_it = etiquetes.lower_bound(tag);
+    if (et_it != etiquetes.end() and (*et_it).first == tag)
+        (*et_it).second.insert(pair<Instant,Tasques::iterator> ((*it).first, it));
     else {
-        map<Instant,tasques_it> m;
-        m.insert(pair<Instant,tasques_it> ((*it).first, it));
-        etiquetes.insert(pair< string,map<Instant,tasques_it> > (tag, m));
+        Tasques_ref m;
+        m.insert(pair<Instant,Tasques::iterator> ((*it).first, it));
+        etiquetes.insert(et_it, pair<string,Tasques_ref> (tag, m));
     }
 }
 
-void Agenda::esborrar_totes_etiquetes_agenda(tasques_it m_it){
-    set<string>::iterator it;
-    while((*m_it).second.primera_etiqueta(it)){
-        etiquetes[*it].erase((*m_it).first);
-        (*m_it).second.esborrar_etiqueta(it);
+void Agenda::esborrar_totes_etiquetes_agenda(Tasques::iterator it){
+    set<string>::iterator etiq_it;
+    while((*it).second.primera_etiqueta(etiq_it)){
+        Etiquetes::iterator map_it = etiquetes.find(*etiq_it);
+        (*map_it).second.erase((*it).first);
+        if ((*map_it).second.empty())
+            etiquetes.erase(map_it);
+        (*it).second.esborrar_etiqueta(etiq_it);
     }
 }
 
@@ -37,20 +40,20 @@ bool Agenda::comprovar_modificable(int i) {
     return true;
 }
 
-void Agenda::modificar_temps(tasques_it &it, const Instant &i) {
-    tasques_it it_original = it;
+void Agenda::modificar_temps(Tasques::iterator &it, const Instant &i) {
+    Tasques::iterator it_original = it;
     it = (tasques.insert(pair<Instant,Tasca> (i, (*it).second))).first;
     set<string>::iterator tag_it;
     while((*it_original).second.primera_etiqueta(tag_it)) {
-        map<string,map<Instant,tasques_it> >::iterator it1 = etiquetes.find(*tag_it);
+        Etiquetes::iterator it1 = etiquetes.find(*tag_it);
 	(*it1).second.erase((*it_original).first);
-	(*it1).second.insert(pair<Instant,tasques_it> (i, it));
+	(*it1).second.insert(pair<Instant,Tasques::iterator> (i, it));
         (*it_original).second.esborrar_etiqueta(tag_it);
     }
     tasques.erase(it_original);
 }
 
-void Agenda::obtenir_tasques_interval(Comanda &c, tasques_it &begin, tasques_it &end) {
+void Agenda::obtenir_tasques_interval(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end) {
     if (c.nombre_dates() == 0) {
 	   begin = tasques.lower_bound(r);
 	   end = tasques.end();	
@@ -72,7 +75,7 @@ void Agenda::obtenir_tasques_interval(Comanda &c, tasques_it &begin, tasques_it 
     }
 }
 
-void Agenda::escriure_tasques_interval(tasques_it &begin, tasques_it &end){
+void Agenda::escriure_tasques_interval(Tasques::iterator &begin, Tasques::iterator &end){
 	int i = 1;
     while (begin != end) {
     	cout << i << ' ';
@@ -84,7 +87,7 @@ void Agenda::escriure_tasques_interval(tasques_it &begin, tasques_it &end){
     }
 }
 
-void Agenda::escriure_tasques_etiquetes(Comanda &c, tasques_it &begin, tasques_it &end){
+void Agenda::escriure_tasques_etiquetes(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end){
     int num_menu = 1;
     while(begin != end){
         if((*begin).second.te_etiqueta(c.etiqueta(1))){
@@ -98,7 +101,7 @@ void Agenda::escriure_tasques_etiquetes(Comanda &c, tasques_it &begin, tasques_i
     }
 }
 
-void Agenda::escriure_tasques_expressio(Comanda &c, tasques_it &begin, tasques_it &end){
+void Agenda::escriure_tasques_expressio(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end){
 	int num_menu = 1;
     while(begin!=end){
         if((*begin).second.compleix_expressio(c.expressio())){
@@ -118,8 +121,8 @@ void convertir_expressio(const string &s, vector<expressio_processada> &v) {
     int i = 0;
     while(i < s.size()) {
         int n;
-        map<string,map<Instant,tasques_it> >::const_iterator tag_it;
-        map<Instant,tasques_it>::const_iterator it;
+        Etiquetes::const_iterator tag_it;
+        Tasques_ref::const_iterator it;
         if (s[i] == '#') {
             int j = i;
             while (s[i] != '.' and s[i] != ',' and s[i] != ')') ++i;
@@ -135,7 +138,7 @@ void convertir_expressio(const string &s, vector<expressio_processada> &v) {
     }
 }
 
-tasques_it seguent_element (const vector<pair<char, tasques_it> > &v, int &i, int &j) {
+Tasques::iterator seguent_element (const vector<pair<char, Tasques::iterator> > &v, int &i, int &j) {
     if (v[i].first == '#') {
         return v[i].second;
     }
@@ -177,7 +180,7 @@ bool Agenda::inserir_tasca(Comanda &c) {
     if (tasques.count(t) == 1)
         return false;
     Tasca q(c.titol());
-    tasques_it it = tasques.insert(pair<Instant,Tasca> (t,q)).first;
+    Tasques::iterator it = tasques.insert(pair<Instant,Tasca> (t,q)).first;
     for (int i = 1; i <= c.nombre_etiquetes(); ++i)
         agenda_afegir_etiqueta(it, c.etiqueta(i));
     return true;
@@ -249,8 +252,8 @@ void Agenda::escriure_rellotge() const {
 
 void Agenda::escriure_tasques_futures(Comanda &c) {
     menu.clear();
-	tasques_it begin;
-    tasques_it end;
+	Tasques::iterator begin;
+    Tasques::iterator end;
     obtenir_tasques_interval(c,begin,end);
 
     if(c.te_expressio()){
@@ -263,8 +266,8 @@ void Agenda::escriure_tasques_futures(Comanda &c) {
 }
 
 void Agenda::escriure_tasques_passades() const {
-    tasques_it_c it = tasques.begin();
-    tasques_it_c it_end = tasques.lower_bound(r);
+    Tasques::const_iterator it = tasques.begin();
+    Tasques::const_iterator it_end = tasques.lower_bound(r);
     int i = 1;
     while (it != it_end) {
         cout << i << ' ';
