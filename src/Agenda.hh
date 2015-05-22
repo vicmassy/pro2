@@ -30,12 +30,6 @@ class Agenda {
         vector<Tasques::iterator> menu;
         Etiquetes etiquetes;
         
-        /*struct expressio_processada {
-            int n;
-            Etiquetes::const_iterator tag_it;
-            Tasques_ref::const_iterator it;
-        };*/
-        
         void escriure_tasca(Tasques::const_iterator it) const;
         void esborrar_totes_etiquetes_agenda(Tasques::iterator m_it);
         bool comprovar_modificable(int i) const;
@@ -43,7 +37,6 @@ class Agenda {
         void modificar_temps(Tasques::iterator &it, const Instant &i);
         void obtenir_tasques_interval(Comanda &c,Tasques::iterator &begin, Tasques::iterator &end);
         void escriure_tasques_interval(Tasques::iterator &begin, Tasques::iterator &end);
-        void escriure_tasques_etiquetes(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end);
         void escriure_tasques_expressio(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end);
 
     public:

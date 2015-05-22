@@ -87,71 +87,24 @@ void Agenda::escriure_tasques_interval(Tasques::iterator &begin, Tasques::iterat
     }
 }
 
-void Agenda::escriure_tasques_etiquetes(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end){
-    int num_menu = 1;
-    while(begin != end){
-        if((*begin).second.te_etiqueta(c.etiqueta(1))){
-            cout << num_menu << ' ';
-            escriure_tasca(begin);
-            cout << endl;
-            menu.push_back(begin);
-            num_menu++;
-        }
-        begin++;
-    }
-}
-
 void Agenda::escriure_tasques_expressio(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end){
     int num_menu = 1;
     while(begin!=end){
-        if((*begin).second.compleix_expressio(c.expressio())){
-            cout << num_menu << ' ';
-            escriure_tasca(begin);
-            cout << endl;
-            menu.push_back(begin);
-            num_menu++;
-        }
-        begin++;
+      bool b;
+      if(c.te_expressio())
+	b = (*begin).second.compleix_expressio(c.expressio());
+      else
+	b = (*begin).second.compleix_expressio(c.etiqueta(1));
+      if(b){
+	  cout << num_menu << ' ';
+	  escriure_tasca(begin);
+	  cout << endl;
+	  menu.push_back(begin);
+	  num_menu++;
+      }	  
+      begin++;
     }
 }
-
-/* FUNCIONS DE LA PART DE CERCA PER ETIQUETES (EN PROGRES!)
-
-void convertir_expressio(const string &s, vector<expressio_processada> &v) {
-    int i = 0;
-    while(i < s.size()) {
-        int n;
-        Etiquetes::const_iterator tag_it;
-        Tasques_ref::const_iterator it;
-        if (s[i] == '#') {
-            int j = i;
-            while (s[i] != '.' and s[i] != ',' and s[i] != ')') ++i;
-            v.push_back({etiquetes.find(s.substr(j, i-j))));
-        }
-        else {
-            if (s[i] == '(') n = 1;
-            else if (s[i] == ')') n = 2;
-            else if (s[i] == '.') n = 3;
-            else n = 4;
-            ++i;
-        }
-    }
-}
-
-Tasques::iterator seguent_element (const vector<pair<char, Tasques::iterator> > &v, int &i, int &j) {
-    if (v[i].first == '#') {
-        return v[i].second;
-    }
-    ++i; --j;
-    int k = i;
-    int p = 0;
-    while (p != 0 or (v[k].first != '.' and v[k].first != ',')) {
-        if (v[k].first == '(') ++p;
-        else if (v[k].first == ')') --p;
-        ++k;
-    }
-    
-} */ 
         
 Agenda::Agenda(const string &d, const string &h) {
     r.modificar_data(d);
@@ -255,10 +208,8 @@ void Agenda::escriure_tasques_futures(Comanda &c) {
     Tasques::iterator begin;
     Tasques::iterator end;
     obtenir_tasques_interval(c,begin,end);
-    if(c.te_expressio())
+    if(c.te_expressio() or c.nombre_etiquetes() == 1)
         escriure_tasques_expressio(c,begin,end);
-    else if(c.nombre_etiquetes() == 1)
-        escriure_tasques_etiquetes(c,begin,end);
     else
         escriure_tasques_interval(begin,end);
 }
