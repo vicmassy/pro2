@@ -18,6 +18,11 @@ class Tasca {
     
         string nom;
         set<string> etiquetes;
+	
+	/** @brief Funció d'immersió per a avaluar si una tasca compleix una expressió.
+	 \pre s conté una expressio, i conté 
+	 \post Retorna cert si la tasca compleix l'expressió i fals en els altres casos.
+	 */
         bool compleix_expressio_i(const string &s, int i, int j) const;
 
     public:
