@@ -1,0 +1,40 @@
++ anar a la platja 20.05.15 10:00 #lleure
++ fer deures 20.04.15 18:00 #educacio
++ anar al teatre 22:00
++ reunio 20.04.15 15:00 #feina #reunio #negocis
+?
+3 #lleure
+1 reunio per promocionar producte 16:00 #important
+1 -#reunio
+?
+1 -etiquetes
+?
+-1
+rellotge 18:01
+passat?
+2 fer deures amb en Pau #amic
++ comprar pa 20.05.15 10:00 #comprar
++ anar a correr 19.05.15 09:00 #esport
+?
++ 22:00 entrenar amb l'equip de futbol 23.05.15 #esport #lleure #futbol
+? #lleure
+rellotge 15.05.15
+? 01.06.15 27.05.15
+? 01.06.15
++ puenting 01.06.15 12:00 #esport #xtreme
++ cafe amb en Pau #lleure 
+?
+1 -#lleure
+4 -#xtreme
+? ((#lleure,#futbol).#esport)
+-2
+rellotge 12.05.15
+?
+4 #esport
+? #docencia
+? ((#educacio,#esport).(#lleure,#important))
+1 -#lleure
+?
+4 #lleure #risc
+? ((#educacio,#esport).(#lleure,#important))
+sortir
