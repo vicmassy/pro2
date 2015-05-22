@@ -19,7 +19,6 @@ using namespace std;
 
 typedef map<Instant,Tasca> Tasques;
 typedef map<Instant,Tasques::iterator> Tasques_ref;
-typedef map<string,Tasques_ref> Etiquetes;
 
 class Agenda {
 
@@ -27,8 +26,7 @@ class Agenda {
 
         Instant r;
         Tasques tasques;
-        vector<Tasques::iterator> menu;
-        Etiquetes etiquetes;
+        vector<Tasques::iterator> menu;	
         
         void escriure_tasca(Tasques::const_iterator it) const;
         void esborrar_totes_etiquetes_agenda(Tasques::iterator m_it);

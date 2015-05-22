@@ -7,29 +7,6 @@ void Agenda::escriure_tasca(Tasques::const_iterator it) const {
     (*it).second.escriure_etiquetes();
 }
 
-void Agenda::agenda_afegir_etiqueta(Tasques::iterator it, const string &tag) {
-    (*it).second.afegir_etiqueta(tag);
-    Etiquetes::iterator et_it = etiquetes.lower_bound(tag);
-    if (et_it != etiquetes.end() and (*et_it).first == tag)
-        (*et_it).second.insert(pair<Instant,Tasques::iterator> ((*it).first, it));
-    else {
-        Tasques_ref m;
-        m.insert(pair<Instant,Tasques::iterator> ((*it).first, it));
-        etiquetes.insert(et_it, pair<string,Tasques_ref> (tag, m));
-    }
-}
-
-void Agenda::esborrar_totes_etiquetes_agenda(Tasques::iterator it) {
-    set<string>::iterator etiq_it;
-    while((*it).second.primera_etiqueta(etiq_it)){
-        Etiquetes::iterator map_it = etiquetes.find(*etiq_it);
-        (*map_it).second.erase((*it).first);
-        if ((*map_it).second.empty())
-            etiquetes.erase(map_it);
-        (*it).second.esborrar_etiqueta(etiq_it);
-    }
-}
-
 bool Agenda::comprovar_modificable(int i) const {
     if (i < 0 or i >= menu.size())
         return false;
@@ -43,13 +20,6 @@ bool Agenda::comprovar_modificable(int i) const {
 void Agenda::modificar_temps(Tasques::iterator &it, const Instant &i) {
     Tasques::iterator it_original = it;
     it = (tasques.insert(pair<Instant,Tasca> (i, (*it).second))).first;
-    set<string>::iterator tag_it;
-    while((*it_original).second.primera_etiqueta(tag_it)) {
-        Etiquetes::iterator map_it = etiquetes.find(*tag_it);
-        (*map_it).second.erase((*it_original).first);
-        (*map_it).second.insert(pair<Instant,Tasques::iterator> (i, it));
-        (*it_original).second.esborrar_etiqueta(tag_it);
-    }
     tasques.erase(it_original);
 }
 
@@ -135,7 +105,7 @@ bool Agenda::inserir_tasca(Comanda &c) {
     Tasca q(c.titol());
     Tasques::iterator it = tasques.insert(pair<Instant,Tasca> (t,q)).first;
     for (int i = 1; i <= c.nombre_etiquetes(); ++i)
-        agenda_afegir_etiqueta(it, c.etiqueta(i));
+        (*it).second.afegir_etiqueta(c.etiqueta(i));
     return true;
 }
 
@@ -163,7 +133,7 @@ bool Agenda::modificar_tasca(Comanda &c) {
     if (c.te_titol())
         (*menu[k]).second.modificar_titol(c.titol());
     for (int j = 1; j <= c.nombre_etiquetes(); ++j)
-        agenda_afegir_etiqueta(menu[k], c.etiqueta(j));
+        (*menu[k]).second.afegir_etiqueta(c.etiqueta(j));
     return true;
 }
 
@@ -171,7 +141,7 @@ bool Agenda::esborrar_tasca(Comanda &c) {
     int i = c.tasca() - 1;
     if (not comprovar_modificable(i))
         return false;
-    esborrar_totes_etiquetes_agenda(menu[i]);
+    (*menu[i]).second.esborrar_totes_etiquetes();
     tasques.erase(menu[i]);
     menu[i] = tasques.end();
     return true;
@@ -180,7 +150,6 @@ bool Agenda::esborrar_tasca(Comanda &c) {
 bool Agenda::esborrar_etiqueta(Comanda &c) {
     int i = c.tasca() - 1;
     if (comprovar_modificable(i) and (*menu[i]).second.esborrar_etiqueta(c.etiqueta(1))){
-        etiquetes[c.etiqueta(1)].erase((*menu[i]).first);
         return true;
     }
     return false;
@@ -190,7 +159,7 @@ bool Agenda::esborrar_etiquetes(Comanda &c) {
     int i = c.tasca() - 1;
     if (not comprovar_modificable(i))
         return false;
-    esborrar_totes_etiquetes_agenda(menu[i]);
+    (*menu[i]).second.esborrar_totes_etiquetes();
     return true;
 }
 

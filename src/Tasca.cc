@@ -33,23 +33,12 @@ bool Tasca::esborrar_etiqueta(const string &tag) {
     return (etiquetes.erase(tag) == 1);
 }
 
-void Tasca::esborrar_etiqueta(set<string>::iterator it) {
-    etiquetes.erase(it);
-}
-
 void Tasca::esborrar_totes_etiquetes() {
     etiquetes.clear();
 }
 
 void Tasca::modificar_titol(const string &s) {
     nom = s;
-}
-
-bool Tasca::primera_etiqueta(set<string>::iterator &it) const {
-    it = etiquetes.begin();
-    if(it == etiquetes.end())
-        return false;
-    return true;
 }
 
 bool Tasca::te_etiqueta(const string &tag) const {

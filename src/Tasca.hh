@@ -48,24 +48,12 @@ class Tasca {
         \post Si tag pertany a la tasca, es esborrada i retorna true. Si no, no fa res i retorna false.
         */
         bool esborrar_etiqueta(const string &tag);
-
-        /** @brief 
-        \pre Cert.
-        \post 
-        */
-        void esborrar_etiqueta(set<string>::iterator it);
         
         /** @brief Esborra totes les etiquetes de la tasca.
         \pre Cert.
         \post S'han esborrat totes les etiquetes del p.i.
         */
         void esborrar_totes_etiquetes();
-
-        /** @brief
-        \pre
-        \post
-        */
-        bool primera_etiqueta(set<string>::iterator &it) const;
     
         /** @brief Canvia el titol del parametre implicit.
         \pre Cert.
