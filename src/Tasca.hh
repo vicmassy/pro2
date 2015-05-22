@@ -67,7 +67,7 @@ class Tasca {
         */
         bool primera_etiqueta(set<string>::iterator &it) const;
     
-        /** @brief
+        /** @brief Canvia el titol del parametre implicit.
         \pre Cert.
         \post El titol del parametre implicit queda modificat amb el valor de s.
         */

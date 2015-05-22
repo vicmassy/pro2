@@ -43,7 +43,7 @@ class Agenda {
     
         //Constructors
         
-        /** @brief
+        /** @brief Crea una agenda buida amb data d i hora h.
         \pre Cert.
         \post Es crea una agenda buida amb data d i hora h.
         */
