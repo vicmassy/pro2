@@ -1,0 +1,29 @@
++ Festa 20.04.15 00:00 #amics #nit
++ Classe 30.04.15 12:00 #amics #UPC
++ Bar 30.04.15 12:00
++ Apocalipsi 31.12.99 23:59 #amics #destruccio
+
+?
+rellotge 21.04.15
+passat?
+?
+
+? (#noexisteix.#amics)
+? (#noexisteix,#amics)
+? (#UPC,#UPC)
+? (#destruccio.#destruccio)
+
+?
+-1
++ Classe 30.04.15 12:00 #amics #UPC
+1 12:01
+
+?
+passat?
+1 #bar
+
+rellotge 31.12.99 23:59
+?
++ Reset 01.01.00 00:00 #bug?
+
+sortir

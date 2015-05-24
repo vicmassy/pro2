@@ -1,0 +1,78 @@
+
++ Festa 20.04.15 00:00 #amics #nit
+
++ Classe 30.04.15 12:00 #amics #UPC
+
++ Bar 30.04.15 12:00
+No s'ha realitzat
+
++ Apocalipsi 31.12.99 23:59 #amics #destruccio
+
+
+
+?
+1 Festa 20.04.15 00:00 #amics #nit
+2 Classe 30.04.15 12:00 #UPC #amics
+3 Apocalipsi 31.12.99 23:59 #amics #destruccio
+
+rellotge 21.04.15
+
+passat?
+1 Festa 20.04.15 00:00 #amics #nit
+
+?
+1 Classe 30.04.15 12:00 #UPC #amics
+2 Apocalipsi 31.12.99 23:59 #amics #destruccio
+
+
+
+? (#noexisteix.#amics)
+
+? (#noexisteix,#amics)
+1 Classe 30.04.15 12:00 #UPC #amics
+2 Apocalipsi 31.12.99 23:59 #amics #destruccio
+
+? (#UPC,#UPC)
+1 Classe 30.04.15 12:00 #UPC #amics
+
+? (#destruccio.#destruccio)
+1 Apocalipsi 31.12.99 23:59 #amics #destruccio
+
+
+
+?
+1 Classe 30.04.15 12:00 #UPC #amics
+2 Apocalipsi 31.12.99 23:59 #amics #destruccio
+
+-1
+
++ Classe 30.04.15 12:00 #amics #UPC
+
+1 12:01
+No s'ha realitzat
+
+
+
+?
+1 Classe 30.04.15 12:00 #UPC #amics
+2 Apocalipsi 31.12.99 23:59 #amics #destruccio
+
+passat?
+1 Festa 20.04.15 00:00 #amics #nit
+
+1 #bar
+No s'ha realitzat
+
+
+
+rellotge 31.12.99 23:59
+
+?
+1 Apocalipsi 31.12.99 23:59 #amics #destruccio
+
++ Reset 01.01.00 00:00 #bug?
+No s'ha realitzat
+
+
+
+sortir
