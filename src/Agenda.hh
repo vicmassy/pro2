@@ -159,9 +159,9 @@ class Agenda {
 
         /** @brief Escriu les tasques passades.
         \pre Cert.
-        \post Escriu totes les tasques passades.
+        \post Escriu totes les tasques passades i esborra el menu.
         */
-        void escriure_tasques_passades() const;
+        void escriure_tasques_passades();
         
 };
 

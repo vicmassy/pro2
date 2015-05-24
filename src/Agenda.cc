@@ -183,7 +183,7 @@ void Agenda::escriure_tasques_futures(Comanda &c) {
         escriure_tasques_interval(begin,end);
 }
 
-void Agenda::escriure_tasques_passades() const {
+void Agenda::escriure_tasques_passades() {
     menu.clear();
     Tasques::const_iterator it = tasques.begin();
     Tasques::const_iterator it_end = tasques.lower_bound(r);
