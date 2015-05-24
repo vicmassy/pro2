@@ -20,6 +20,11 @@ using namespace std;
 /** @class Agenda
     @brief Representa l'agenda i gestiona les interaccions amb les comandes
 */
+/*  Invariants:
+        - Les tasques estan ordenades per data i hora.
+        - Si l'ultima consulta realitzada es de tasques futures, el menu conte iteradors als resultats en ordre.
+        En cas contrari, el menu es buit.
+*/
 
 typedef map<Instant,Tasca> Tasques;
 typedef map<Instant,Tasques::iterator> Tasques_ref;
@@ -33,16 +38,15 @@ class Agenda {
         vector<Tasques::iterator> menu;	
         
 	/** @brief Escriu la tasca.
-        \pre La tasca que es vol escriure existeix.
-        \post S'escriu pel canal estandard de sortida la tasca a la que apunta el iterador it.
+        \pre it apunta a una tasca existent del mapa tasques.
+        \post S'ha escrit pel canal estandard de sortida la tasca a la que apunta el iterador it.
         */
         void escriure_tasca(Tasques::const_iterator it) const;
 	
-	/** @brief Comprova si la tasca es modificable
+	/** @brief Comprova si l'element i del menu existeix i es modificable
         \pre Cert.
-        \post Retorna fals si i no compleix aquest interval, 0 < i <= menu.size(), per saber si accedim a una tasca existent, 
-        o be si menu[i] == tasques.end() per veure si es una tasca esborrada, o be si la
-        tasca es passada, (*menu[i]).first < r. Retorna cert altrament.
+        \post Retorna fals si i no compleix  0 < i <= menu.size(), si menu[i] == tasques.end() 
+        o si la tasca apuntada per menu[i] es passada. Retorna cert altrament.
         */
         bool comprovar_modificable(int i) const;
 	
@@ -52,26 +56,25 @@ class Agenda {
         */
         void modificar_temps(Tasques::iterator &it, const Instant &i);
 	
-	/** @brief Obtenim totes les tasques que estan en un cert interval de temps, o be totes les futures.
-        \pre Cert.
-        \post Entre els dos iteradors, trobarem totes les tasques que compleixen l'interval de temps de
-        la comanda c. En el cas que hi hagi un interval de dates, i la segona sigui mes gran que la primera,
-	es a dir un interval erroni, els dos iteradors els deixarem apuntant tasques.end().En el cas que no 
-	hi hagi cap interval de temps, entre els dos iteradors hi haura totes les tasques futures a partir 
-	del instant r.
+	/** @brief Obtenim iteradors a la primera i l'ultima tasca d'un interval.
+        \pre c es una comanda d'escriure tasques futures.
+        \post Si c no especifica cap data, l'interval es de la data actual fins a l'ultima tasca.
+        Si especifica una sola data, l'interval son totes les tasques d'aquell dia.
+        Si hi ha dues dates, l'interval conte totes les tasques entre els dos dies, ambdos inclosos;
+        excepte si la primera data es posterior a la segona, aleshores l'interval es buit i ambdos iteradors apunten al final.
         */
         void obtenir_tasques_interval(Comanda &c,Tasques::iterator &begin, Tasques::iterator &end);
 	
-	/** @brief Escriu les tasques entre un interval de temps, o be totes les futures.
+	/** @brief Escriu les tasques en un interval de temps.
         \pre Cert.
-        \post Escriu pel canal estandard de sortida totes les tasques que esta entre els dos iteradors.
+        \post S'han escrit pel canal estandard de sortida totes les tasques que esta entre els dos iteradors.
         */
         void escriure_tasques_interval(Tasques::iterator &begin, Tasques::iterator &end);
 	
-	/** @brief Escriu les tasques que compleixen l'expressio o l'etiqueta.
-        \pre Cert.
-        \post Escriu pel canal estandard de sortida totes les tasques que compleixen l'expressio
-        booleana, o be contenen l'etiqueta.
+	/** @brief Escriu les tasques en un interval de temps que compleixen l'expressio o l'etiqueta.
+        \pre c es una comanda de cerca amb etiqueta o expressio booleana.
+        \post S'han escrit pel canal estandard de sortida totes les tasques que compleixen l'expressio
+        booleana o l'etiqueta.
         */
         void escriure_tasques_expressio(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end);
 

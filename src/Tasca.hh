@@ -15,6 +15,9 @@ using namespace std;
 /** @class Tasca
     @brief Representa una tasca i les seves etiquetes
 */
+/*  Invariants:
+        - Les etiquetes de la tasca estan ordenades lexicograficament.
+*/
 
 class Tasca {
   
@@ -24,8 +27,8 @@ class Tasca {
         set<string> etiquetes;
 	
 	/** @brief Funció d'immersió per a avaluar si una tasca compleix una expressió.
-	 \pre El parametre s conte una expressio, i es el limit esquerre i j el dret de la part de s que sera avaluada.
-	 \post Retorna cert si la tasca compleix l'expressió entre i i j i fals en els altres casos.
+	 \pre i >= 0, j < s.size() i el substring s[i..j] conte una expressio valida o una etiqueta.
+	 \post Retorna cert si la tasca compleix l'expressió s[i..j] i fals en els altres casos.
 	 */
         bool compleix_expressio_i(const string &s, int i, int j) const;
 

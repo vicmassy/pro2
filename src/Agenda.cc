@@ -184,6 +184,7 @@ void Agenda::escriure_tasques_futures(Comanda &c) {
 }
 
 void Agenda::escriure_tasques_passades() const {
+    menu.clear();
     Tasques::const_iterator it = tasques.begin();
     Tasques::const_iterator it_end = tasques.lower_bound(r);
     int i = 1;

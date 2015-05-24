@@ -15,20 +15,22 @@ using namespace std;
 /** @class Instant
     @brief Representa una moment en el temps.
 */
+/*  Invariants:
+        - L'instant representat esta entre l'any 2000 i l'any 2099.
+*/
 
 class Instant {
 
     private:
-	/** @brief Funcio de conversio d'un caracter numeric a un enter.
-        \pre El parametre c es un caracter numeric.
-        \post Converteix el caracter c en un enter.
+	/** @brief Converteix un numero codificar en ASCII a un enter.
+        \pre El parametre c es un caracter entre '0' i '9'.
+        \post Retorna l'enter representat per c.
         */
         int num(char c) const;
 	
-	/** @brief Funcio d'escriptura d'enters en format data o hora.
-        \pre El parametre n es un enter.
-        \post Escriu pel canal estandard de sortida l'enter n, i si es un enter mes petit
-        que 10, es a dir de dos digits, afegeig un 0 davant.
+	/** @brief Escriu un enter amb dues xifres.
+        \pre El parametre n esta entre 0 i 99.
+        \post S'ha escrit pel canal estandard de sortida l'enter n amb dues xifres.
         */
         void escriurenum(int n) const;
 	
