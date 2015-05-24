@@ -20,7 +20,7 @@ class Tasca {
         set<string> etiquetes;
 	
 	/** @brief Funció d'immersió per a avaluar si una tasca compleix una expressió.
-	 \pre s conté una expressio, i conté 
+	 \pre El parametre s conté una expressio, i = I i inicialment val 0, i j = J i inicialment val s.size()-1.
 	 \post Retorna cert si la tasca compleix l'expressió i fals en els altres casos.
 	 */
         bool compleix_expressio_i(const string &s, int i, int j) const;
@@ -70,21 +70,21 @@ class Tasca {
         */
         bool te_etiqueta(const string &tag) const;
 
-        /** @brief Comprova si el p.i. compleix l'expressio d'etiquetes corresponent
-        \pre expressio te el format correcte d'una expressio booleana d'etiquetes.
+        /** @brief Comprova si el p.i. compleix l'expressio d'etiquetes corresponent.
+        \pre L'expressio te el format correcte d'una expressio booleana d'etiquetes.
         \post Retorna true si les etiquetes de la tasca compleixen les condicions de l'expressio.
         */
         bool compleix_expressio(const string &expressio) const;
         
         //IO
     
-        /** @brief Escriu la tasca
+        /** @brief Escriu el nom de la tasca.
         \pre El p.i. no es buit.
         \post S'ha escrit el nom de la tasca.
         */
         void escriure_nom() const;
         
-        /** @brief Escriu la tasca
+        /** @brief Escriu la tasca.
         \pre El p.i. no es buit.
         \post S'han escrit les etiquetes en ordre lexicografic.
         */

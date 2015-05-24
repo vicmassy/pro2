@@ -28,13 +28,47 @@ class Agenda {
         Tasques tasques;
         vector<Tasques::iterator> menu;	
         
+	/** @brief Escriu la tasca.
+        \pre La tasca que es vol escriure existeix.
+        \post S'escriu pel canal estandard de sortida la tasca a la que apunta el iterador it.
+        */
         void escriure_tasca(Tasques::const_iterator it) const;
-        void esborrar_totes_etiquetes_agenda(Tasques::iterator m_it);
+	
+	/** @brief Comprova si la tasca es modificable
+        \pre Cert.
+        \post Retorna fals si i no compleix aquest interval, 0 < i <= menu.size(), per saber si accedim a una tasca existent, 
+        o be si menu[i] == tasques.end() per veure si es una tasca esborrada, o be si la
+        tasca es passada, (*menu[i]).first < r. Retorna cert altrament.
+        */
         bool comprovar_modificable(int i) const;
-        void agenda_afegir_etiqueta(Tasques::iterator it, const string &tag);
+	
+	/** @brief Modifica el temps d'una tasca.
+        \pre L'instant i es posterior al rellotge r, i l'iterador it apunta a una tasca existent i modificable.
+        \post Modifica el temps, ja sigui data o hora, de la tasca apuntada per it.
+        */
         void modificar_temps(Tasques::iterator &it, const Instant &i);
+	
+	/** @brief Obtenim totes les tasques que estan en un cert interval de temps, o be totes les futures.
+        \pre Cert.
+        \post Entre els dos iteradors, trobarem totes les tasques que compleixen l'interval de temps de
+        la comanda c. En el cas que hi hagi un interval de dates, i la segona sigui mes gran que la primera,
+	es a dir un interval erroni, els dos iteradors els deixarem apuntant tasques.end().En el cas que no 
+	hi hagi cap interval de temps, entre els dos iteradors hi haura totes les tasques futures a partir 
+	del instant r.
+        */
         void obtenir_tasques_interval(Comanda &c,Tasques::iterator &begin, Tasques::iterator &end);
+	
+	/** @brief Escriu les tasques entre un interval de temps, o be totes les futures.
+        \pre Cert.
+        \post Escriu pel canal estandard de sortida totes les tasques que esta entre els dos iteradors.
+        */
         void escriure_tasques_interval(Tasques::iterator &begin, Tasques::iterator &end);
+	
+	/** @brief Escriu les tasques que compleixen l'expressio o l'etiqueta.
+        \pre Cert.
+        \post Escriu pel canal estandard de sortida totes les tasques que compleixen l'expressio
+        booleana, o be contenen l'etiqueta.
+        */
         void escriure_tasques_expressio(Comanda &c, Tasques::iterator &begin, Tasques::iterator &end);
 
     public:
