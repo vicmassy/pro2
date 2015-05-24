@@ -1,3 +1,7 @@
+/** @file Tasca.hh
+    @brief Classe Tasca
+ */
+
 #ifndef __TASCA__
 #define __TASCA__
 
@@ -20,8 +24,8 @@ class Tasca {
         set<string> etiquetes;
 	
 	/** @brief Funció d'immersió per a avaluar si una tasca compleix una expressió.
-	 \pre El parametre s conté una expressio, i = I i inicialment val 0, j = J i inicialment val s.size()-1.
-	 \post Retorna cert si la tasca compleix l'expressió i fals en els altres casos.
+	 \pre El parametre s conte una expressio, i es el limit esquerre i j el dret de la part de s que sera avaluada.
+	 \post Retorna cert si la tasca compleix l'expressió entre i i j i fals en els altres casos.
 	 */
         bool compleix_expressio_i(const string &s, int i, int j) const;
 

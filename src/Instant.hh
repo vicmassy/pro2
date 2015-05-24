@@ -1,3 +1,7 @@
+/** @file Instant.hh
+    @brief Classe Instant
+ */
+
 #ifndef __INSTANT__
 #define __INSTANT__
 

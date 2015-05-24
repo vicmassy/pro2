@@ -1,3 +1,7 @@
+/** @file Agenda.hh
+    @brief Classe Agenda
+ */
+
 #ifndef __AGENDA__
 #define __AGENDA__
 
