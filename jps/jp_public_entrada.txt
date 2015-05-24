@@ -53,8 +53,4 @@ rellotge 02.05.15
 ?
 1 #amics
 ?
-sortir
-
-
-
-            
+sortir            

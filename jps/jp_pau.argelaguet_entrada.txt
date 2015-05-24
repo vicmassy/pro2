@@ -5,10 +5,14 @@
 + Madrid vs Juventus 13.05.15 20:45 #champions #desconegut
 + Barça vs Bayern 12.05.15 20:45 #champions #desconegut
 rellotge 01.05.15 20:45
+? 01.05.15
+-1 #desconegut
+1 -#desconegut
+1 #guanyat
 passat?
 rellotge 01.05.15 23:59
 passat?
-1 
+1 #perdut
 ?
 + Barça vs Juventus 06.06.15 21:00 #champions #desconegut
 ?

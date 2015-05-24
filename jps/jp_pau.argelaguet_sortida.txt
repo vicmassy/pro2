@@ -13,12 +13,23 @@
 
 rellotge 01.05.15 20:45
 
+? 01.05.15
+1 Barça vs Madrid 01.05.15 21:00 #desconegut #lliga
+Error de format
+
+1 -#desconegut
+
+1 #guanyat
+
 passat?
 
 rellotge 01.05.15 23:59
 
 passat?
-1 Barça vs Madrid 01.05.15 21:00 #desconegut #lliga
+1 Barça vs Madrid 01.05.15 21:00 #guanyat #lliga
+
+1 #perdut
+No s'ha realitzat
 
 ?
 1 Bayern vs Barça 04.05.15 20:45 #champions #desconegut
