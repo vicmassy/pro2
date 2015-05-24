@@ -15,9 +15,19 @@ using namespace std;
 class Instant {
 
     private:
-  
+	/** @brief Funcio de conversio d'un caracter numeric a un enter.
+        \pre El parametre c es un caracter numeric.
+        \post Converteix el caracter c en un enter.
+        */
         int num(char c) const;
+	
+	/** @brief Funcio d'escriptura d'enters en format data o hora.
+        \pre El parametre n es un enter.
+        \post Escriu pel canal estandard de sortida l'enter n, i si es un enter mes petit
+        que 10, es a dir de dos digits, afegeig un 0 davant.
+        */
         void escriurenum(int n) const;
+	
         int hh, min, dd, mm, yy;
     
     public: 
