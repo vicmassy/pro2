@@ -163,10 +163,6 @@ bool Agenda::esborrar_etiquetes(Comanda &c) {
     return true;
 }
 
-Instant Agenda::consultar_rellotge() const {
-    return r;
-}
-
 void Agenda::escriure_rellotge() const {
     r.escriure();
     cout << endl;

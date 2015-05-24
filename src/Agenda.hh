@@ -131,17 +131,7 @@ class Agenda {
         En cas contrari retorna true i esborra totes les etiquetes de la tasca.
         */
         bool esborrar_etiquetes(Comanda &c);        
-        
-        //Consultores
-
-        /** @brief Retorna el rellotge intern.
-        \pre Cert.
-        \post Retorna la data i l'hora actuals de l'agenda.
-        */
-        Instant consultar_rellotge() const;
-        
-        //Lectura
-        
+    
         //Escriptura
         
         /** @brief Escriu el rellotge intern.
