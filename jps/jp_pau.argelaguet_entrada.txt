@@ -1,4 +1,5 @@
 + Barça vs Madrid 01.05.15 21:00 #lliga #desconegut
++ Barça vs Atletico 10.07.15 21:00 #lliga #desconegut
 + Barça vs Athletic 25.05.15 21:00 #copa #desconegut
 + Bayern vs Barça 04.05.15 20:45 #champions #desconegut
 + Juventus vs Madrid 05.05.15 20:45 #champions #desconegut
@@ -14,6 +15,22 @@ rellotge 01.05.15 23:59
 passat?
 1 #perdut
 ?
+1 -#desconegut
+2 -#desconegut
+3 -#desconegut
+1 #guanyat
+2 #empatat
+3 #perdut
+? (#desconegut.#lliga)
+? ((#guanyat,#perdut),#empatat)
+?
+-1
+-2
+-3
+-4
+-5
+1 cine 10.05.15 18:10
 + Barça vs Juventus 06.06.15 21:00 #champions #desconegut
 ?
+passat?
 sortir
